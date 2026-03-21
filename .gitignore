@@ -2,9 +2,19 @@
 __pycache__/
 *.py[codz]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
+
+# dataset
+Dataset/
+
+# runs(학습결과)
+runs/
+
+# venv
+venv/
 
 # Distribution / packaging
 .Python
