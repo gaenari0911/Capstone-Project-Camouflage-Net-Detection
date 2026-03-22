@@ -79,6 +79,9 @@ converted/
 Testing에서 모델이 헷갈려 할만한 30장을 선별해서
 reserve에 먼저 넣고 분류 (대신, 서로 유사한 이미지들이 들어가면 안됨 => 과적합) 
 How? Revise_Hard_Positive_Selected.py
+=> (객체가 작을수록, 객체와 배경 색 차이가 작을수록, 밝기 대비가 낮을수록, 이미지가 흐릴수록 점수를 높게 줬고,
+ 경계 복잡도는 보조 지표로 약하게 반영했습니다. 각 특징은 0~1로 정규화한 뒤 가중합으로 합쳐서,
+  값이 클수록 “모델이 놓치기 쉬운 positive”에 가깝게 보도록 했습니다.)
 
 Testing 데이터에서 mask 기반 특징(면적, 색 유사도, 대비, blur 등)으로 hard positive score를 계산하고, csv에 저장
 snow / non_snow로 분류(이미지 크기 줄이기 -> 평균 밝기와 채도 계산 -> 밝기 높고 채도 낮으면 snow)한 뒤 7:3 비율을 유지하여 상위 30장을 후보로 선별한다. => 결과는 4.5 : 1 비율이 돼버림
@@ -186,17 +189,48 @@ test와 val은 Snow : nonSnow = 1:4
 snow synthetic: 1179개
 nonSnow synthetic: 4121개
 
+그리고 train object도 분리
+snow object:
+Nonsnow object: 
+
+즉, 
+기존 train 원본 748장에서 객체를 추출
+    snow 31
+    nonSnow 717
+train용 배경 2000장 확보
+    snow 400
+    nonSnow 1600
+이걸 이용해 synthetic 5300장 생성
+    snow synthetic 1179
+    nonSnow synthetic 4121
+최종적으로 train의 snow:nonSnow를 대략 1:4로 보정
+
+
+
 과정:
 
 1. 기존 mask 기반 객체 crop
-2. 배경 랜덤 선택
-3. 랜덤 위치에 배치
-4. blending 수행
+   - 위장망 영역만 추출
+
+2. 배경 선택
+   - snow / nonSnow 구분 후 조건 맞게 선택
+
+3. 랜덤 위치 배치
+   - scale, 위치 다양화
+
+4. blending 수행 (핵심 단계)
+
    - alpha blending
-   - edge blur
-   - color matching
+   - edge blur (경계 부드럽게)
+   - color matching (밝기/색 보정)
+
+   ※ 이 단계 안 하면:
+   "색 차이 = 경계"로 학습됨
+
 5. 새로운 mask 생성
-6. polygon → txt 변환
+   - 배치된 위치 기준으로 생성
+
+6. polygon → YOLO txt 변환
 
 저장:
 
