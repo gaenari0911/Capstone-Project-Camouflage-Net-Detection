@@ -20,6 +20,10 @@ import numpy as np
 
 VALID_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png")
 
+# 이 스크립트는 시각적 확인용입니다.
+# YOLO polygon의 정규화 좌표를 다시 이미지 픽셀 좌표로 바꿔서
+# 빨간 외곽선으로 그려 줍니다.
+
 
 def parse_args() -> argparse.Namespace:
     """Parse arguments for polygon visualization."""

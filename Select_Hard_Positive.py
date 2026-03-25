@@ -1,5 +1,13 @@
 """
 Integrated hard-positive pipeline.
+
+읽는 순서:
+1. testing 이미지/GT 쌍을 모읍니다.
+2. 후보마다 handcrafted difficulty 지표를 계산합니다.
+3. 이 지표들을 hard-positive score로 변환합니다.
+4. 환경 비율을 고려해 1차 선택을 수행합니다.
+5. similarity group을 이용해 너무 비슷한 샘플이 몰리지 않게 보정합니다.
+6. 최종 CSV 로그를 저장하고 필요하면 파일도 이동합니다.
 """
 
 from __future__ import annotations
@@ -24,6 +32,9 @@ WEIGHT_LOW_COLOR_DISTANCE = 0.25
 WEIGHT_LOW_CONTRAST = 0.20
 WEIGHT_BLUR = 0.20
 WEIGHT_EDGE_COMPLEXITY = 0.05
+
+# 여기서는 score가 높을수록 더 어려운 hard positive 샘플이라는 뜻입니다.
+# 아래 weight는 어떤 시각적 특성을 더 중요하게 볼지 정의합니다.
 
 SIMILARITY_GROUPS_RAW = {
     "non_snow": [

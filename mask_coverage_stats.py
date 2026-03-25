@@ -1,3 +1,13 @@
+"""
+Summarize how much foreground area the training GT masks occupy.
+
+읽는 순서:
+1. training 이미지와 GT mask를 짝지어 읽습니다.
+2. GT mask를 threshold해서 binary foreground로 만듭니다.
+3. foreground 면적 비율을 계산합니다.
+4. 통계값과 coverage bin 분포를 출력합니다.
+"""
+
 from pathlib import Path
 
 import cv2
@@ -9,6 +19,8 @@ MASK_THRESHOLD = 128
 
 IMAGE_DIR = Path("Dataset") / "masks_raw" / "Training" / "images"
 MASK_DIR = Path("Dataset") / "masks_raw" / "Training" / "GT"
+
+# 이 스크립트는 순수 진단용입니다. 파일을 수정하거나 새로 저장하지 않습니다.
 
 
 def collect_image_files(directory: Path) -> list[Path]:

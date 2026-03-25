@@ -6,6 +6,13 @@ Workflow:
 2. Copy revised hard positive Testing samples into reserve pools
 3. Exclude those hard positive stems, then split remaining Testing samples into val/test
 
+읽는 순서:
+1. revised hard-positive CSV를 읽어 reserve로 보낼 stem을 고정합니다.
+2. 원본 Training split을 새 train 디렉토리로 복사합니다.
+3. 선택된 hard positive를 reserve pool로 이동/복사합니다.
+4. 남은 Testing 데이터를 val / test로 분할합니다.
+5. 최종 분할 결과를 split log로 저장해 추적 가능하게 만듭니다.
+
 Example:
     python Build_Splits_From_Revised_Selected.py --dry-run
     python Build_Splits_From_Revised_Selected.py --overwrite
@@ -27,6 +34,9 @@ VALID_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png")
 SNOW_BRIGHTNESS_THRESHOLD = 160.0
 SNOW_SATURATION_THRESHOLD = 60.0
 RESIZE_MAX_SIDE = 256
+
+# 이 분류기는 split 비율을 균형 있게 맞추기 위한 보조 휴리스틱입니다.
+# 모델 자체의 일부가 아니라 데이터 분할 보조용입니다.
 
 
 def parse_args() -> argparse.Namespace:

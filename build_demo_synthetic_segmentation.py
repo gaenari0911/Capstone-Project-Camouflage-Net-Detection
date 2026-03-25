@@ -1,3 +1,16 @@
+"""
+Synthetic segmentation generator used to build demo/full synthetic data.
+
+읽는 순서:
+1. 전역 상수에서 경로, mode, scale bucket, quota 설정을 먼저 봅니다.
+2. helper 함수들이 배경/객체를 로드하고 crop/resize 하는 역할을 맡습니다.
+3. 파이프라인은 scale을 먼저 고정한 뒤, object 후보를 평가하고,
+   각 object마다 여러 위치 후보를 다시 평가합니다.
+4. 점수는 tone, texture, edge compatibility, placement, usage penalty를 함께 반영해
+   특정 객체/배경 조합이 과도하게 반복되지 않도록 합니다.
+5. 최종 선택 결과를 배경에 합성하고, sharp binary GT mask와 YOLO polygon txt를 저장합니다.
+"""
+
 from pathlib import Path
 import random
 import cv2
@@ -27,6 +40,11 @@ DOMAIN_PENALTY_WEIGHT = 0.08
 BACKGROUND_PENALTY_WEIGHT = 0.18
 RECENT_PENALTY_WEIGHT = 0.10
 QUOTA_BONUS_WEIGHT = 0.06
+
+# 이 프로젝트는 domain 구조가 비대칭입니다.
+# - snow 객체는 자연스럽게 연결되는 coarse domain이 1개뿐이고
+# - non-snow 객체는 여러 background domain으로 퍼질 수 있습니다.
+# 아래 quota/penalty 로직은 이 비대칭을 조금 더 공정하게 다루기 위한 장치입니다.
 
 ALLOWED_DOMAINS = {
     "snow": ["snow"],
@@ -159,6 +177,14 @@ def _coarse_domain_penalty(object_domain, target_domain, mode):
 
 
 def _build_object_quota(total_needed, object_ids, object_domain):
+    """
+    각 객체가 최대 몇 번까지 등장할 수 있는지 미리 계산합니다.
+
+    전략:
+    - 가능하면 모든 객체에 최소 1번씩 먼저 기회를 줍니다.
+    - 남은 횟수는 round-robin으로 분배합니다.
+    - 기본 최대 사용 횟수는 5이고, 꼭 필요할 때만 완화합니다.
+    """
     quotas = {}
     shuffled_ids = list(object_ids)
     GLOBAL_STATE["rng"].shuffle(shuffled_ids)
@@ -207,6 +233,7 @@ def _build_object_quota(total_needed, object_ids, object_domain):
 
 
 def _initialize_usage_state(schedule):
+    """합성 루프가 시작되기 전에 quota/usage 테이블을 준비합니다."""
     targets_by_object_domain = {"snow": 0, "non_snow": 0}
     for item in schedule:
         object_domain = _get_object_domain_for_target_domain(item["domain"])
@@ -292,7 +319,6 @@ def build_object_pool(image_dir, mask_dir):
                 "id": image_path.stem,
                 "image_path": image_path,
                 "mask_path": mask_path,
-                "usage_count": 0,
             }
         )
     return pool
@@ -402,6 +428,12 @@ def choose_target_schedule():
 
 
 def sample_background_for_domain(domain, mode):
+    """
+    요청된 domain에 맞는 배경 이미지 하나를 선택합니다.
+
+    Natural/Semi에서는 사용 횟수가 적은 배경을 조금 더 우선해서
+    몇 장의 배경만 과도하게 반복되는 현상을 줄입니다.
+    """
     state = GLOBAL_STATE["background_state"].get(domain, {})
     paths = state.get("paths", [])
     if not paths:
@@ -423,6 +455,12 @@ def sample_background_for_domain(domain, mode):
 
 
 def sample_object_candidates(domain, background_path, k, usage_state, mode):
+    """
+    비용이 큰 위치 평가 전에 object 후보를 먼저 걸러내고 정렬합니다.
+
+    이 단계에서 이미 quota, domain 반복, background 반복, recent history를 반영해서
+    과도하게 많이 쓰인 객체가 초반부터 밀려나도록 합니다.
+    """
     object_domain = _get_object_domain_for_target_domain(domain)
     pool = GLOBAL_STATE["object_pools"].get(object_domain, [])
     if not pool:
@@ -559,6 +597,15 @@ def _score_from_difference(diff_value, scale):
 
 
 def compute_object_background_match_score(object_bgr, object_mask, patch_bgr, y_ratio, mode):
+    """
+    resize된 object 하나가 background patch 하나에 얼마나 자연스럽게 붙는지 점수화합니다.
+
+    점수는 여러 축을 함께 봅니다.
+    - tone 유사도
+    - texture 유사도
+    - edge / boundary 접합감
+    - placement 선호도
+    """
     object_stats = _masked_hsv_stats(object_bgr, object_mask)
     bg_full_mask = np.ones((patch_bgr.shape[0], patch_bgr.shape[1]), dtype=np.uint8) * 255
     patch_stats = _masked_hsv_stats(patch_bgr, bg_full_mask)
@@ -619,6 +666,12 @@ def compute_object_background_match_score(object_bgr, object_mask, patch_bgr, y_
 
 
 def select_best_object_and_position(background, background_path, object_candidates, mode, target_domain):
+    """
+    하나의 고정된 scale에 대해 object-position 조합을 전부 평가합니다.
+
+    이 함수에 들어오기 전에 scale은 이미 정해져 있으므로,
+    여기서는 object identity와 placement만 탐색합니다.
+    """
     bg_h, bg_w = background.shape[:2]
     accepted = []
     strictness = MODE_CONFIG[mode]["strictness"]
@@ -738,6 +791,12 @@ def select_best_object_and_position(background, background_path, object_candidat
 
 
 def apply_tone_matching(object_bgr, object_mask, patch_bgr, mode):
+    """
+    약한 global tone adjustment와 더 강한 local edge-band matching을 적용합니다.
+
+    binary GT mask는 의도적으로 sharp하게 유지하고,
+    실제로 시각적 보정은 합성 이미지 쪽에만 적용합니다.
+    """
     config = MODE_CONFIG[mode]
     brightness_alpha = GLOBAL_STATE["rng"].uniform(config["brightness_alpha"][0], config["brightness_alpha"][1])
     contrast_alpha = GLOBAL_STATE["rng"].uniform(config["contrast_alpha"][0], config["contrast_alpha"][1])
@@ -840,8 +899,13 @@ def mask_to_polygon_lines(mask, class_id):
 
 
 def save_polygon_txt(txt_path, polygon_lines):
-    txt_path.parent.mkdir(parents=True, exist_ok=True)
-    txt_path.write_text("\n".join(polygon_lines), encoding="utf-8")
+    try:
+        txt_path.parent.mkdir(parents=True, exist_ok=True)
+        txt_path.write_text("\n".join(polygon_lines), encoding="utf-8")
+        return True
+    except OSError as exc:
+        print(f"[WARN] Failed to save txt: {txt_path} ({exc})")
+        return False
 
 def save_image_unicode(path, image):
     path = Path(path)
@@ -856,10 +920,12 @@ def save_image_unicode(path, image):
 def save_result_image(path, image):
     ok = save_image_unicode(path, image)
     print(f"[DEBUG] save image: {path} -> {ok}")
+    return ok
 
 def save_result_mask(path, mask):
     ok = save_image_unicode(path, mask)
     print(f"[DEBUG] save mask: {path} -> {ok}")
+    return ok
 
 
 def _initialize_object_pools():
@@ -996,6 +1062,16 @@ def _print_output_summary():
 
 
 def main():
+    """
+    synthetic data 생성 루프를 처음부터 끝까지 실행합니다.
+
+    전체 순서:
+    1. pool / schedule 초기화
+    2. domain + scale + background 선택
+    3. object / position 후보 평가
+    4. 합성 및 저장
+    5. usage 통계 갱신
+    """
     _initialize_object_pools()
     schedule = choose_target_schedule()
     _initialize_usage_state(schedule)
@@ -1071,10 +1147,19 @@ def main():
         mask_path = OUTPUT_MASK_ROOT / f"{stem}.png" if SAVE_MASKS else None
         txt_path = OUTPUT_TXT_ROOT / f"{stem}.txt"
 
-        save_result_image(image_path, synthetic)
-        save_polygon_txt(txt_path, polygon_lines)
+        image_saved = save_result_image(image_path, synthetic)
+        txt_saved = save_polygon_txt(txt_path, polygon_lines)
+        mask_saved = True
         if mask_path is not None:
-            save_result_mask(mask_path, transformed_mask)
+            mask_saved = save_result_mask(mask_path, transformed_mask)
+
+        if not image_saved or not txt_saved or not mask_saved:
+            print(
+                "[WARN] Save failed, sample will not be counted: "
+                f"image={image_saved}, txt={txt_saved}, mask={mask_saved}"
+            )
+            skipped += 1
+            continue
 
         object_domain = _get_object_domain_for_target_domain(domain)
         _register_object_usage(best["object_item"]["id"], object_domain, domain, best["background_key"])

@@ -2,6 +2,13 @@
 Build an object pool from train images and YOLO segmentation txt labels,
 classifying each extracted object itself as snow / non_snow.
 
+읽는 순서:
+1. train 이미지와 YOLO segmentation txt를 짝지어 읽습니다.
+2. 가장 큰 polygon을 골라 binary mask로 만듭니다.
+3. 이미지와 마스크에서 객체 영역을 타이트하게 crop 합니다.
+4. crop된 객체를 heuristic 기반으로 snow / non_snow로 분류합니다.
+5. 이후 파이프라인에서 재사용할 object pool과 CSV 메타데이터를 저장합니다.
+
 Example:
     python Build_Object_Pool_From_Txt_ObjectBased.py
 """
@@ -19,6 +26,8 @@ import numpy as np
 VALID_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 RESIZE_MAX_SIDE = 256
 
+# 이 스크립트는 학습된 분류기가 아니라 HSV/밝기 기반 휴리스틱을 사용합니다.
+# 객체 환경 분류가 어색해 보이면 아래 threshold를 조정하는 방식으로 보정하면 됩니다.
 # Heuristic thresholds for object-based environment classification.
 # This classification is heuristic and may require manual correction.
 SNOW_BRIGHTNESS_THRESHOLD = 165.0

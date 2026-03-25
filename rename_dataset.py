@@ -17,6 +17,11 @@ from pathlib import Path
 
 VALID_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 
+# rename은 의도적으로 2단계로 처리합니다.
+# 1. 모든 파일을 임시 이름으로 먼저 바꿉니다.
+# 2. 임시 이름에서 최종 이름으로 다시 바꿉니다.
+# 이렇게 해야 기존 이름과 최종 이름이 겹칠 때 충돌을 피할 수 있습니다.
+
 
 def parse_args() -> argparse.Namespace:
     """Parse command-line arguments."""

@@ -8,6 +8,13 @@ This script only processes the following two directories:
 The generated labels are saved to:
 - converted/labels/Training
 - converted/labels/Testing
+
+읽는 순서:
+1. grayscale GT mask 하나를 읽습니다.
+2. threshold를 적용해 binary foreground mask를 만듭니다.
+3. 유효한 외곽 contour를 추출합니다.
+4. contour 좌표를 YOLO polygon 형식의 정규화 좌표로 바꿉니다.
+5. mask 이미지마다 대응되는 `.txt` 파일을 저장합니다.
 """
 
 from __future__ import annotations
