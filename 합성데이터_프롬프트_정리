@@ -1,0 +1,366 @@
+Python 스크립트 하나를 작성해줘.
+
+사용 라이브러리 제한:
+- pathlib
+- random
+- cv2
+- numpy
+
+다른 외부 라이브러리는 사용하지 마라.
+
+==================================================
+목표
+==================================================
+
+총 3000개의 synthetic segmentation 데이터를 생성한다.
+
+출력 경로:
+
+이미지:
+- G:\내 드라이브\합성_데이터셋\images
+
+마스크:
+- G:\내 드라이브\합성_데이터셋\masks
+
+txt:
+- G:\내 드라이브\합성_데이터셋\txt
+
+추가:
+- transformed binary mask를 기반으로 polygon을 생성하여 txt 저장
+- GT는 feathering 전 binary mask 기준 유지
+
+==================================================
+핵심 목적
+==================================================
+
+“객체 + 위치 조합을 평가 → best 또는 top-k 선택 → mode별 처리”
+
+금지:
+- 랜덤 객체 1개 선택
+- 랜덤 위치 1개 선택
+
+필수:
+- 후보 여러 개 생성
+- 점수 계산
+- best 또는 top-k 선택
+
+==================================================
+입력 데이터 구조
+==================================================
+
+객체:
+- Dataset/object_pool/snow/images
+- Dataset/object_pool/snow/masks
+- Dataset/object_pool/nonsnow/images
+- Dataset/object_pool/nonsnow/masks
+
+배경:
+- G:\내 드라이브\데이터셋\snow
+- G:\내 드라이브\데이터셋\forest
+- G:\내 드라이브\데이터셋\grass_field
+- G:\내 드라이브\데이터셋\leaf_ground
+- G:\내 드라이브\데이터셋\rocky
+- G:\내 드라이브\데이터셋\mixed
+
+주의:
+- snow → snow object + snow background
+- 나머지 domain → nonsnow object 사용
+- domain은 class가 아니라 background grouping
+
+==================================================
+데이터 분포
+==================================================
+
+총 3000장
+
+DOMAIN_TARGETS:
+- snow: 600
+- forest: 600
+- grass_field: 600
+- leaf_ground: 450
+- rocky: 300
+- mixed: 450
+
+==================================================
+MODE_TARGETS
+==================================================
+
+Natural: 1200
+Semi: 900
+Hard: 600
+Minimal: 300
+
+각 mode 내부 domain 분포도 정확히 맞출 것 (카운트 기반)
+
+==================================================
+Scale 분포
+==================================================
+
+0~5%:   10%
+5~10%:  20%
+10~15%: 15%
+15~20%: 15%
+20~25%: 15%
+25~30%: 10%
+30~40%: 10%
+40~60%: 5%
+60%+:   0~1%
+
+==================================================
+Scale 적용 규칙
+==================================================
+
+1. scale 먼저 샘플링
+2. 모든 object 후보 동일 scale 적용
+3. 이후 위치 후보 생성
+4. 이후 선택
+
+scale은 selection 결과로 바뀌면 안 됨
+
+==================================================
+Object 사용 전략
+==================================================
+
+- 모든 object 최소 1회 사용
+- 최대 5회 제한
+- 초과 시 제한 완화 (로그 출력)
+- recent history로 연속 사용 방지
+
+==================================================
+파이프라인
+==================================================
+
+1. mode 선택
+2. domain 선택
+3. scale 샘플링
+4. background 로드
+5. background resize (long side = 1280)
+
+6. object 후보 K개 선택
+7. mask threshold + bbox crop
+8. 동일 scale 적용
+
+9. 위치 후보 N개 생성
+
+10. 각 위치 평가:
+   - tone score
+   - texture score
+   - edge score
+   - placement score
+
+11. object별 best 위치
+
+12. 최종 선택:
+   - Natural → best
+   - Semi → top-3
+   - Hard → top-5
+   - Minimal → random
+
+13. tone matching
+14. edge band matching
+15. optional feathering
+
+16. image 생성
+17. mask 생성
+18. polygon 생성
+19. 저장
+
+==================================================
+Mask / Polygon
+==================================================
+
+- binary mask 유지
+- feathering 적용 금지
+- contour → approxPolyDP → normalize → txt
+
+==================================================
+Mode 파라미터 (단일화)
+==================================================
+
+Natural:
+- brightness: 0.20~0.35
+- contrast: 0.20~0.35
+- saturation: 0.05~0.12
+- feather: 3~7
+
+Semi:
+- brightness: 0.08~0.20
+- contrast: 0.08~0.18
+- saturation: 0.03~0.10
+- feather: 0~5
+
+Hard:
+- brightness: 0.00~0.10
+- contrast: 0.00~0.10
+- saturation: 0.00~0.05
+- feather: 0
+
+Minimal:
+- brightness: 0
+- contrast: 0
+- saturation: 0
+- feather: 0
+
+==================================================
+Score 구성 (단일화)
+==================================================
+
+score =
+  w_tone * tone
++ w_texture * texture
++ w_edge * edge
++ w_place * placement
+==================================================
+Mode별 Score Weight 가이드 (추가)
+==================================================
+
+Natural:
+- tone weight 높음
+- texture weight 중간
+- edge weight 높음
+- placement weight 중간
+- 가장 자연스러운 접합 우선
+
+권장 예:
+- tone: 0.35
+- texture: 0.20
+- edge: 0.30
+- placement: 0.15
+
+--------------------------------------------------
+
+Semi:
+- tone weight 중간
+- texture weight 중간
+- edge weight 중간
+- placement weight 중간~높음
+- same-domain 우선이지만 약간의 loosen 허용
+
+권장 예:
+- tone: 0.30
+- texture: 0.25
+- edge: 0.25
+- placement: 0.20
+
+--------------------------------------------------
+
+Hard:
+- tone weight 낮춤
+- texture weight 중간
+- edge weight 중간
+- placement 다양성 / mismatch 허용 비중 증가
+
+권장 예:
+- tone: 0.20
+- texture: 0.25
+- edge: 0.20
+- placement: 0.35
+
+--------------------------------------------------
+
+Minimal:
+- score 기반 자연스러움보다
+  reject 통과와 다양성 확보를 우선
+- score는 약하게만 사용
+
+권장 예:
+- tone: 0.15
+- texture: 0.20
+- edge: 0.15
+- placement: 0.50
+==================================================
+Reject 조건
+==================================================
+
+- sky
+- low texture
+- outer margin
+- boundary 초과
+- patch 실패
+- edge band 부족
+
+==================================================
+Tone Matching
+==================================================
+
+2단계:
+
+1. global (약하게)
+2. edge band (강하게)
+
+- object texture 유지
+- hue 거의 변경하지 않음
+
+==================================================
+Feathering
+==================================================
+
+기본: 사용 안 함
+
+Natural만:
+- 매우 약하게 (3~7)
+
+조건:
+- score 계산 후 적용
+- alpha mask만 사용
+
+==================================================
+랜덤화
+==================================================
+
+- tone strength
+- feather
+- 위치
+- object
+- scale
+- mode
+- domain
+
+==================================================
+디버그 출력
+==================================================
+
+- mode
+- domain
+- object
+- scale
+- 위치
+- total score
+- tone / texture / edge / placement
+
+==================================================
+예외 처리
+==================================================
+
+- image load 실패 → skip
+- mask 없음 → skip
+- contour 없음 → skip
+- polygon 실패 → skip
+
+==================================================
+Execution Mode
+==================================================
+
+EXECUTION_MODE = "DEMO" or "FULL"
+
+DEMO:
+- 60~120장
+- DOMAIN_TARGETS / MODE_TARGETS 무시
+- 다양성 위주
+
+FULL:
+- 3000장
+- 모든 분포 정확히 적용
+
+==================================================
+출력 요구
+==================================================
+
+1. 전체 파이프라인 설명
+2. mode 설명
+3. scale 설명
+4. object sampling 설명
+5. domain 설명
+6. mask→polygon 설명
+7. 함수 구조 설명
+8. 전체 코드

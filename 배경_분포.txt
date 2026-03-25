@@ -1,0 +1,141 @@
+<background domain>은
+총 4230개 중
+forest_dense(그림자 숲): 30% 		(1269개)
+grass_field(밝은 초록색): 20%    		(846개)
+leaf_ground(갈색, 황토색 위주의 낙엽 및 파쇄석): 15% 		(635개)
+rocky(회색조 거친질감, 암석지대): 10% 			(423개)
+mixed_nature(숲과 흙 바위 골고루 섞인): 15% 	(635개)
+snow_field: 10% 		(423개)
+
+
+<Train> => 전체분포와 동일
+forest_dense: 1269
+grass_field: 846
+leaf_ground: 635
+rocky: 423
+mixed: 635
+snow: 423
+
+	
+
+<Val>  => 전체분포와 동일
+forest_dense: 21
+grass_field: 14
+leaf_ground: 10
+rocky: 7
+mixed: 10
+snow: 7
+
+
+
+<Test> => 전체분포와 동일
+forest_dense: 38
+grass_field: 26
+leaf_ground: 20
+rocky: 13
+mixed: 20
+snow: 13
+
+
+
+<FP>
+leaf_ground: 30
+forest_dense: 70
+rocky: 20
+grass: 15
+mixed: 15
+
+
+
+
+
+🔴 1. forest_dense (30% / 1269개)
+
+👉 핵심: shadow + clutter + low contrast
+
+기본
+dense forest floor shadow leaves
+forest undergrowth clutter texture
+dark forest canopy ground view
+thick woodland vegetation ground
+hard negative 강화
+cluttered forest vegetation texture
+forest floor branches leaves clutter
+jungle dense foliage ground view
+forest floor mixed leaves dirt shadow
+lighting 포함
+forest shadows dappled light ground
+sunlight through trees shadow forest floor
+uneven lighting forest ground texture
+patchy sunlight forest vegetation
+🔴 2. grass_field (20% / 846개)
+
+👉 핵심: “uniform grass 제거” + clutter 있는 grass만
+
+반드시 사용할 것
+wild grass uneven ground texture
+tall grass cluttered natural environment
+grass mixed dirt field texture
+grass shadow uneven lighting
+섞기 (중요)
+grass with leaves and dirt mixed
+grass bush mixed ground texture
+grass and shadow clutter environment
+❌ 제외 필터
+golf grass
+perfect lawn
+uniform grass field
+🔴 3. leaf_ground (15% / 635개)
+
+👉 핵심: brown + irregular + noisy texture
+
+기본
+forest floor dead leaves soil texture
+leaf litter ground mixed dirt
+dry leaves soil mixed ground texture
+hard negative
+autumn forest floor leaves clutter
+broken leaves dirt texture ground
+forest floor leaves branches mixed
+확장
+brown organic forest ground texture
+decomposing leaves soil texture
+🔴 4. rocky (10% / 423개)
+
+👉 핵심: high-frequency texture + edge 강함
+
+기본
+rocky terrain rough texture ground
+gravel stone ground natural texture
+cracked rock surface texture
+확장
+mountain rock uneven surface
+stone and dirt mixed terrain
+rough stone field texture
+🔴 5. mixed_nature (15% / 635개)
+
+👉 핵심: 진짜 중요한 영역 (generalization)
+
+필수
+forest dirt grass rock mixed ground
+natural terrain mixed vegetation clutter
+bush grass tree mixed environment ground
+hard negative
+natural clutter ground environment texture
+forest floor mixed textures close up
+vegetation soil rock mixed terrain
+확장
+complex natural environment ground
+mixed vegetation soil texture
+🔴 6. snow_field (10% / 423개)
+
+👉 핵심: low texture + lighting 중요
+
+기본
+snow ground uneven texture
+snow field natural surface detail
+snowy terrain with shadow texture
+변형
+snow and dirt mixed ground
+snow surface irregular pattern
+winter forest snow ground clutter
