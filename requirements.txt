@@ -1,0 +1,24 @@
+# --- Deep Learning Framework ---
+torch>=1.8.0
+torchvision>=0.9.0
+
+# --- Vision & Image Processing ---
+# Docker 환경에서 libGL.so 에러(GUI 의존성 문제)를 방지하기 위해 반드시 headless 버전 사용
+opencv-python-headless>=4.6.0
+Pillow>=7.1.2
+
+# --- Data & Computation ---
+numpy>=1.23.0
+matplotlib>=3.3.0
+PyYAML>=5.3.1
+
+# --- Profiling & Utils ---
+# tasks.py의 _profile_one_layer 함수 등에서 GFLOPs 계산 시 사용됨
+thop>=0.1.1
+tqdm>=4.64.0
+scipy>=1.4.1
+pandas>=1.1.4
+
+# --- (선택) TensorBoard ---
+# 학습 중 runs 폴더에 쌓이는 로그를 시각화하기 위해 권장
+tensorboard>=2.13.0

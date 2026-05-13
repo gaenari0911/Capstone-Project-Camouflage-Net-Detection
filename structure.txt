@@ -1,0 +1,22 @@
+cod_project/                     # 전체 프로젝트 최상위 폴더 (Git 저장소)
+│
+├── ultralytics/          # [Step 1]에서 clone한 후 Head/Loss 등을 수정한 핵심 엔진
+│
+├── datasets/                    # 위장 객체 데이터셋 (YOLO 포맷의 이미지/라벨)
+│   ├── train/
+│  │   ├── labels/		# 정답 이미지 마스크
+│  │   ├── images/		# 실제 RGB 이미지
+│   ├── test/
+│  │   ├── labels/
+│  │   ├── images/
+│
+├── experiments/                 # 실제 학습 및 추론을 실행하는 스크립트 모음
+│   ├── train_baseline.py        # 원본 YOLOv8-seg 학습 스크립트 (비교용)
+│   ├── train.py      			# 수정한 Dual-Head 모델 학습 스크립트
+│   └── test.py    			# 학습된 가중치(.pt)를 불러와 실시간 탐지를 수행하는 코드
+│   └── data.yaml                # 데이터셋 경로와 클래스 정의
+│
+├── runs/                        # (자동 생성) Ultralytics가 학습 로그, 가중치(best.pt) 등을 저장하는 폴더
+│
+├── requirements.txt             # 프로젝트에 필요한 패키지 목록 (OpenCV 등)
+└── README.md                    # 프로젝트 아키텍처 및 실행 방법 기록
