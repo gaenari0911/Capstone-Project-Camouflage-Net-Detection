@@ -35,9 +35,9 @@ MAX_OBJECT_CANDIDATES = 8
 MAX_POSITION_CANDIDATES = 16
 RANDOM_SEED = 7
 EXECUTION_MODE = "FULL"  # "DEMO" or "FULL"
-SYNTHESIS_SPLIT_NAME = "train" # 생성한 합성데이터가 어디 소속인지 metadata에 기록되는 값
-DIFFICULTY_MODE = "hard"  # "easy", "medium", "hard", "extreme"
-DEBUG_VISUALIZE = True
+SYNTHESIS_SPLIT_NAME = "train"  # 생성한 합성데이터가 어디 소속인지 metadata에 기록되는 값
+DIFFICULTY_MODE = "medium"  # "fixed" 모드일 때 사용할 난이도
+DEBUG_VISUALIZE = False
 SAVE_MASKS = True
 CLASS_ID = 0
 MAX_OBJECT_USAGE = 5
@@ -59,56 +59,56 @@ FULL_BACKGROUND_COUNTS = {
 }
 
 FULL_MODE_TOTALS = {
-    "natural": 1200,
-    "semi": 900,
-    "hard": 600,
-    "minimal": 300,
+    "natural": 2700,
+    "semi": 300,
+    "hard": 0,
+    "minimal": 0,
 }
 
-FULL_TOTAL_IMAGES = 100
+FULL_TOTAL_IMAGES = 3000
 DIFFICULTY_SAMPLING_MODE = "mixed"  # "fixed" or "mixed" fixed는 difficulty mix 안하는거
 DIFFICULTY_RATIOS = {
-    "easy": 0.05,
-    "medium": 0.25,
-    "hard": 0.50,
-    "extreme": 0.20,
+    "easy": 0.10,
+    "medium": 0.45,
+    "hard": 0.35,
+    "extreme": 0.10,
 }
 
 DIFFICULTY_CONFIG = {
     "easy": {
-        "scale_multiplier": 1.18,
-        "bg_aug_strength": 0.60,
-        "object_aug_strength": 0.55,
-        "camouflage_pull": 0.10,
-        "boundary_softness": 0.95,
+        "scale_multiplier": 1.12,
+        "bg_aug_strength": 0.52,
+        "object_aug_strength": 0.42,
+        "camouflage_pull": 0.06,
+        "boundary_softness": 0.98,
         "clutter_strength": 0.05,
     },
     "medium": {
         "scale_multiplier": 1.00,
-        "bg_aug_strength": 0.85,
-        "object_aug_strength": 0.75,
-        "camouflage_pull": 0.16,
+        "bg_aug_strength": 0.68,
+        "object_aug_strength": 0.55,
+        "camouflage_pull": 0.10,
         "boundary_softness": 1.00,
-        "clutter_strength": 0.10,
+        "clutter_strength": 0.08,
     },
     "hard": {
-        "scale_multiplier": 0.86,
-        "bg_aug_strength": 1.00,
-        "object_aug_strength": 0.92,
-        "camouflage_pull": 0.22,
-        "boundary_softness": 1.06,
-        "clutter_strength": 0.16,
+        "scale_multiplier": 0.90,
+        "bg_aug_strength": 0.82,
+        "object_aug_strength": 0.64,
+        "camouflage_pull": 0.14,
+        "boundary_softness": 1.03,
+        "clutter_strength": 0.12,
     },
     "extreme": {
-        "scale_multiplier": 0.72,
-        "bg_aug_strength": 1.12,
-        "object_aug_strength": 1.00,
-        "camouflage_pull": 0.28,
-        "boundary_softness": 1.14,
-        "clutter_strength": 0.22,
+        "scale_multiplier": 0.82,
+        "bg_aug_strength": 0.92,
+        "object_aug_strength": 0.72,
+        "camouflage_pull": 0.18,
+        "boundary_softness": 1.05,
+        "clutter_strength": 0.15,
     },
 }
-ARTIFACT_PENALTY_WEIGHT = 0.12 #경계 artifact가 크면 감점
+ARTIFACT_PENALTY_WEIGHT = 0.16 #경계 artifact가 큰 후보를 조금 더 강하게 감점
 
 # 이 프로젝트는 domain 구조가 비대칭입니다.
 # - snow 객체는 자연스럽게 연결되는 coarse domain이 1개뿐이고
@@ -1097,20 +1097,20 @@ def apply_domain_aware_background_augmentation(background, domain, difficulty_mo
     records = []
 
     if domain == "forest_dense":
-        image = _apply_shadow_overlay(image, 0.12 * strength)
-        image = _apply_local_brightness_variation(image, 0.05 * strength)
+        image = _apply_shadow_overlay(image, 0.09 * strength)
+        image = _apply_local_brightness_variation(image, 0.035 * strength)
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
         hsv[:, :, 0] = np.mod(hsv[:, :, 0] + 4.0 * strength, 180.0)
         image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
-        image = _apply_motion_blur(image, 3 + int(round(2 * strength)), horizontal=False)
+        image = _apply_motion_blur(image, 3 + int(round(1 * strength)), horizontal=False)
         records.extend(["shadow", "green_hue", "local_darkness", "motion_blur"])
     elif domain == "grass_field":
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
         hsv[:, :, 1] = np.clip(hsv[:, :, 1] * (1.0 + _sample_uniform(-0.10, 0.18) * strength), 0, 255)
         hsv[:, :, 2] = np.clip(hsv[:, :, 2] * (1.0 + _sample_uniform(-0.08, 0.10) * strength), 0, 255)
         image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
-        image = _apply_directional_blur(image, 5, angle_deg=_sample_uniform(-20.0, 20.0))
-        image = _apply_patch_color_perturbation(image, 0.8 * strength)
+        image = _apply_directional_blur(image, 3, angle_deg=_sample_uniform(-12.0, 12.0))
+        image = _apply_patch_color_perturbation(image, 0.45 * strength)
         records.extend(["sat_jitter", "brightness_fluctuation", "directional_blur", "texture_noise"])
     elif domain == "leaf_ground":
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
@@ -1119,28 +1119,28 @@ def apply_domain_aware_background_augmentation(background, domain, difficulty_mo
         hsv[:, :, 2] = np.clip(hsv[:, :, 2] * (1.0 - 0.05 * strength), 0, 255)
         image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
         image = cv2.addWeighted(image, 0.92, cv2.GaussianBlur(image, (0, 0), sigmaX=4.0), 0.08, 0.0)
-        image = _apply_patch_color_perturbation(image, 0.75 * strength)
+        image = _apply_patch_color_perturbation(image, 0.40 * strength)
         records.extend(["brown_yellow_shift", "contrast_reduction", "debris_overlay"])
     elif domain == "rocky":
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         gray_3 = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
         image = cv2.addWeighted(image, 0.75, gray_3, 0.25, 0.0)
-        sharp = cv2.addWeighted(image, 1.18, cv2.GaussianBlur(image, (0, 0), sigmaX=1.1), -0.18, 0.0)
-        image = _apply_edge_noise(np.clip(sharp, 0, 255).astype(np.uint8), 0.70 * strength)
+        sharp = cv2.addWeighted(image, 1.10, cv2.GaussianBlur(image, (0, 0), sigmaX=1.0), -0.10, 0.0)
+        image = _apply_edge_noise(np.clip(sharp, 0, 255).astype(np.uint8), 0.35 * strength)
         records.extend(["grayscale_perturb", "rough_sharpen", "edge_noise"])
     elif domain == "snow":
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
         hsv[:, :, 1] = np.clip(hsv[:, :, 1] * (1.0 - 0.18 * strength), 0, 255)
         hsv[:, :, 2] = np.clip(hsv[:, :, 2] * (1.0 + 0.08 * strength), 0, 255)
         image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
-        image = _apply_fog_effect(image, 0.55 * strength)
+        image = _apply_fog_effect(image, 0.38 * strength)
         wb_shift = np.array([1.0 - 0.03 * strength, 1.0, 1.0 + 0.03 * strength], dtype=np.float32)
         image = np.clip(image.astype(np.float32) * wb_shift[None, None, :], 0, 255).astype(np.uint8)
         records.extend(["overexposure", "low_saturation", "white_balance", "fog"])
     else:
-        image = _apply_patch_color_perturbation(image, 0.55 * strength)
-        image = _apply_local_brightness_variation(image, 0.04 * strength)
-        if GLOBAL_STATE["rng"].random() < 0.5:
+        image = _apply_patch_color_perturbation(image, 0.35 * strength)
+        image = _apply_local_brightness_variation(image, 0.028 * strength)
+        if GLOBAL_STATE["rng"].random() < 0.35:
             image = _apply_motion_blur(image, 3, horizontal=GLOBAL_STATE["rng"].random() < 0.5)
             records.append("mixed_blur")
         records.extend(["mixed_patch_color", "mixed_local_brightness"])
@@ -1157,7 +1157,7 @@ def apply_anti_memorization_background_transform(background, domain, difficulty_
     strength = get_difficulty_config(difficulty_mode)["bg_aug_strength"]
     records = []
 
-    crop_ratio = _sample_uniform(0.84, 0.98 if difficulty_mode == "easy" else 0.94)
+    crop_ratio = _sample_uniform(0.90, 0.99 if difficulty_mode == "easy" else 0.96)
     crop_w = max(64, int(round(w * crop_ratio)))
     crop_h = max(64, int(round(h * crop_ratio)))
     crop_x = _sample_int(0, max(0, w - crop_w))
@@ -1166,12 +1166,12 @@ def apply_anti_memorization_background_transform(background, domain, difficulty_
     image = cv2.resize(image, (w, h), interpolation=cv2.INTER_LINEAR)
     records.append("random_crop_resize")
 
-    angle = _sample_uniform(-4.0, 4.0) * strength
+    angle = _sample_uniform(-2.5, 2.5) * strength
     rot = cv2.getRotationMatrix2D((w / 2.0, h / 2.0), angle, _sample_uniform(0.98, 1.02))
     image = cv2.warpAffine(image, rot, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT_101)
     records.append("rotation")
 
-    perspective_mag = 0.018 * strength
+    perspective_mag = 0.010 * strength
     src = np.float32([[0, 0], [w - 1, 0], [0, h - 1], [w - 1, h - 1]])
     dst = src.copy()
     for idx in range(4):
@@ -1181,11 +1181,13 @@ def apply_anti_memorization_background_transform(background, domain, difficulty_
     image = cv2.warpPerspective(image, persp, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT_101)
     records.append("perspective")
 
-    image = _apply_local_brightness_variation(image, 0.03 + 0.03 * strength)
-    image = _apply_patch_color_perturbation(image, 0.55 + 0.20 * strength)
-    image = _apply_partial_blur_region(image, 0.45 + 0.30 * strength)
-    image = _apply_gamma(image, _sample_uniform(0.90, 1.12))
-    records.extend(["local_brightness", "patch_color", "partial_blur", "gamma"])
+    image = _apply_local_brightness_variation(image, 0.02 + 0.02 * strength)
+    image = _apply_patch_color_perturbation(image, 0.22 + 0.10 * strength)
+    if GLOBAL_STATE["rng"].random() < 0.45:
+        image = _apply_partial_blur_region(image, 0.20 + 0.15 * strength)
+        records.append("partial_blur")
+    image = _apply_gamma(image, _sample_uniform(0.96, 1.06))
+    records.extend(["local_brightness", "patch_color", "gamma"])
 
     return image, records
 
@@ -1201,25 +1203,25 @@ def apply_object_texture_diversity(object_bgr, object_mask, difficulty_mode, dom
     if np.count_nonzero(mask_bool) == 0:
         return image, records
 
-    if GLOBAL_STATE["rng"].random() < 0.60:
-        sigma = _sample_uniform(0.4, 1.0) * strength
+    if GLOBAL_STATE["rng"].random() < 0.35:
+        sigma = _sample_uniform(0.25, 0.60) * strength
         blurred = cv2.GaussianBlur(image, (0, 0), sigmaX=sigma)
         image[mask_bool] = blurred[mask_bool]
         records.append("local_blur")
 
-    if GLOBAL_STATE["rng"].random() < 0.55:
-        sharpened = cv2.addWeighted(image, 1.0 + 0.14 * strength, cv2.GaussianBlur(image, (0, 0), sigmaX=1.0), -0.14 * strength, 0.0)
+    if GLOBAL_STATE["rng"].random() < 0.30:
+        sharpened = cv2.addWeighted(image, 1.0 + 0.08 * strength, cv2.GaussianBlur(image, (0, 0), sigmaX=0.9), -0.08 * strength, 0.0)
         image[mask_bool] = np.clip(sharpened, 0, 255).astype(np.uint8)[mask_bool]
         records.append("sharpen")
 
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
-    hsv[:, :, 2][mask_bool] = np.clip(hsv[:, :, 2][mask_bool] * _sample_uniform(0.92, 1.08), 0, 255)
-    hsv[:, :, 1][mask_bool] = np.clip(hsv[:, :, 1][mask_bool] * _sample_uniform(0.94, 1.08), 0, 255)
+    hsv[:, :, 2][mask_bool] = np.clip(hsv[:, :, 2][mask_bool] * _sample_uniform(0.96, 1.04), 0, 255)
+    hsv[:, :, 1][mask_bool] = np.clip(hsv[:, :, 1][mask_bool] * _sample_uniform(0.97, 1.04), 0, 255)
     image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
     records.extend(["contrast_perturb", "gamma_perturb"])
 
-    if GLOBAL_STATE["rng"].random() < 0.45:
-        image = _simulate_jpeg_artifact(image, 0.5 * strength)
+    if GLOBAL_STATE["rng"].random() < 0.12:
+        image = _simulate_jpeg_artifact(image, 0.22 * strength)
         records.append("jpeg_artifact")
 
     return image, records
