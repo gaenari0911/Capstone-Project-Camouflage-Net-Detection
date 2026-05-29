@@ -11,6 +11,7 @@ Synthetic segmentation generator used to build demo/full synthetic data.
 5. 최종 선택 결과를 배경에 합성하고, sharp binary GT mask와 YOLO polygon txt를 저장합니다.
 """
 
+import argparse
 from pathlib import Path
 import random
 import csv
@@ -21,11 +22,11 @@ import numpy as np
 OBJECT_POOL_ROOT = Path("Dataset") / "object_pool"
 DEMO_BACKGROUND_ROOT = Path(r"G:\내 드라이브\데이터셋\snow")
 FULL_BACKGROUND_ROOT = Path(r"G:\내 드라이브\데이터셋")
-OUTPUT_IMAGE_ROOT = Path(r"G:\내 드라이브\합성_데이터셋\images")
-OUTPUT_MASK_ROOT = Path(r"G:\내 드라이브\합성_데이터셋\masks")
-OUTPUT_TXT_ROOT = Path(r"G:\내 드라이브\합성_데이터셋\txt")
-OUTPUT_DEBUG_ROOT = Path(r"G:\내 드라이브\합성_데이터셋\debug")
-OUTPUT_METADATA_CSV = Path(r"G:\내 드라이브\합성_데이터셋\synthesis_metadata.csv")
+OUTPUT_IMAGE_ROOT = Path(r"G:\내 드라이브\합성_데이터셋_2차\images")
+OUTPUT_MASK_ROOT = Path(r"G:\내 드라이브\합성_데이터셋_2차\masks")
+OUTPUT_TXT_ROOT = Path(r"G:\내 드라이브\합성_데이터셋_2차\txt")
+OUTPUT_DEBUG_ROOT = Path(r"G:\내 드라이브\합성_데이터셋_2차\debug")
+OUTPUT_METADATA_CSV = Path(r"G:\내 드라이브\합성_데이터셋_2차\synthesis_metadata.csv")
 VALID_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".jfif", ".webp"}
 TARGET_BACKGROUND_LONG_SIDE = 1280
 MASK_THRESHOLD = 127
@@ -66,6 +67,7 @@ FULL_MODE_TOTALS = {
 }
 
 FULL_TOTAL_IMAGES = 3000
+DEMO_TOTAL_IMAGES = 1000
 DIFFICULTY_SAMPLING_MODE = "mixed"  # "fixed" or "mixed" fixed는 difficulty mix 안하는거
 DIFFICULTY_RATIOS = {
     "easy": 0.10,
@@ -867,7 +869,10 @@ def resize_background_long_side(image, target_long_side):
     scale = float(target_long_side) / float(long_side)
     new_w = max(1, int(round(w * scale)))
     new_h = max(1, int(round(h * scale)))
-    interpolation = cv2.INTER_AREA if scale < 1.0 else cv2.INTER_LINEAR
+    if scale < 1.0:
+        interpolation = cv2.INTER_LANCZOS4 if scale < 0.95 else cv2.INTER_CUBIC
+    else:
+        interpolation = cv2.INTER_CUBIC
     return cv2.resize(image, (new_w, new_h), interpolation=interpolation)
 
 
@@ -938,16 +943,17 @@ def _allocate_counts_by_weights(total_count, weight_map):
     return allocated
 
 
-def build_full_mode_targets_from_background_distribution():
+def build_full_mode_targets_from_background_distribution(total_images=FULL_TOTAL_IMAGES):
     """
-    FULL 모드의 mode/domain 목표 수를 실제 background 확보 비율 기반으로 만듭니다.
+    mode/domain 목표 수를 실제 background 확보 비율 기반으로 만듭니다.
+    total_images를 통해 FULL/DEMO 모두 동적으로 생성할 수 있습니다.
     """
     mode_ratios = {}
     total_mode_weight = float(sum(FULL_MODE_TOTALS.values()))
     for mode_name, count in FULL_MODE_TOTALS.items():
         mode_ratios[mode_name] = float(count) / max(total_mode_weight, 1e-6)
 
-    mode_totals = _allocate_counts_by_weights(FULL_TOTAL_IMAGES, mode_ratios)
+    mode_totals = _allocate_counts_by_weights(total_images, mode_ratios)
     weighted_targets = {}
     for mode_name, total_count in mode_totals.items():
         weighted_targets[mode_name] = _allocate_counts_by_weights(total_count, FULL_BACKGROUND_COUNTS)
@@ -1203,20 +1209,30 @@ def apply_object_texture_diversity(object_bgr, object_mask, difficulty_mode, dom
     if np.count_nonzero(mask_bool) == 0:
         return image, records
 
-    if GLOBAL_STATE["rng"].random() < 0.35:
-        sigma = _sample_uniform(0.25, 0.60) * strength
+    if GLOBAL_STATE["rng"].random() < 0.10:
+        sigma = _sample_uniform(0.18, 0.40) * strength
         blurred = cv2.GaussianBlur(image, (0, 0), sigmaX=sigma)
         image[mask_bool] = blurred[mask_bool]
         records.append("local_blur")
 
-    if GLOBAL_STATE["rng"].random() < 0.30:
-        sharpened = cv2.addWeighted(image, 1.0 + 0.08 * strength, cv2.GaussianBlur(image, (0, 0), sigmaX=0.9), -0.08 * strength, 0.0)
+    if GLOBAL_STATE["rng"].random() < 0.60:
+        sharpen_amount = np.clip(0.18 + 0.20 * strength, 0.14, 0.42)
+        unsharp = cv2.GaussianBlur(image, (0, 0), sigmaX=0.9)
+        sharpened = cv2.addWeighted(image, 1.0 + sharpen_amount, unsharp, -0.85 * sharpen_amount, 0.0)
         image[mask_bool] = np.clip(sharpened, 0, 255).astype(np.uint8)[mask_bool]
         records.append("sharpen")
 
+    if GLOBAL_STATE["rng"].random() < 0.40:
+        sigma_noise = _sample_uniform(4.5, 10.5)
+        noise_rng = np.random.RandomState(GLOBAL_STATE["rng"].randint(0, 2**31 - 1))
+        noise = noise_rng.normal(0.0, sigma_noise, image.shape).astype(np.float32)
+        noisy = np.clip(image.astype(np.float32) + noise, 0, 255).astype(np.uint8)
+        image[mask_bool] = noisy[mask_bool]
+        records.append("fine_gaussian_noise")
+
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV).astype(np.float32)
-    hsv[:, :, 2][mask_bool] = np.clip(hsv[:, :, 2][mask_bool] * _sample_uniform(0.96, 1.04), 0, 255)
-    hsv[:, :, 1][mask_bool] = np.clip(hsv[:, :, 1][mask_bool] * _sample_uniform(0.97, 1.04), 0, 255)
+    hsv[:, :, 2][mask_bool] = np.clip(hsv[:, :, 2][mask_bool] * _sample_uniform(0.98, 1.06), 0, 255)
+    hsv[:, :, 1][mask_bool] = np.clip(hsv[:, :, 1][mask_bool] * _sample_uniform(0.98, 1.06), 0, 255)
     image = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
     records.extend(["contrast_perturb", "gamma_perturb"])
 
@@ -1321,7 +1337,11 @@ def resize_object_to_target_scale(image, mask, bg_h, bg_w, target_ratio):
     if new_w < MIN_OBJECT_PIXEL_SIZE or new_h < MIN_OBJECT_PIXEL_SIZE:
         return None, None
 
-    resized_image = cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
+    if new_w < image.shape[1] or new_h < image.shape[0]:
+        interpolation = cv2.INTER_LANCZOS4 if resize_scale < 0.95 else cv2.INTER_CUBIC
+    else:
+        interpolation = cv2.INTER_CUBIC
+    resized_image = cv2.resize(image, (new_w, new_h), interpolation=interpolation)
     resized_mask = cv2.resize(mask, (new_w, new_h), interpolation=cv2.INTER_NEAREST)
     resized_mask = binarize_mask(resized_mask)
     return resized_image, resized_mask
@@ -1330,7 +1350,7 @@ def resize_object_to_target_scale(image, mask, bg_h, bg_w, target_ratio):
 def choose_target_schedule():
     schedule = []
     if EXECUTION_MODE == "DEMO":
-        targets = DEMO_MODE_TARGETS
+        targets = build_full_mode_targets_from_background_distribution(total_images=DEMO_TOTAL_IMAGES)
     else:
         targets = build_full_mode_targets_from_background_distribution()
 
@@ -1924,6 +1944,8 @@ def apply_difficulty_camouflage_pull(object_bgr, object_mask, patch_bgr, difficu
     difficulty가 높을수록 foreground를 background 쪽으로 조금 더 끌어당깁니다.
     """
     strength = get_difficulty_config(difficulty_mode)["camouflage_pull"]
+    if difficulty_mode in ("hard", "extreme"):
+        strength *= 0.45
     if strength <= 0.0:
         return object_bgr
 
@@ -1940,7 +1962,7 @@ def apply_difficulty_camouflage_pull(object_bgr, object_mask, patch_bgr, difficu
         255,
     )
     obj_hsv[:, :, 1][mask_bool] = np.clip(
-        obj_hsv[:, :, 1][mask_bool] * (1.0 - 0.8 * strength) + patch_hsv[:, :, 1][mask_bool] * (0.8 * strength),
+        obj_hsv[:, :, 1][mask_bool] * (1.0 - 0.75 * strength) + patch_hsv[:, :, 1][mask_bool] * (0.75 * strength),
         0,
         255,
     )
@@ -1955,12 +1977,12 @@ def apply_blur_consistency_matching(object_bgr, object_mask, patch_bgr, difficul
     object_texture = compute_patch_texture_score(object_bgr)
     patch_texture = compute_patch_texture_score(patch_bgr)
     grad_gap = object_texture["grad_mean"] - patch_texture["grad_mean"]
-    if grad_gap <= 6.0:
+    if grad_gap <= 12.0 or GLOBAL_STATE["rng"].random() > 0.15:
         return object_bgr
 
     strength = get_difficulty_config(difficulty_mode)["boundary_softness"]
-    sigma = np.clip((grad_gap / 55.0) * 0.8 * strength, 0.0, 1.6)
-    if sigma <= 0.05:
+    sigma = np.clip((grad_gap / 55.0) * 0.6 * strength, 0.0, 1.2)
+    if sigma <= 0.08:
         return object_bgr
 
     softened = cv2.GaussianBlur(object_bgr, (0, 0), sigmaX=sigma)
@@ -1975,6 +1997,9 @@ def apply_post_blend_edge_smoothing(background, blended, alpha, x, y, difficulty
     """
     합성 후 경계 band만 아주 약하게 smoothing해 경계 단차를 줄입니다.
     """
+    if difficulty_mode in ("hard", "extreme"):
+        return blended
+
     obj_h, obj_w = alpha.shape[:2]
     result = blended.copy()
     roi = result[y:y + obj_h, x:x + obj_w]
@@ -2041,17 +2066,17 @@ def apply_tone_matching(object_bgr, object_mask, patch_bgr, mode, difficulty_mod
     band_bool = band > 0
     if np.count_nonzero(band_bool) > 0:
         local_alpha = {
-            "natural": 0.22,
-            "semi": 0.18,
-            "hard": 0.14,
-            "minimal": 0.10,
-        }.get(mode, 0.16)
+            "natural": 0.18,
+            "semi": 0.14,
+            "hard": 0.10,
+            "minimal": 0.06,
+        }.get(mode, 0.14)
         matched_hsv = cv2.cvtColor(matched.astype(np.uint8), cv2.COLOR_BGR2HSV).astype(np.float32)
         bg_hsv = cv2.cvtColor(patch_bgr, cv2.COLOR_BGR2HSV).astype(np.float32)
         band_v = matched_hsv[:, :, 2]
         band_s = matched_hsv[:, :, 1]
         band_v[band_bool] = np.clip(band_v[band_bool] * (1.0 - local_alpha) + bg_hsv[:, :, 2][band_bool] * local_alpha, 0, 255)
-        local_s_alpha = min(0.22, saturation_alpha + 0.03)
+        local_s_alpha = min(0.18, saturation_alpha + 0.02)
         band_s[band_bool] = np.clip(band_s[band_bool] * (1.0 - local_s_alpha) + bg_hsv[:, :, 1][band_bool] * local_s_alpha, 0, 255)
         matched_hsv[:, :, 2] = band_v
         matched_hsv[:, :, 1] = band_s
@@ -2168,12 +2193,8 @@ def _initialize_object_pools():
 
 def _initialize_background_state():
     background_state = {}
-    if EXECUTION_MODE == "DEMO":
-        snow_files = collect_image_files(DEMO_BACKGROUND_ROOT)
-        background_state["snow"] = {"paths": snow_files}
-    else:
-        for domain, directory in FULL_BACKGROUND_DIR_MAP.items():
-            background_state[domain] = {"paths": collect_image_files(directory)}
+    for domain, directory in FULL_BACKGROUND_DIR_MAP.items():
+        background_state[domain] = {"paths": collect_image_files(directory)}
     GLOBAL_STATE["background_state"] = background_state
 
 
@@ -2310,6 +2331,17 @@ def main():
     4. 합성 및 저장
     5. usage 통계 갱신
     """
+    global EXECUTION_MODE, SYNTHESIS_SPLIT_NAME
+    parser = argparse.ArgumentParser(description="Synthetic camouflage synthesis runner")
+    parser.add_argument("--mode", type=str, default="FULL", choices=["FULL", "DEMO"], help="실행 모드: FULL 또는 DEMO")
+    parser.add_argument("--split", type=str, default=SYNTHESIS_SPLIT_NAME, help="메타데이터 split 이름")
+    args = parser.parse_args()
+
+    EXECUTION_MODE = args.mode.upper()
+    SYNTHESIS_SPLIT_NAME = args.split
+
+    print(f"[INFO] Execution mode={EXECUTION_MODE}, split_name={SYNTHESIS_SPLIT_NAME}")
+
     _initialize_object_pools()
     schedule = choose_target_schedule()
     _initialize_usage_state(schedule)
@@ -2512,12 +2544,10 @@ def main():
 
     print(f"\n[SUMMARY] created={created} skipped={skipped} remaining_schedule={len(schedule)} attempts={attempt}")
     if EXECUTION_MODE == "DEMO":
-        print("[SUMMARY] Demo mode uses snow-only backgrounds:")
-        snow_paths = GLOBAL_STATE["background_state"].get("snow", {}).get("paths", [])
-        print(f"  snow: {len(snow_paths)} file(s)")
-        if snow_paths:
-            print(f"  first: {snow_paths[0]}")
-            print(f"  last: {snow_paths[-1]}")
+        print("[SUMMARY] Demo mode uses FULL-domain background distribution:")
+        for domain, state in GLOBAL_STATE["background_state"].items():
+            paths = state.get("paths", [])
+            print(f"  {domain}: {len(paths)} file(s)")
     save_synthesis_metadata_csv()
     _print_scale_histogram()
     _print_output_summary()

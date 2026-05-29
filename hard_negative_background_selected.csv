@@ -1,0 +1,31 @@
+﻿rank,domain,filename,image_path,hard_negative_score
+1,forest_dense,forest_dense_shadow (311).jpg,G:\내 드라이브\데이터셋\forest_dense\forest_dense_shadow (311).jpg,0.873212
+2,forest_dense,forest_dense_shadow (257).jpg,G:\내 드라이브\데이터셋\forest_dense\forest_dense_shadow (257).jpg,0.868237
+3,forest_dense,forest_dense_shadow (231).jpg,G:\내 드라이브\데이터셋\forest_dense\forest_dense_shadow (231).jpg,0.857267
+4,forest_dense,forest_dense_shadow (261).jpg,G:\내 드라이브\데이터셋\forest_dense\forest_dense_shadow (261).jpg,0.853395
+5,forest_dense,forest_dense_ (7).png,G:\내 드라이브\데이터셋\forest_dense\forest_dense_ (7).png,0.823709
+6,grass_field,image (193).jpg,G:\내 드라이브\데이터셋\grass_field\image (193).jpg,0.791373
+7,grass_field,image (239).jfif,G:\내 드라이브\데이터셋\grass_field\image (239).jfif,0.777543
+8,grass_field,image (18).jfif,G:\내 드라이브\데이터셋\grass_field\image (18).jfif,0.752436
+9,grass_field,image (223).jpg,G:\내 드라이브\데이터셋\grass_field\image (223).jpg,0.731611
+10,grass_field,image (175).jpg,G:\내 드라이브\데이터셋\grass_field\image (175).jpg,0.730739
+11,grass_field,image (433).jpg,G:\내 드라이브\데이터셋\grass_field\image (433).jpg,0.724505
+12,grass_field,image (872).jfif,G:\내 드라이브\데이터셋\grass_field\image (872).jfif,0.680632
+13,leaf_ground,imgi_290_pexels-photo-11255566.jpg,G:\내 드라이브\데이터셋\leaf_ground\imgi_290_pexels-photo-11255566.jpg,0.882688
+14,leaf_ground,imgi_934_pexels-photo-11255753.jpg,G:\내 드라이브\데이터셋\leaf_ground\imgi_934_pexels-photo-11255753.jpg,0.875343
+15,leaf_ground,imgi_544_pexels-photo-11255713.jpg,G:\내 드라이브\데이터셋\leaf_ground\imgi_544_pexels-photo-11255713.jpg,0.870567
+16,mixed,imgi_161_forest-ground-wallpaper.jpg,G:\내 드라이브\데이터셋\mixed\imgi_161_forest-ground-wallpaper.jpg,0.853215
+17,mixed,imgi_101_forest-ground-with-stones-and-grass-2048x2048.jpg,G:\내 드라이브\데이터셋\mixed\imgi_101_forest-ground-with-stones-and-grass-2048x2048.jpg,0.841609
+18,mixed,imgi_116_forest-floor-terrain_0001_02_S_enl.jpg,G:\내 드라이브\데이터셋\mixed\imgi_116_forest-floor-terrain_0001_02_S_enl.jpg,0.837169
+19,mixed,imgi_104_seamless-rocky-ground-moss-texture-background-gray-102824844.jpg,G:\내 드라이브\데이터셋\mixed\imgi_104_seamless-rocky-ground-moss-texture-background-gray-102824844.jpg,0.836361
+20,mixed,imgi_169_0129-pebbles-and-icy-grass-texture-seamless.jpg,G:\내 드라이브\데이터셋\mixed\imgi_169_0129-pebbles-and-icy-grass-texture-seamless.jpg,0.834415
+21,mixed,imgi_82_closeup-small-stone-background-natural-background-cast-gravel-and-sand-texture-ground-level-view-photo.jpg,G:\내 드라이브\데이터셋\mixed\imgi_82_closeup-small-stone-background-natural-background-cast-gravel-and-sand-texture-ground-level-view-photo.jpg,0.827359
+22,mixed,imgi_124_0035-ground-texture-seamless.jpg,G:\내 드라이브\데이터셋\mixed\imgi_124_0035-ground-texture-seamless.jpg,0.826787
+23,rocky,imgi_133_rock-6560662_1280.jpg,G:\내 드라이브\데이터셋\rocky\imgi_133_rock-6560662_1280.jpg,0.799373
+24,rocky,imgi_2002_pexels-photo-27102852.jpg,G:\내 드라이브\데이터셋\rocky\imgi_2002_pexels-photo-27102852.jpg,0.786790
+25,rocky,imgi_2152_pexels-photo-6472943.jpg,G:\내 드라이브\데이터셋\rocky\imgi_2152_pexels-photo-6472943.jpg,0.762153
+26,snow,imgi_128_93685372-the-texture-of-the-ground-covered-with-a-thin-layer-of-snow-the-soil-of-the-garden-in-winter-the.jpg,G:\내 드라이브\데이터셋\snow\imgi_128_93685372-the-texture-of-the-ground-covered-with-a-thin-layer-of-snow-the-soil-of-the-garden-in-winter-the.jpg,0.869349
+27,snow,imgi_183_the-texture-of-the-ground-covered-with-a-thin-layer-of-snow-the-soil-of-the-garden-in-winter-the-dug-ground-close-up-photo.jpg,G:\내 드라이브\데이터셋\snow\imgi_183_the-texture-of-the-ground-covered-with-a-thin-layer-of-snow-the-soil-of-the-garden-in-winter-the-dug-ground-close-up-photo.jpg,0.865330
+28,snow,imgi_170_JeroenSchouten-Speulderbos-Speulderforest-Winter-Spring-Path.jpg.jpg,G:\내 드라이브\데이터셋\snow\imgi_170_JeroenSchouten-Speulderbos-Speulderforest-Winter-Spring-Path.jpg.jpg,0.823426
+29,snow,imgi_180_snow_covering_grass_1_diffuse.jpg,G:\내 드라이브\데이터셋\snow\imgi_180_snow_covering_grass_1_diffuse.jpg,0.821859
+30,snow,imgi_164_grass-in-the-frost-the-grass-in-winter-covered-with-frost-closeup-with-a-small-depth-of-field-photo.jpg,G:\내 드라이브\데이터셋\snow\imgi_164_grass-in-the-frost-the-grass-in-winter-covered-with-frost-closeup-with-a-small-depth-of-field-photo.jpg,0.821822
