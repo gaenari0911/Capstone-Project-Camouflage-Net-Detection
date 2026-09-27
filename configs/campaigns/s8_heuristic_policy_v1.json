@@ -1,0 +1,17 @@
+{
+ "schema_version":1,"seed":7,"images_per_dataset":3000,"long_side":1280,
+ "datasets":{"train748":["A0","A1","A2","A3","A4","A5"],"low187":["A1"]},
+ "foreground_candidates":8,"positions":16,"sample_attempts":10,
+ "domain_weights":"decoded FULL background counts","mode_counts":{"natural":2700,"semi":300},
+ "difficulty_counts":{"easy":300,"medium":1350,"hard":1050,"extreme":300},
+ "quota":"ceil(environment target/eligible objects); low minimum-use candidates require remaining-round bipartite matching feasibility excluding repeated object/background",
+ "low_selection":"up to8 feasible foreground choices remain available for A1 compatibility ranking; static allocation is a capacity certificate only",
+ "duplicate_rule":"at most one same foreground/background per condition",
+ "paired":"same plans/features; condition-local ordered usage; A0 never score/quota ranks",
+ "position_policy":"legacy sample_candidate_positions16 with per-object SHA256 stream; common to all conditions",
+ "selection_policy":"paired_v1 stable top1 A1-A5, A0 seeded uniform; no legacy semi top3",
+ "max_workers":6,"inflight_multiplier":1,"task_timeout_seconds":240,
+ "ram_headroom_gib":4,"commit_headroom_gib":4,"commit_fraction_max":0.85,
+ "new_disk_gib":100,"min_free_gib":20,"active_seconds_max":604800,
+ "polygon_roundtrip_iou_min":0.90
+}

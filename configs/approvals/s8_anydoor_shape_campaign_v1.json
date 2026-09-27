@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED_SCOPE_PENDING_TECHNICAL_RELEASE",
+  "date": "2026-09-16",
+  "basis": "User inspected overlays, accepted current shape-controlled method, requested one-command steps6-9 and delegated task-aware rule selection.",
+  "pilot_quality": "USER_ACCEPTED_REVIEWED_SHAPE_CONTROL_SAMPLES_WITH_RESIDUAL_ERROR",
+  "quality_evidence": "artifacts/s8_anydoor_shape_review/run_v1/agent_review.json",
+  "shape_control": true,
+  "sam2": false,
+  "annotation_policy": "Use input placement masks as user-accepted approximate synthetic labels; do not claim independently verified output GT.",
+  "candidate_counts": {"train748": 6000, "low187": 6000},
+  "selection_counts_per_pool": {"random": 3000, "task_aware": 3000},
+  "task_rule": {"judge": "L0_seed0_best_mask", "lambda": 1.0, "formula": "(1-mask_iou)+(1-confidence)", "matching": "prediction with highest raster IoU to the single target; tie highest confidence then stable index", "no_prediction": {"iou": 0, "confidence": 0}, "rank": "descending", "tie_seed": 416, "validity": "common pre-Judge technical audit; not Judge-based filtering", "distribution": "report domain/scale/object/no-prediction distributions, no hidden rebalancing"},
+  "training": {"experiments": ["M2", "M3", "L2", "L3"], "seeds": [0, 1, 2], "epochs": 150, "batch": 16, "gpu_concurrency": 1, "learner": "unchanged custom H2 DualHeadSegment n"},
+  "evaluation": {"unique_test_checkpoints": 28, "logical_test_cells": 30, "A_excluded": true, "test_after_validation_checkpoint_and_rules_freeze_only": true},
+  "active_time_ceiling": null,
+  "per_job_approval_required": false,
+  "safety": "Technical verification failures pause affected dispatch with evidence; never skip them or replace failed outputs with heuristic images. Preserve existing22 completed jobs."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED_BY_USER",
+  "date": "2026-09-10",
+  "foreground_policy": "split_by_real_budget",
+  "foreground_subsets": {"A": "train748", "M": "train748", "H": "train748", "L": "low187"},
+  "judge": "L0_seed0_best_mask",
+  "generation_seed": 7,
+  "heuristic": {"A0_A5_train748": 18000, "L_A1_low187": 3000},
+  "generative_candidates": {"M_train748": 6000, "L_low187": 6000},
+  "selection": "Within each M/L pool select random3000 and task-aware3000; do not generate twice per selection strategy",
+  "formal_unique_images": 33000,
+  "training_jobs": 34,
+  "test_unique_checkpoints": 28,
+  "pilot_quality_gate": "retained; quality approval must cover both source budgets before their formal generation",
+  "preserve_completed_training": true,
+  "val_test_foreground_allowed": false,
+  "budget_changes": "none; retain100GiB new,20GiB free,168h cumulative; reprofile increased generation",
+  "low187_quota_policy": "UNDECIDED; existing maximum7 cannot supply3000; block formal low synthesis until explicit policy freeze",
+  "current_execution_scope": "approval/documentation and source provenance verification only; no generation/training/inference"
+}

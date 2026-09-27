@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "mode": "s8_preflight",
+  "output": "artifacts/s8_preflight/run_v2",
+  "cpu_slots": 6,
+  "max_parallel": 2,
+  "inputs": {},
+  "disk_budget_gib": 100,
+  "min_free_gib": 20,
+  "active_seconds_max": 604800,
+  "jobs": [
+    {
+      "id": "source_provenance",
+      "kind": "source_audit",
+      "dependencies": [],
+      "cpu": 1,
+      "max_attempts": 3,
+      "duration_seconds": 0.2,
+      "fail_attempts": [],
+      "partial_attempts": []
+    },
+    {
+      "id": "fixture_prepare",
+      "kind": "fixture",
+      "dependencies": [],
+      "cpu": 1,
+      "max_attempts": 3,
+      "duration_seconds": 0.2,
+      "fail_attempts": [],
+      "partial_attempts": []
+    },
+    {
+      "id": "fixture_train_a",
+      "kind": "fixture",
+      "dependencies": [
+        "fixture_prepare"
+      ],
+      "cpu": 1,
+      "max_attempts": 3,
+      "duration_seconds": 0.2,
+      "fail_attempts": [],
+      "partial_attempts": []
+    },
+    {
+      "id": "fixture_train_b",
+      "kind": "fixture",
+      "dependencies": [
+        "fixture_train_a"
+      ],
+      "cpu": 1,
+      "max_attempts": 3,
+      "duration_seconds": 0.2,
+      "fail_attempts": [],
+      "partial_attempts": []
+    },
+    {
+      "id": "fixture_report",
+      "kind": "fixture",
+      "dependencies": [
+        "fixture_train_b"
+      ],
+      "cpu": 1,
+      "max_attempts": 3,
+      "duration_seconds": 0.2,
+      "fail_attempts": [],
+      "partial_attempts": []
+    }
+  ]
+}

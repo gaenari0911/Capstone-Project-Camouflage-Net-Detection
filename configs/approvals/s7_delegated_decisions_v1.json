@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "approval_id": "s7_delegated_research_decisions_v1",
+  "date": "2026-09-08",
+  "status": "APPROVED_BY_USER_DELEGATION",
+  "authority": {
+    "kind": "explicit_user_delegation",
+    "statement": "13개를 너가 읽고 결정해서 승인해줘. 너가 결정해주면, 그거 바탕으로 내가 sol에서 s8프롬프트 실행시킬게",
+    "decision_maker": "assistant_planner",
+    "scope": "13 research decisions and conditional campaign scope"
+  },
+  "execution_readiness": "PENDING_S8_IMPLEMENTATION_AND_PREFLIGHT",
+  "executable_config": false,
+  "references": {
+    "s7_summary": {
+      "path": "artifacts/s7_plan/run_v3/summary.json",
+      "sha256": "6c6b7524cb128114a2cc4acdb01e7ae0443abd9f3129c4b792fcd2cac9d398e0"
+    },
+    "s6_summary": {
+      "path": "artifacts/s6_profile/run_v3/summary.json",
+      "sha256": "4a1c6a700535d14a1d2e1aae93163a0ac8a1ce481c8fb3072a5b1a0189e74232"
+    },
+    "proposed_recipe": {
+      "path": "configs/campaigns/s7_plan.json",
+      "file_sha256": "993de76483f2f40c12731268f4d8488b0a1a3b5b0c4a162dd48f25d0416493f0"
+    },
+    "low187": {
+      "path": "manifests/low187_v1.jsonl",
+      "sha256": "301be1cb0a8ed4b2c6b9ddec004c9f38974b99035d42bd94913d65a050d0b0d5"
+    }
+  },
+  "decisions": [
+    {
+      "id": 1,
+      "name": "campaign",
+      "value": {
+        "target": "all",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "seed0_first": true,
+        "automatic_remaining_seeds": true,
+        "unique_training_jobs": 54,
+        "epoch_job_units": 6120,
+        "seed0_jobs_included_not_added": 18,
+        "gate": "technical_correctness_and_identical_contract_not_metric_improvement"
+      }
+    },
+    {
+      "id": 2,
+      "name": "synthetic_source_budget",
+      "value": {
+        "shared_low187_for_A_M_L": true,
+        "real_train_M_A_H": 748,
+        "real_train_L": 187,
+        "verify_foreground_source_membership": true,
+        "generation_seed": 7,
+        "subset_seed": 42,
+        "selection_seed": 7
+      }
+    },
+    {
+      "id": 3,
+      "name": "batch",
+      "value": {
+        "batch": 16,
+        "imgsz": 640,
+        "mask_ratio": 1,
+        "overlap_mask": false,
+        "amp": true,
+        "compile": false,
+        "automatic_batch_shrink": false,
+        "real_loader_preflight_required": true
+      }
+    },
+    {
+      "id": 4,
+      "name": "parallelism",
+      "value": {
+        "gpu_train_concurrency": 2,
+        "oom_fallback_concurrency": 1,
+        "cpu_heavy_workers_global_max": 6,
+        "cpu_gpu_overlap": true,
+        "reservation_formula": "min(total_mib*0.85,total_mib-2048)",
+        "s6_initial_reservation_mib": 5520,
+        "measure_real_loader_reservation": true,
+        "anydoor_gpu_exclusive_until_profiled": true
+      }
+    },
+    {
+      "id": 5,
+      "name": "ablation_epochs",
+      "value": 40
+    },
+    {
+      "id": 6,
+      "name": "M_L_H_epochs",
+      "value": {
+        "epochs": 150,
+        "early_stopping": false,
+        "best_checkpoint_metric": "val_mask_map50_95"
+      }
+    },
+    {
+      "id": 7,
+      "name": "augmentation",
+      "value": {
+        "hsv_h": 0.015,
+        "hsv_s": 0.7,
+        "hsv_v": 0.4,
+        "translate": 0.1,
+        "scale": 0.5,
+        "fliplr": 0.5,
+        "mosaic": 0,
+        "mixup": 0,
+        "copy_paste": 0,
+        "cutmix": 0,
+        "remaining_effective_args": "resolve_and_record_before_training"
+      }
+    },
+    {
+      "id": 8,
+      "name": "background_only",
+      "value": {
+        "add_background_only_training_examples": false,
+        "external_backgrounds_for_synthesis": true
+      }
+    },
+    {
+      "id": 9,
+      "name": "anydoor_pilot",
+      "value": {
+        "pilot_generation_approved": true,
+        "pilot_images": 100,
+        "pilot_separate_from_formal_pool": true,
+        "quality_review_required": true,
+        "quality_review_status": "PENDING_ACTUAL_IMAGES_AND_USER_REVIEW",
+        "formal_valid_pool_images": 6000,
+        "formal_generation_conditional_on_quality_approval": true
+      }
+    },
+    {
+      "id": 10,
+      "name": "judge",
+      "value": {
+        "source": "L0_seed0_best_mask",
+        "checkpoint_hash_freeze_required": true,
+        "learner_initialization_from_judge": false
+      }
+    },
+    {
+      "id": 11,
+      "name": "disk_budget",
+      "value": {
+        "incremental_campaign_budget_gib": 100,
+        "minimum_remaining_free_disk_gib": 20,
+        "count": "new outputs, retries, caches and additional generative environment/weights",
+        "overrun": "pause_affected_dispatch_without_deleting",
+        "estimate_status": "S7_12.64_GiB_uses_384px_smoke_not_formal_forecast"
+      }
+    },
+    {
+      "id": 12,
+      "name": "time_budget",
+      "value": {
+        "active_campaign_wall_hours_max": 168,
+        "exclude": "offline_time_and_user_review_waits",
+        "eta_after": "first_real_epoch_and_seed0",
+        "progress_interval_hours": 24,
+        "overrun": "checkpoint_at_safe_boundary_and_pause",
+        "seed1_seed2_require_new_approval": false
+      }
+    },
+    {
+      "id": 13,
+      "name": "final_Test",
+      "value": {
+        "scope_approved": true,
+        "series": [
+          "M",
+          "L",
+          "H"
+        ],
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "A_screening_excluded": true,
+        "unique_checkpoint_evaluations": 36,
+        "logical_evaluation_cells": 42,
+        "H2_references_M0_M1": true,
+        "execute_only_after": "all_selected_checkpoints_and_evaluation_rules_frozen_using_val_only",
+        "per_checkpoint_approval_required": false
+      }
+    }
+  ],
+  "gates": {
+    "campaign_execution": "APPROVED_SCOPE_PENDING_TECHNICAL_PREFLIGHT",
+    "pilot_generation": "APPROVED_100_IMAGES",
+    "generative_pilot_quality": "PENDING_ACTUAL_REVIEW",
+    "final_test": "APPROVED_SCOPE_PENDING_FINAL_FREEZE"
+  },
+  "implementation_requirements": [
+    "Bind this approval hash and new effective config/manifest/code hashes before dispatch; preserve S7 historical output.",
+    "S7 planned reuse hashes are design identities, not evidence that real checkpoint hashes match.",
+    "Verify low187 object source mapping, real train/val loader, boundary loss, H0/H1 adapters, full mask validator and resume before dependent formal jobs.",
+    "Model/environment installation or download remains subject to actual OS/network permissions; never replace the verified training environment.",
+    "Task-aware matching/lambda/eligibility and generator settings must be specified and validated before selection; this approval does not invent unknown results.",
+    "Pilot gate must depend on actual pilot outputs and review; do not treat it as an unconditional root.",
+    "No new research model, extra H2 retraining, new dataset split or cloud execution is authorized by this record."
+  ]
+}

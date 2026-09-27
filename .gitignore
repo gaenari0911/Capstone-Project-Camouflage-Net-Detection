@@ -215,3 +215,32 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Research data and local execution state are not public release assets.
+.venv*/
+Dataset/
+Dataset.zip
+Real_CamoDataset.zip
+artifacts/
+/Ultralytics/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.sqlite*
+*.db
+*.pem
+*.key
+.env.*
+demo_data.js
+publication_audit.local.json
+
+# Dataset masks/labels and browser profiles must never be staged accidentally.
+converted/
+manifests/
+edge_profile_*/

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED_BY_USER",
+  "date": "2026-09-09",
+  "authority": "User explicitly accepted proposed A/H seed0 and M/L seeds0/1/2 configuration",
+  "base_approval_sha256": "21da4972d061371f239078b0e229d1eda393a1bd2e3242b03e6e447545095154",
+  "seeds": {"A": [0], "M": [0, 1, 2], "L": [0, 1, 2], "H": [0]},
+  "training_jobs": 34,
+  "epoch_job_units": 4440,
+  "test_unique_checkpoints": 28,
+  "test_logical_cells": 30,
+  "unchanged": "A40 M/L/H150; synthetic3000; shared_low187; DualHeadSegment for A/M/L; H2 reuses M0/M1; pilot quality gate; budgets",
+  "policy": "Cancel only never-started excluded jobs; preserve all existing training artifacts"
+}

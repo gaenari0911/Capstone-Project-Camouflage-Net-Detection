@@ -1,0 +1,15 @@
+experiment_id,stage,dataset,real_ratio,synthetic_type,synthetic_count,model,pretrained_checkpoint,epochs,seed,status,output_dir,best_checkpoint,val_mask_map50,val_mask_map50_95,test_mask_map50,test_mask_map50_95,notes
+A0,heuristic_ablation,real_train748_plus_synth,1.0,random_copy_paste,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; 30-50 epoch screening; control only; no generation or training performed
+A1,heuristic_ablation,real_train748_plus_synth,1.0,full_heuristic,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; 30-50 epoch screening; shared candidate plan
+A2,heuristic_ablation,real_train748_plus_synth,1.0,full_minus_tone_score,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; remove tone score contribution; preserve shared rendering
+A3,heuristic_ablation,real_train748_plus_synth,1.0,full_minus_texture_score,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; remove texture score contribution
+A4,heuristic_ablation,real_train748_plus_synth,1.0,full_minus_edge_score,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; remove edge score contribution; preserve blending
+A5,heuristic_ablation,real_train748_plus_synth,1.0,full_minus_placement_score,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Validation only; remove placement score contribution; preserve scale and domain candidate policy
+M0,main,real_train748,1.0,none,0,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Independent common pretrained initialization; background-only policy unresolved
+M1,main,real_train748_plus_synth,1.0,heuristic,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Heuristic fixed after validation ablation; independent common pretrained initialization
+M2,main,real_train748_plus_synth,1.0,generative,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Same candidate pool as M3; no task-aware filtering; pilot approval required before large generation
+M3,main,real_train748_plus_synth,1.0,task_aware,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Same candidate pool as M2; Judge separate from learner; no Test scoring
+L0,low_data,real_train187_manifest_pending,0.25,none,0,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Exactly 187 of 748; no full-real trained initialization; subset not yet generated
+L1,low_data,real_train187_plus_synth,0.25,heuristic,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Same 187 manifest as L0; foreground provenance must respect 25 percent budget
+L2,low_data,real_train187_plus_synth,0.25,generative,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Same candidate pool as L3; candidate source must respect 25 percent budget
+L3,low_data,real_train187_plus_synth,0.25,task_aware,3000,UNDECIDED,UNDECIDED,UNDECIDED,UNDECIDED,PLANNED,,,,,,,Same candidate pool as L2; Judge and foreground restricted to permitted Real sources

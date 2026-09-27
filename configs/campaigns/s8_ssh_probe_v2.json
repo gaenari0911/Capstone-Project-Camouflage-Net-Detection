@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "mode": "s8_preflight",
+  "output": "artifacts/s8_ssh_probe/run_v2",
+  "cpu_slots": 1,
+  "max_parallel": 1,
+  "inputs": {},
+  "disk_budget_gib": 1,
+  "min_free_gib": 20,
+  "active_seconds_max": 900,
+  "jobs": [{"id": "ssh_wait", "kind": "fixture", "dependencies": [], "cpu": 1,
+            "max_attempts": 1, "duration_seconds": 600, "fail_attempts": [], "partial_attempts": []}]
+}

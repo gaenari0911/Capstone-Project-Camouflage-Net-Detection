@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "campaign_name": "s5_dualhead_smoke_v7",
+  "gpu_slots": 1,
+  "source_zip_sha256": "ee444fca6cabc979b6dc5f0d9dead5e7c1cefb1a99c9320bc5c2a612ec60f008",
+  "paths": {
+    "artifact_root": "artifacts/s5_smoke/run_v7",
+    "source_zip": "D:/Capstone_Projects/Capstone(Dataset)/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model.zip",
+    "model_yaml": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/experiments/yolov8-seg-custom.yaml",
+    "pretrained": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/experiments/yolov8m-seg.pt",
+    "train_manifest": "tests/fixtures/s5_train_manifest.json",
+    "val_manifest": "tests/fixtures/s5_val_manifest.json"
+  },
+  "model": {
+    "class": "DualHeadSegment",
+    "scale": "n",
+    "num_classes": 1,
+    "initialization_seed": 20260908,
+    "initialization_policy": "independent base pretrained plus seed-initialized cv5 boundary head"
+  },
+  "device": "cuda:0",
+  "effective_args": {
+    "imgsz": 64,
+    "batch": 1,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "weight_decay": 0.0005,
+    "lrf": 0.01,
+    "amp": true,
+    "compile": false,
+    "workers": 0,
+    "mask_ratio": 1,
+    "overlap_mask": false,
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "cutmix": 0.0
+  },
+  "metrics": {
+    "confidence": 0.25,
+    "mask_iou": 0.5
+  },
+  "jobs": [
+    {
+      "job_id": "dualhead_smoke_a",
+      "dependencies": [],
+      "steps": 2,
+      "max_attempts": 2,
+      "inject_failure_after_step": 1
+    },
+    {
+      "job_id": "dualhead_smoke_b",
+      "dependencies": ["dualhead_smoke_a"],
+      "steps": 1,
+      "max_attempts": 1,
+      "inject_failure_after_step": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "mode": "s8_preflight",
+  "output": "artifacts/s8_epoch_dispatch/run_v1",
+  "cpu_slots": 6,
+  "max_parallel": 2,
+  "inputs": {},
+  "disk_budget_gib": 100,
+  "min_free_gib": 20,
+  "active_seconds_max": 604800,
+  "jobs": [
+    {"id":"epoch_H2","kind":"epoch_train","dependencies":[],"cpu":3,"max_attempts":3,"duration_seconds":0,"fail_attempts":[],"partial_attempts":[],"training":{"experiment":"L0","seed":0,"epochs":2,"stop_after_epoch":1}},
+    {"id":"cpu_overlap","kind":"fixture","dependencies":[],"cpu":1,"max_attempts":1,"duration_seconds":30,"fail_attempts":[],"partial_attempts":[]},
+    {"id":"epoch_H0","kind":"epoch_train","dependencies":["epoch_H2"],"cpu":3,"max_attempts":3,"duration_seconds":0,"fail_attempts":[],"partial_attempts":[],"training":{"experiment":"H0_R","seed":0,"epochs":2,"stop_after_epoch":0}},
+    {"id":"epoch_H1","kind":"epoch_train","dependencies":["epoch_H2"],"cpu":3,"max_attempts":3,"duration_seconds":0,"fail_attempts":[],"partial_attempts":[],"training":{"experiment":"H1_R","seed":0,"epochs":2,"stop_after_epoch":0}}
+  ]
+}

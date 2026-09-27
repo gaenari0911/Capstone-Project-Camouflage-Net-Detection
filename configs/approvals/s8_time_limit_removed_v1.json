@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-16",
+  "status": "APPROVED_BY_USER",
+  "basis": "User explicitly removed the 168-hour time limit and requested prompt.txt steps 6-9",
+  "active_campaign_wall_hours_max": null,
+  "scope": "New AnyDoor pilot, M/L candidate pools, selection, M2/M3/L2/L3 training and final evaluation",
+  "continue_tracking_elapsed_time": true,
+  "preserve_completed_frozen_contracts": true,
+  "disk_budget_gib": 100,
+  "minimum_free_disk_gib": 20,
+  "note": "Time ceiling removed; disk capacity protection and actual pilot quality review remain. No pilot quality approval inferred."
+}

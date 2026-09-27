@@ -1,0 +1,8 @@
+# The research export is SHA-256 bound to its exact source bytes.
+# Preserve source line endings across Windows/Linux instead of rewriting them.
+* -text
+*.png binary
+# Keep the three pre-existing main-branch files on their original Git LF convention.
+/.gitignore text eol=lf
+/LICENSE text eol=lf
+/README.md text eol=lf

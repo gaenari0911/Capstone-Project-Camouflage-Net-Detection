@@ -1,0 +1,28 @@
+name: CPU checks and aggregate results
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  cpu-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, pinned 2026-09-27
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5, pinned 2026-09-27
+        with:
+          python-version: '3.11'
+      - name: Check aggregate metrics and source export hashes
+        run: python tools/verify_public_results.py
+      - name: Standard-library scheduler and synthesis fixtures
+        run: python -m unittest tests.test_s0_s1 tests.test_s3_synthesis -v
+      - name: AnyDoor selection logic without models or GPU
+        run: python tools/test_s8_anydoor_selection.py -v
+      - name: Publication boundary and credential-pattern checks
+        run: python tools/publication_preflight.py

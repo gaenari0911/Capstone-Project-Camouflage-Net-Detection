@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED_BY_USER_DELEGATION",
+  "date": "2026-09-13",
+  "scope": "Existing train748 A0 in s8_heuristic_formal/run_v1 only",
+  "decision": "Preserve existing A0; disclose 9 excess same-object/background repetitions as a random-control exception",
+  "basis": "User explicitly delegated selection between preservation and regeneration",
+  "exact_image_duplicates_within_A0": 0,
+  "repeat_excess": 9,
+  "image_count": 3000,
+  "rationale": "0.3 percent excess; retain frozen paired candidate plan and avoid post-hoc selective regeneration",
+  "limitations": "A0 differs in history-based eligibility as well as scoring; do not claim a perfectly isolated score-only contrast",
+  "unchanged": "A1-A5 and low187 repeat prohibitions; all source budgets, counts, seeds, rendering and training recipes",
+  "does_not_approve": "visual quality acceptance or starting formal long training in the current task"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED_BY_USER",
+  "date": "2026-09-10",
+  "low_heuristic_images": 3000,
+  "foreground_subset": "low187",
+  "requirements": [
+    "Balance foreground reuse within each eligible environment",
+    "Limit repeated same-object/background/similar-placement combinations",
+    "Keep source budget187; never import remaining train objects to resolve capacity",
+    "Inspect train/validation gap versus L0; no Test tuning",
+    "Do not claim3000 is optimal or diversity controls guarantee no overfitting"
+  ],
+  "quota_ceiling": "May adapt to required counts instead of legacy7; exact allocation must be deterministic and frozen before generation",
+  "implementation_status": "PENDING_IMPLEMENTATION_AND_VALIDATION",
+  "generation_authorized_by_this_record": false
+}
