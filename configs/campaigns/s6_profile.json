@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "frozen_profile_contract",
+  "scope": "profiling_only_no_formal_training",
+  "paths": {
+    "artifact_root": "artifacts/s6_profile/run_v3",
+    "s5_config": "configs/campaigns/s5_dualhead_smoke.json"
+  },
+  "inputs": {
+    "s4_source_manifest": "artifacts/s4_smoke/source_manifest_v1.json",
+    "environment_resolution": "manifests/object_environment_resolution_v1.jsonl"
+  },
+  "expected_s5_hashes": {
+    "config_sha256": "9f19e20630dae226be110c409690ffa6a553f2dee3f84aa0b5ca070d1277078a",
+    "code_sha256": "ced2e424351ca1b36b9c2b6f84926175d25172afbff5f913eee6d407bfae8abe",
+    "pretrained_sha256": "51fa7e5ef385efa6d5b1d8e31b73399be6ed5d7ca71bda4bd4b2794bb445c4f4",
+    "source_zip_sha256": "ee444fca6cabc979b6dc5f0d9dead5e7c1cefb1a99c9320bc5c2a612ec60f008"
+  },
+  "expected_input_hashes": {
+    "s4_source_manifest_sha256": "29d35d96e025269badd9963c1aee4b42cb163f1130ba532824ef991c5cba1f74",
+    "environment_resolution_sha256": "9caa6de90be295673d419784dbed02cdb0343734890a45e2607614d0f92e369e"
+  },
+  "expected_initial_state_sha256": "89d7cd90a029ae51a24f7df433c644adc8c6dd8faacf804d687debaba915bc18",
+  "gpu_profile": {
+    "batches": [4, 8, 16],
+    "warmup_steps": 1,
+    "measure_steps": 3,
+    "single_job_reservation_mib": 12000,
+    "effective_args": {
+      "imgsz": 640,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "weight_decay": 0.0005,
+      "mask_ratio": 1,
+      "overlap_mask": false,
+      "amp": true,
+      "compile": false
+    }
+  },
+  "cpu_smoke": {
+    "workers": 2,
+    "campaign_seed": 7,
+    "sample_count": 2,
+    "candidates_per_sample": 3,
+    "positions_per_candidate": 2,
+    "target_long_side": 384,
+    "modes": ["natural", "semi"],
+    "difficulties": ["easy", "medium", "hard", "extreme"],
+    "scale_buckets": ["05to10", "10to15", "15to20"]
+  },
+  "monitor_interval_seconds": 0.2
+}

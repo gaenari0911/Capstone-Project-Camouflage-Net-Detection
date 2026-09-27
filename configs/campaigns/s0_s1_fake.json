@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "campaign_name": "s0_s1_fake_example_v2",
+  "paths": {
+    "artifact_root": "../../artifacts/s0_s1_fake",
+    "protected_roots": [
+      "../../Dataset",
+      "../../Dataset.zip",
+      "../../../../Capstone(Dataset)"
+    ],
+    "input_files": [
+      "../../README.md"
+    ]
+  },
+  "resources": {
+    "cpu_slots": 6,
+    "gpu_mib": 12000
+  },
+  "jobs": [
+    {
+      "job_id": "prepare",
+      "dependencies": [],
+      "resources": {"cpu": 2, "gpu_mib": 0},
+      "duration_seconds": 0.1,
+      "max_attempts": 1,
+      "fail_attempts": []
+    },
+    {
+      "job_id": "fake_gpu_train",
+      "dependencies": ["prepare"],
+      "resources": {"cpu": 2, "gpu_mib": 8000},
+      "duration_seconds": 0.15,
+      "max_attempts": 2,
+      "fail_attempts": [1]
+    },
+    {
+      "job_id": "cpu_side_branch",
+      "dependencies": ["prepare"],
+      "resources": {"cpu": 4, "gpu_mib": 0},
+      "duration_seconds": 0.15,
+      "max_attempts": 1,
+      "fail_attempts": []
+    },
+    {
+      "job_id": "finalize",
+      "dependencies": ["fake_gpu_train", "cpu_side_branch"],
+      "resources": {"cpu": 1, "gpu_mib": 0},
+      "duration_seconds": 0.05,
+      "max_attempts": 1,
+      "fail_attempts": []
+    }
+  ]
+}

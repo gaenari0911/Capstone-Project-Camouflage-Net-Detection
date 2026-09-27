@@ -1,0 +1,5 @@
+{
+  "fixture_id": "s3_paired_v1",
+  "description": "Small dependency-free fixture; workers hash this file with plan IDs to derive deterministic feature records.",
+  "validity": "All generated fixture candidate records are explicitly valid. No new image threshold is introduced."
+}

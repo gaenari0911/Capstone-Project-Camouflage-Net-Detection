@@ -1,0 +1,2332 @@
+{
+  "source_report": "end_to_end_v6_readable",
+  "source_report_manifest_sha256": "952dbce90787c1ef12c49c8698064b0fdd28c88f0cf6efe7ae3a3333f5bb7508",
+  "scope": "Source files and aggregate metrics/charts only. No raw images, labels, masks, weights, demo_data.js, or personal runtime settings.",
+  "files": {
+    "capstone_lab/__init__.py": {
+      "sha256": "71aa6c19790f27bd69b684d4d5493c8280bcbf1c5f0ddb6a26f0b7c0ce4ca532",
+      "source": "capstone_lab/__init__.py",
+      "bytes": 152
+    },
+    "capstone_lab/__main__.py": {
+      "sha256": "3d2438ae92f4746e9ffaa1f837b1fe803f6281091d1f31f8c95643716f257d9a",
+      "source": "capstone_lab/__main__.py",
+      "bytes": 80
+    },
+    "capstone_lab/audit.py": {
+      "sha256": "fd917bb206c6d2bfff0cfe95c6350e2d835ffbf5aa5658e9398f61bfcb87b148",
+      "source": "capstone_lab/audit.py",
+      "bytes": 3978
+    },
+    "capstone_lab/campaign/__init__.py": {
+      "sha256": "546b8a493a1641aa8848296a4af0a25d6a3785287f01aca4d6cce6084cf1fd5e",
+      "source": "capstone_lab/campaign/__init__.py",
+      "bytes": 81
+    },
+    "capstone_lab/campaign/__main__.py": {
+      "sha256": "71cdd4ba594ad8d020883dae88acce05645691bee1461d904300c5fe78f9d5b0",
+      "source": "capstone_lab/campaign/__main__.py",
+      "bytes": 2126
+    },
+    "capstone_lab/campaign/contracts.py": {
+      "sha256": "ac9764f748b6235e6084c11a1de402405e96a71fc75a3c37af1f7804712d5f3e",
+      "source": "capstone_lab/campaign/contracts.py",
+      "bytes": 14988
+    },
+    "capstone_lab/campaign/data.py": {
+      "sha256": "bab1e5ed6cd1d355733ed2bddacaf636cc496bdf9fde68010142c012282988ed",
+      "source": "capstone_lab/campaign/data.py",
+      "bytes": 6038
+    },
+    "capstone_lab/campaign/detached.py": {
+      "sha256": "4df071eda3b6eed543098471a2ce5746d6c2cee7b8044517a3bfea72ce9f0ec9",
+      "source": "capstone_lab/campaign/detached.py",
+      "bytes": 3888
+    },
+    "capstone_lab/campaign/epoch_preflight.py": {
+      "sha256": "91750393d7b03965809e6568a81e437429f0f0334dacbd74b692c3c2437da0cb",
+      "source": "capstone_lab/campaign/epoch_preflight.py",
+      "bytes": 3425
+    },
+    "capstone_lab/campaign/epoch_release.py": {
+      "sha256": "7e72a1aa2f0a604610b40064e5e050f88b801aee3acf120ed2a2a899a0fe573c",
+      "source": "capstone_lab/campaign/epoch_release.py",
+      "bytes": 4273
+    },
+    "capstone_lab/campaign/epoch_safety.py": {
+      "sha256": "f1f35f4244da9dc48ecd9558dcd002376c33ffb81d01529ea405caaa8ab9a47c",
+      "source": "capstone_lab/campaign/epoch_safety.py",
+      "bytes": 2816
+    },
+    "capstone_lab/campaign/epochs.py": {
+      "sha256": "9ae82354ec430ae60d558c3e68b6988661ef79ccc130f003a8c119904d8673aa",
+      "source": "capstone_lab/campaign/epochs.py",
+      "bytes": 16177
+    },
+    "capstone_lab/campaign/foreground_policy.py": {
+      "sha256": "14ab25ae1083bd382e2ce3514f008d3f0e17145a49b9490358798d848e71b3a0",
+      "source": "capstone_lab/campaign/foreground_policy.py",
+      "bytes": 3183
+    },
+    "capstone_lab/campaign/generative_data.py": {
+      "sha256": "0d85d34890589cd8ed220a7a3cc495c0c1e2acea19c7d30c68af6d9c21879ee5",
+      "source": "capstone_lab/campaign/generative_data.py",
+      "bytes": 2809
+    },
+    "capstone_lab/campaign/heuristic_audit.py": {
+      "sha256": "ebc9665b2d888f8856d5fa38e73295c56d44e3c4c02316502afaab083ac38399",
+      "source": "capstone_lab/campaign/heuristic_audit.py",
+      "bytes": 5835
+    },
+    "capstone_lab/campaign/heuristic_review.py": {
+      "sha256": "b86994c405922f6408eba4d9c5b215176da0a0280acfd0dd61c398662504e7f9",
+      "source": "capstone_lab/campaign/heuristic_review.py",
+      "bytes": 1852
+    },
+    "capstone_lab/campaign/io.py": {
+      "sha256": "db30a750ccf35d59be8efcda69f80016b9731b5d2fe8ee6b3f8d6109bc7b14fd",
+      "source": "capstone_lab/campaign/io.py",
+      "bytes": 2420
+    },
+    "capstone_lab/campaign/mixed.py": {
+      "sha256": "7f61ee5da5f062576ec56fe9fe7193e03c7813031797643158638391cf8c550c",
+      "source": "capstone_lab/campaign/mixed.py",
+      "bytes": 2145
+    },
+    "capstone_lab/campaign/mixed_release.py": {
+      "sha256": "a63f72c76ebcf04340bc4312365703ecdd0567492d41eff455f36ce27b6e03df",
+      "source": "capstone_lab/campaign/mixed_release.py",
+      "bytes": 5642
+    },
+    "capstone_lab/campaign/models.py": {
+      "sha256": "8d3611144fa4b65b014a6326e70b947479ecec309c618ecf3378ec21a5401ccb",
+      "source": "capstone_lab/campaign/models.py",
+      "bytes": 10024
+    },
+    "capstone_lab/campaign/persistent.py": {
+      "sha256": "9c4ea138be8a082b73995eeb1e08779f93848e1787693cf71666dd74c241ed93",
+      "source": "capstone_lab/campaign/persistent.py",
+      "bytes": 4320
+    },
+    "capstone_lab/campaign/post_real.py": {
+      "sha256": "ce0d05ee661d2a46303daca6f08485e4be2f3059486221786a6c83957f9cd816",
+      "source": "capstone_lab/campaign/post_real.py",
+      "bytes": 11055
+    },
+    "capstone_lab/campaign/report.py": {
+      "sha256": "88f3121b60f4266ceb0b7d14cf2bcc4fc98c1416e8e8fab7ed39bd11456e83a3",
+      "source": "capstone_lab/campaign/report.py",
+      "bytes": 3335
+    },
+    "capstone_lab/campaign/resources.py": {
+      "sha256": "bb5ab8017cb2d29f369786b36fff828aa75eb471834513a627d0a02cf512f272",
+      "source": "capstone_lab/campaign/resources.py",
+      "bytes": 2306
+    },
+    "capstone_lab/campaign/resume_preflight.py": {
+      "sha256": "4bf23e1657eb055cde33026b0dbbb2300fb19451961c21578b18ff492eb5b3cf",
+      "source": "capstone_lab/campaign/resume_preflight.py",
+      "bytes": 5565
+    },
+    "capstone_lab/campaign/seed_policy.py": {
+      "sha256": "189c1890a382964a9c1e153d7a24695d03849e260158882a19629cf2de268290",
+      "source": "capstone_lab/campaign/seed_policy.py",
+      "bytes": 5189
+    },
+    "capstone_lab/campaign/sources.py": {
+      "sha256": "fbd46820beee430e924ed329e8d2bbf8307d9290f085d4870b0094d35d1e937e",
+      "source": "capstone_lab/campaign/sources.py",
+      "bytes": 8861
+    },
+    "capstone_lab/campaign/stress_preflight.py": {
+      "sha256": "6831d5db1c10b009f793ecb93f2d42fafe8d7f56a484f0007c3cba31fdf0967d",
+      "source": "capstone_lab/campaign/stress_preflight.py",
+      "bytes": 3012
+    },
+    "capstone_lab/campaign/supervisor.py": {
+      "sha256": "7d143965bd1fc2996a4abefdb535c48a9e0e1b236fd07fd100b94dcdd0f5d7bc",
+      "source": "capstone_lab/campaign/supervisor.py",
+      "bytes": 22731
+    },
+    "capstone_lab/campaign/verification.py": {
+      "sha256": "851e86f728c6c7b5db648b05864fcc10bd079e7e4c2b2a9ee6ec764d593ed3fd",
+      "source": "capstone_lab/campaign/verification.py",
+      "bytes": 1507
+    },
+    "capstone_lab/campaign/watchdog.py": {
+      "sha256": "98968a87d6bae7865da1363331afd9be2f426f0eef34d9937385f3c54682d7ca",
+      "source": "capstone_lab/campaign/watchdog.py",
+      "bytes": 5037
+    },
+    "capstone_lab/campaign/worker.py": {
+      "sha256": "077355574c1e53b398cd2162aa379711bb4d985cc985483fd2ebe73541632b82",
+      "source": "capstone_lab/campaign/worker.py",
+      "bytes": 6610
+    },
+    "capstone_lab/cli.py": {
+      "sha256": "44fcda5b204e09c69382679e03f4a9ed4b794b90532df5bc1d1250d3231d4bb5",
+      "source": "capstone_lab/cli.py",
+      "bytes": 11233
+    },
+    "capstone_lab/config.py": {
+      "sha256": "1f03db4d7e0de33be0335a51f893ad1596efc86226621640ece104896093bb92",
+      "source": "capstone_lab/config.py",
+      "bytes": 11502
+    },
+    "capstone_lab/doctor.py": {
+      "sha256": "f3bc0b54642e4abe395d2926ab912c46625b6608f43dd098f90f814a3e45b124",
+      "source": "capstone_lab/doctor.py",
+      "bytes": 3048
+    },
+    "capstone_lab/environment_resolution.py": {
+      "sha256": "0926159e41012cccc11ad55af633e9933964cac7cc1a3268af88463ebb100888",
+      "source": "capstone_lab/environment_resolution.py",
+      "bytes": 4888
+    },
+    "capstone_lab/errors.py": {
+      "sha256": "e8260b8d41f10b21073687f7027ee8fe0a2efa9d36fc1f0c01686e78cb03b79d",
+      "source": "capstone_lab/errors.py",
+      "bytes": 506
+    },
+    "capstone_lab/fake_job.py": {
+      "sha256": "fe1cd56f22cc489119924c193ca1c353310b720829eea808da94e3a4545ed0ee",
+      "source": "capstone_lab/fake_job.py",
+      "bytes": 1549
+    },
+    "capstone_lab/manifests.py": {
+      "sha256": "2d19b543ba108b614173315aa545c31ef39613cf6cf006d91dee6a852c3cd41c",
+      "source": "capstone_lab/manifests.py",
+      "bytes": 18507
+    },
+    "capstone_lab/planning/__init__.py": {
+      "sha256": "1bf232e94882189548a3afa77632c60c3a4c0dd5f777763beb2a0c90a72c86cd",
+      "source": "capstone_lab/planning/__init__.py",
+      "bytes": 205
+    },
+    "capstone_lab/planning/planner.py": {
+      "sha256": "0c59c032c860997dd58e77d80e265ee81cda1cfd97f88b68f640fcbb28b75483",
+      "source": "capstone_lab/planning/planner.py",
+      "bytes": 26241
+    },
+    "capstone_lab/planning/runner.py": {
+      "sha256": "eb524ea3ca470ab68c1ab68c621f09096529b75f33dbf64fa562404c059d8920",
+      "source": "capstone_lab/planning/runner.py",
+      "bytes": 5432
+    },
+    "capstone_lab/profiling/__init__.py": {
+      "sha256": "5d81f13d9e330be212803bbbb4f2a65529afee44499798df52d40216b73c27dd",
+      "source": "capstone_lab/profiling/__init__.py",
+      "bytes": 340
+    },
+    "capstone_lab/profiling/contracts.py": {
+      "sha256": "9681aa9758eda2587f5532cb8db29d97432817e423d6d5f9c018591382ed3b26",
+      "source": "capstone_lab/profiling/contracts.py",
+      "bytes": 7506
+    },
+    "capstone_lab/profiling/cpu_worker.py": {
+      "sha256": "f9427c4536cb4dc7346df1fe02fd5336f5801935540a927053f0473a95ab421e",
+      "source": "capstone_lab/profiling/cpu_worker.py",
+      "bytes": 1906
+    },
+    "capstone_lab/profiling/gpu_worker.py": {
+      "sha256": "0229394fd41aca99829a81c9bb229e4b7ccddd8156cb598cfbfbbef831af3e98",
+      "source": "capstone_lab/profiling/gpu_worker.py",
+      "bytes": 12010
+    },
+    "capstone_lab/profiling/runner.py": {
+      "sha256": "96b5c0efe020ccc98bf1e18290130e5a68a198e1ec1cb1fdf0f40d4a16448434",
+      "source": "capstone_lab/profiling/runner.py",
+      "bytes": 19072
+    },
+    "capstone_lab/scheduler.py": {
+      "sha256": "dd5fe20ecab913fea6167833cd417443400e907146f24fa8122fff33df4e1791",
+      "source": "capstone_lab/scheduler.py",
+      "bytes": 13536
+    },
+    "capstone_lab/state.py": {
+      "sha256": "7f1bd09f373ae42b222c1778dcc68b5206765a08c462233fee255131ba2403a0",
+      "source": "capstone_lab/state.py",
+      "bytes": 9351
+    },
+    "capstone_lab/synthesis/__init__.py": {
+      "sha256": "c45fa4747816b0ca2bd8410fc3fee4e9cb67ba46f7483372d89862d40f9db261",
+      "source": "capstone_lab/synthesis/__init__.py",
+      "bytes": 775
+    },
+    "capstone_lab/synthesis/acceptance.py": {
+      "sha256": "fd2c7962f14650745ce40f1efa4847db2331414707bce45408aff66d0dc7dfdf",
+      "source": "capstone_lab/synthesis/acceptance.py",
+      "bytes": 7959
+    },
+    "capstone_lab/synthesis/backgrounds.py": {
+      "sha256": "9aa40e6d695d0126e328150d5264c2f7319ec073bc140ec46bd4025b2c1188a0",
+      "source": "capstone_lab/synthesis/backgrounds.py",
+      "bytes": 4291
+    },
+    "capstone_lab/synthesis/contract.py": {
+      "sha256": "59ff13275cbc83bac4cbf667b4233b41052308b4e9b1f2fa3fd778f04d135bf9",
+      "source": "capstone_lab/synthesis/contract.py",
+      "bytes": 7918
+    },
+    "capstone_lab/synthesis/executor.py": {
+      "sha256": "16b39807364a82c8b602c18caf5b4883896e2abbf486f9e0f4c041a1418104ff",
+      "source": "capstone_lab/synthesis/executor.py",
+      "bytes": 14022
+    },
+    "capstone_lab/synthesis/formal.py": {
+      "sha256": "946ead6d694367eacc30692a5835fa07829c89c0554fdcdd0719a603ef89b201",
+      "source": "capstone_lab/synthesis/formal.py",
+      "bytes": 36337
+    },
+    "capstone_lab/synthesis/full.py": {
+      "sha256": "610802812f6bbda75208c856091aef4543cdb48c33e018c3705fd63d2646d208",
+      "source": "capstone_lab/synthesis/full.py",
+      "bytes": 26873
+    },
+    "capstone_lab/synthesis/managed.py": {
+      "sha256": "11763c66ae08b7e907b23d15bbd902baba41fb52414093288c415fdd4a2e309c",
+      "source": "capstone_lab/synthesis/managed.py",
+      "bytes": 6770
+    },
+    "capstone_lab/synthesis/scoring.py": {
+      "sha256": "27d28bcc4aeb0a85af4281360471e602784b3b90f200f43c8ec5330023730743",
+      "source": "capstone_lab/synthesis/scoring.py",
+      "bytes": 8934
+    },
+    "capstone_lab/synthesis/smoke.py": {
+      "sha256": "0c835186dc91a12d6bb496b92e70d90c5105cbbf7862022bbea88a3af0d542ee",
+      "source": "capstone_lab/synthesis/smoke.py",
+      "bytes": 54406
+    },
+    "capstone_lab/training/__init__.py": {
+      "sha256": "3a89e7c68be793bab4f4b28134f0d5f7bf300425ab040055dde1ff49711a8573",
+      "source": "capstone_lab/training/__init__.py",
+      "bytes": 222
+    },
+    "capstone_lab/training/checkpoints.py": {
+      "sha256": "c9a4c4da30f69a84ca3a42bd720d02517d08c6a5d9ef7e7a54fe9c63e0aa9b1c",
+      "source": "capstone_lab/training/checkpoints.py",
+      "bytes": 3739
+    },
+    "capstone_lab/training/dualhead.py": {
+      "sha256": "a1ee3bdea7cbb1996ab567280d8c19842e674dd8156e7be5cafe6b39a3fcd3f4",
+      "source": "capstone_lab/training/dualhead.py",
+      "bytes": 13412
+    },
+    "capstone_lab/training/metrics.py": {
+      "sha256": "636fccfe8c0e96cc7439fab6b31402a95c17a3764d7255226d8b5b9c28932a6e",
+      "source": "capstone_lab/training/metrics.py",
+      "bytes": 4278
+    },
+    "capstone_lab/training/scheduler.py": {
+      "sha256": "599d285fada986d8fdfa5f994ce4ea8d67fd9b0f8bc1cb924fea06c154a40d26",
+      "source": "capstone_lab/training/scheduler.py",
+      "bytes": 21465
+    },
+    "capstone_lab/training/worker.py": {
+      "sha256": "59c971603229e8eb5ecc9e62debacf425486cebfd3de1bc8c28241cf5c54f785",
+      "source": "capstone_lab/training/worker.py",
+      "bytes": 687
+    },
+    "tools/anydoor_annotation_probe.py": {
+      "sha256": "eea5ab9c2ada47ac145a0f330fb38baf86560a050272e5f1d122ca94b1502db5",
+      "source": "tools/anydoor_annotation_probe.py",
+      "bytes": 9585
+    },
+    "tools/anydoor_fp32_probe_prepare.py": {
+      "sha256": "0bf2e60326abbc631b97a1c6f32b752c39f558cd1368325efeaee9b9b442028b",
+      "source": "tools/anydoor_fp32_probe_prepare.py",
+      "bytes": 1007
+    },
+    "tools/anydoor_geometry_review.py": {
+      "sha256": "61011ed3aeeb2c79fa09c04f09e4fa6fae2c37c488377fbcee33c4acd030fd1f",
+      "source": "tools/anydoor_geometry_review.py",
+      "bytes": 3963
+    },
+    "tools/anydoor_pilot.py": {
+      "sha256": "b052c482e5030fe59f878b8980f3d70cb00ef87e62d983775dc0ec64be35c64e",
+      "source": "tools/anydoor_pilot.py",
+      "bytes": 18321
+    },
+    "tools/anydoor_pilot_audit.py": {
+      "sha256": "ea83b58241343645688927b50f5fd4160a8e257cbc3b1277132aa134d1087be3",
+      "source": "tools/anydoor_pilot_audit.py",
+      "bytes": 5895
+    },
+    "tools/anydoor_pilot_launch.py": {
+      "sha256": "27256654f70053c530c57ad004e43f0274bcf2006cb23ddbdfbf058a4eb3d869",
+      "source": "tools/anydoor_pilot_launch.py",
+      "bytes": 2254
+    },
+    "tools/anydoor_preprocess_verify.py": {
+      "sha256": "4eef7c4b9dec621b9bc81bb8b1760b3d9730a9e81e3faddd03c2942e36a13a06",
+      "source": "tools/anydoor_preprocess_verify.py",
+      "bytes": 2184
+    },
+    "tools/anydoor_runtime.py": {
+      "sha256": "2d65dee83ed1885a5b75f327d7e6949cf6b0e6f4a83553dac5081013a21fa8d3",
+      "source": "tools/anydoor_runtime.py",
+      "bytes": 12004
+    },
+    "tools/anydoor_setup_verify.py": {
+      "sha256": "153880ee8b519dcaed3ea7236a04f1fd94cd2c40aeee4e2e731b2755e08b0980",
+      "source": "tools/anydoor_setup_verify.py",
+      "bytes": 3518
+    },
+    "tools/anydoor_shape_probe.py": {
+      "sha256": "cdc6a896e6643a80f5ea43621e9f8165217653f9fe6db9f2f288b30e1cf26cdd",
+      "source": "tools/anydoor_shape_probe.py",
+      "bytes": 4745
+    },
+    "tools/anydoor_square_probe_prepare.py": {
+      "sha256": "aea360503f1d21e155eb84df07b6c3c5e132337c9c8517ee901b90560185d47f",
+      "source": "tools/anydoor_square_probe_prepare.py",
+      "bytes": 1408
+    },
+    "tools/anydoor_square_probe_review.py": {
+      "sha256": "ab7ac993266c2efa67b8376eb31dd10d45b9b6824c305a4ad938d0cbdfd1527c",
+      "source": "tools/anydoor_square_probe_review.py",
+      "bytes": 3658
+    },
+    "tools/build_complete_results_report.py": {
+      "sha256": "b992c376ccf2a430d87532bec01f58f6565eee22d63463fab828295d2bb08b65",
+      "source": "tools/build_complete_results_report.py",
+      "bytes": 38845
+    },
+    "tools/build_end_to_end_report.py": {
+      "sha256": "f8a981ded3cc7449dc005086740512aabc2bdb19848d0854690689e6d05733a8",
+      "source": "tools/build_end_to_end_report.py",
+      "bytes": 23439
+    },
+    "tools/build_final_presentation_assets.py": {
+      "sha256": "1cce574442de1d9996907235193514f5c140fcad92b3a0a2d00751a82be619e3",
+      "source": "tools/build_final_presentation_assets.py",
+      "bytes": 29944
+    },
+    "tools/build_qualitative_package.py": {
+      "sha256": "edf8c5ae5a663e052a88db5abc5abd3c8da38415741ff3de1906d71739b5c449",
+      "source": "tools/build_qualitative_package.py",
+      "bytes": 31795
+    },
+    "tools/build_readable_results.py": {
+      "sha256": "57ceade22834f429cf55f8a89fe92d1b2935a6e1457bbf187b392c0e6796d4d4",
+      "source": "tools/build_readable_results.py",
+      "bytes": 12450
+    },
+    "tools/collect_qualitative_predictions.py": {
+      "sha256": "361295274d0b8d692f977a02e3cd3a0192930bd0c2196c7595dcf28cad2f4ba6",
+      "source": "tools/collect_qualitative_predictions.py",
+      "bytes": 7546
+    },
+    "tools/experiment_lookup.css": {
+      "sha256": "ac94c6ca9e19dd6f294b0e14c35e05e5881f41430a1c00d523734490e7c8fae6",
+      "source": "tools/experiment_lookup.css",
+      "bytes": 3627
+    },
+    "tools/experiment_lookup.js": {
+      "sha256": "a22754424a67108f5d1e7f7020d8f23fe9832c3f241c4ae22c2ef3197c8b346e",
+      "source": "tools/experiment_lookup.js",
+      "bytes": 8542
+    },
+    "tools/experiment_lookup_template.md": {
+      "sha256": "94ab5576721f864cbb10f4b0444ad8a9658f0917c954aa7d6a349d4e93c20204",
+      "source": "tools/experiment_lookup_template.md",
+      "bytes": 12812
+    },
+    "tools/finalize_qualitative_package.py": {
+      "sha256": "d8dd8d14e67ee47bca34c8e84976eaced173688fa724860b38a82a1902971d8e",
+      "source": "tools/finalize_qualitative_package.py",
+      "bytes": 4985
+    },
+    "tools/presentation_script_template.md": {
+      "sha256": "da96ecf539e22676e81979b3492cd4d1d3963981e3915d97b1d450bd80bf2de5",
+      "source": "tools/presentation_script_template.md",
+      "bytes": 9601
+    },
+    "tools/qualitative_core.py": {
+      "sha256": "ae54146b9925e26f117936675aea0ddaf99b608d22700510837631e356f7838b",
+      "source": "tools/qualitative_core.py",
+      "bytes": 4274
+    },
+    "tools/qualitative_demo.html": {
+      "sha256": "36a2aa1b2d5a342bfc39c48b451da5a1dd547c69f9bdfe80062b4b0af481bd99",
+      "source": "tools/qualitative_demo.html",
+      "bytes": 4980
+    },
+    "tools/qualitative_demo.js": {
+      "sha256": "27dd80857051be54ee53430c18e903dc07262a725ee840dfe9b509556e17bdb6",
+      "source": "tools/qualitative_demo.js",
+      "bytes": 5681
+    },
+    "tools/readable_experiment_catalog.py": {
+      "sha256": "3b943870fa9001aaeece0ae8c76f814261393fb0e1df875aebd89ef82dbfc349",
+      "source": "tools/readable_experiment_catalog.py",
+      "bytes": 5342
+    },
+    "tools/s8_anydoor_pipeline.py": {
+      "sha256": "335989c0787c5102cbc09791af340366feb4fed3262b9ae9bc84a95f90b62eef",
+      "source": "tools/s8_anydoor_pipeline.py",
+      "bytes": 13515
+    },
+    "tools/s8_anydoor_preflight.py": {
+      "sha256": "5a8b2dba49552da14c7bbd0806f0c95e9dcd519004c4b094bb4e1729e3cfc789",
+      "source": "tools/s8_anydoor_preflight.py",
+      "bytes": 7802
+    },
+    "tools/s8_anydoor_selection.py": {
+      "sha256": "391f7f2ea95163ffffe06ad005c0e56e10f6a96ba7513eeb143792f233876bc6",
+      "source": "tools/s8_anydoor_selection.py",
+      "bytes": 1911
+    },
+    "tools/s8_anydoor_stages.py": {
+      "sha256": "f42bf4119411f4260333a21975a4cd03a1db9b960796dc29c92847c5ab2559e3",
+      "source": "tools/s8_anydoor_stages.py",
+      "bytes": 25244
+    },
+    "tools/s8_validation_snapshot.py": {
+      "sha256": "4ee45ee8f1cd236a3793091b694c86b90e38f18dc491a850cc1ec0759851f71c",
+      "source": "tools/s8_validation_snapshot.py",
+      "bytes": 5019
+    },
+    "tools/s9_background_campaign.py": {
+      "sha256": "d832354c0877a6ad9f4d511fd3c54c54efc3b36ee145f0980a38bc5a0c857617",
+      "source": "tools/s9_background_campaign.py",
+      "bytes": 14960
+    },
+    "tools/s9_background_data.py": {
+      "sha256": "529ef5377e5e24ce10b3b30a2146b20c0794dcfcd183e84d857abf8b51e91631",
+      "source": "tools/s9_background_data.py",
+      "bytes": 1794
+    },
+    "tools/s9_background_report.py": {
+      "sha256": "2ac8ed6224604238e2ce9294db2015c8c194fc02c01e43afd0a35978e73784ef",
+      "source": "tools/s9_background_report.py",
+      "bytes": 6721
+    },
+    "tools/serve_prediction_demo.py": {
+      "sha256": "ae929e24cc069ee4b9b72c529269fd44ac8c3eee0f1cedaaddee174fb12addf9",
+      "source": "tools/serve_prediction_demo.py",
+      "bytes": 3650
+    },
+    "tools/serve_readable_demo.py": {
+      "sha256": "8c8536a9d78bb37eb5bc369358ceae5bfa9d0ddc8ad71f6b7a0090a4d00a90db",
+      "source": "tools/serve_readable_demo.py",
+      "bytes": 303
+    },
+    "tools/test_anydoor_annotation_gate.py": {
+      "sha256": "ac6725114ead8194989ea0ebd2e9ab9dae4e8e4dbe360e1bc18f437c05584758",
+      "source": "tools/test_anydoor_annotation_gate.py",
+      "bytes": 1116
+    },
+    "tools/test_anydoor_pilot.py": {
+      "sha256": "981ff678ec9d0399b71dc560600fa0747ca704f7f61c1a796786cc26b4299da8",
+      "source": "tools/test_anydoor_pilot.py",
+      "bytes": 3928
+    },
+    "tools/test_anydoor_shape_control.py": {
+      "sha256": "639d7f761ee04436182740c525ebd01d4fc81e9a613e70e88ca6df68f30645ac",
+      "source": "tools/test_anydoor_shape_control.py",
+      "bytes": 2158
+    },
+    "tools/test_s8_anydoor_pipeline.py": {
+      "sha256": "c10ee3bc018701d39c1fba6a881c76f2492c2fdec28ba436e45687b9e89bf3aa",
+      "source": "tools/test_s8_anydoor_pipeline.py",
+      "bytes": 2798
+    },
+    "tools/test_s8_anydoor_selection.py": {
+      "sha256": "af632a9a8c5ddab336d9c3d7b6b4f6d51a4391827b4fc60146080488dcd33712",
+      "source": "tools/test_s8_anydoor_selection.py",
+      "bytes": 1197
+    },
+    "tools/verify_prediction_demo.py": {
+      "sha256": "b7dcfd42b43722c697a6a66261d37c1beb8ff82aa3b31ca9436d1c4b589682f1",
+      "source": "tools/verify_prediction_demo.py",
+      "bytes": 8954
+    },
+    "tools/verify_readable_results.py": {
+      "sha256": "920b4f2da63de11522e715fc70be5ab8b5b7a8a5ed3c521d1fe1de022c5141cb",
+      "source": "tools/verify_readable_results.py",
+      "bytes": 9298
+    },
+    "tests/__init__.py": {
+      "sha256": "455d7325d0b927ab2f3bf31e47814b530914c6e527bffa6747a833301e7436f8",
+      "source": "tests/__init__.py",
+      "bytes": 57
+    },
+    "tests/fixtures/s3_fixture.json": {
+      "sha256": "5a6197fd7f9d348938507266a8e9c24f566106c06b0594c277a0406893fbaca6",
+      "source": "tests/fixtures/s3_fixture.json",
+      "bytes": 281
+    },
+    "tests/fixtures/s5_train_manifest.json": {
+      "sha256": "2c834eae530963e60c3bb8829f0fd777ad093523b3bc315367292967cc186a50",
+      "source": "tests/fixtures/s5_train_manifest.json",
+      "bytes": 112
+    },
+    "tests/fixtures/s5_val_manifest.json": {
+      "sha256": "8393967d5c7ad7889213a98fd0cf596a266dd07caca3bb595ac737267eca9fde",
+      "source": "tests/fixtures/s5_val_manifest.json",
+      "bytes": 165
+    },
+    "tests/s8_heuristic_evidence.py": {
+      "sha256": "881d9189d07a7ff54c7607f7d306ddf868f208ed05580ad33abb867f956b211c",
+      "source": "tests/s8_heuristic_evidence.py",
+      "bytes": 4151
+    },
+    "tests/s8_synthesis_fault_probe.py": {
+      "sha256": "e7f2513ddcf8caa381cff3d200325c97d24b66aecdb3695528812a0f6233c956",
+      "source": "tests/s8_synthesis_fault_probe.py",
+      "bytes": 2392
+    },
+    "tests/test_environment_resolution.py": {
+      "sha256": "f61ccbaef49df8eb3bdc2a8639d60335148425e4a4ea7021140331f045d53fe7",
+      "source": "tests/test_environment_resolution.py",
+      "bytes": 3997
+    },
+    "tests/test_s0_s1.py": {
+      "sha256": "f835c11ba4487485a8c466f56fdbcab0d55d0a525f1140a16e2912eb30b6efb6",
+      "source": "tests/test_s0_s1.py",
+      "bytes": 11957
+    },
+    "tests/test_s2_manifests.py": {
+      "sha256": "3ff5aa2bfe66a1791fcfe73f80b636802736fdf147c2d4909c5d29dba1f22625",
+      "source": "tests/test_s2_manifests.py",
+      "bytes": 6210
+    },
+    "tests/test_s3_synthesis.py": {
+      "sha256": "b100a102ceaeb88731aa126b82e03d0d28b54ce880b56bb548e989a6a086210d",
+      "source": "tests/test_s3_synthesis.py",
+      "bytes": 10688
+    },
+    "tests/test_s4_smoke.py": {
+      "sha256": "0ca1998ac9eac00fbde43f97ca17daaf680e47ecddc0952b9f61f7bf4780715d",
+      "source": "tests/test_s4_smoke.py",
+      "bytes": 13209
+    },
+    "tests/test_s5_training.py": {
+      "sha256": "1b0b5d25135e0136a56bf1a6bd4fcdf892264c4ff97eeb53ea2ad92a909f0f97",
+      "source": "tests/test_s5_training.py",
+      "bytes": 5850
+    },
+    "tests/test_s6_profiling.py": {
+      "sha256": "bd2f173d895cf0768c2566cd1dfff6859cc72f7633db0ca786078da14aac3a00",
+      "source": "tests/test_s6_profiling.py",
+      "bytes": 4707
+    },
+    "tests/test_s7_planning.py": {
+      "sha256": "3767d0a6c8763525cd6cf24f1c52604367538c6cdc0ca267d2433f22f6dca9d1",
+      "source": "tests/test_s7_planning.py",
+      "bytes": 8191
+    },
+    "tests/test_s8_campaign.py": {
+      "sha256": "7a462fecc8eaa79ad3801f187505934fb5b21262a8cfc30c8e14d0bb99c2d8b9",
+      "source": "tests/test_s8_campaign.py",
+      "bytes": 10079
+    },
+    "tests/test_s8_detached.py": {
+      "sha256": "2a4546328407f5b8acec225d9f158aa2a87608aad5b10f985961dc70400dce9f",
+      "source": "tests/test_s8_detached.py",
+      "bytes": 3794
+    },
+    "tests/test_s8_epochs.py": {
+      "sha256": "6a4afdf6f17fa664a95a9a954e9960c1651910ff2c64da8806319caa3dd5ee1a",
+      "source": "tests/test_s8_epochs.py",
+      "bytes": 5128
+    },
+    "tests/test_s8_formal_synthesis.py": {
+      "sha256": "dd01da6451bc5e63b33136ea62a3707bcd6d78683c1e06f231ddf2b7f301bfec",
+      "source": "tests/test_s8_formal_synthesis.py",
+      "bytes": 10664
+    },
+    "tests/test_s8_full_synthesis.py": {
+      "sha256": "de7dd69f4fd88bfdaffc8a92dd627edc9066cb33dbfc1d193fd5d939b1f7602f",
+      "source": "tests/test_s8_full_synthesis.py",
+      "bytes": 6890
+    },
+    "tests/test_s8_real_data.py": {
+      "sha256": "87acbd2d32bed910eefd86d20c954c279eb6295fac5dbd3b22f515f399afc5f5",
+      "source": "tests/test_s8_real_data.py",
+      "bytes": 3318
+    },
+    "tests/test_s8_seed_policy.py": {
+      "sha256": "7fd6745a43f488a3d10b0b527679065664a65b942ff01993282bb32825546756",
+      "source": "tests/test_s8_seed_policy.py",
+      "bytes": 3103
+    },
+    "tests/test_s8_source_policy.py": {
+      "sha256": "dd0447cd2ff5e799cf44f0e83161815f8b0b6500e2c1887cf21f0af14a071dbd",
+      "source": "tests/test_s8_source_policy.py",
+      "bytes": 1838
+    },
+    "tests/test_s9_background.py": {
+      "sha256": "06079310861e5b5b8a042532da3aab4d32c448809efe8e62c07fcbebce8fac68",
+      "source": "tests/test_s9_background.py",
+      "bytes": 2811
+    },
+    "configs/approvals/s7_delegated_decisions_v1.json": {
+      "sha256": "21da4972d061371f239078b0e229d1eda393a1bd2e3242b03e6e447545095154",
+      "source": "configs/approvals/s7_delegated_decisions_v1.json",
+      "bytes": 6889
+    },
+    "configs/approvals/s8_a0_repeat_exception_v1.json": {
+      "sha256": "69ba4a59963ca1b622810580acc0d8536fb4e3e343ecb6e5b6ef97aabcda4666",
+      "source": "configs/approvals/s8_a0_repeat_exception_v1.json",
+      "bytes": 935
+    },
+    "configs/approvals/s8_anydoor_shape_campaign_v1.json": {
+      "sha256": "c259ce2128b436e997a3e2037f8d5b77d64aadcd6547db2c23d0606cab4978e9",
+      "source": "configs/approvals/s8_anydoor_shape_campaign_v1.json",
+      "bytes": 1814
+    },
+    "configs/approvals/s8_foreground_amendment_v1.json": {
+      "sha256": "c3347e1e127274039a00480ca4d35fad07c92ce1273efaebb609f10b6828f68e",
+      "source": "configs/approvals/s8_foreground_amendment_v1.json",
+      "bytes": 1180
+    },
+    "configs/approvals/s8_low_diversity_v1.json": {
+      "sha256": "3f0483bef015ae164fb188a9132088a849c55e78e7a5b44c4fd1a624dceeb4c2",
+      "source": "configs/approvals/s8_low_diversity_v1.json",
+      "bytes": 799
+    },
+    "configs/approvals/s8_seed_amendment_v1.json": {
+      "sha256": "ea7cfcb6335cfe934ee0a9a3a40ee5b9d341ef6829af4b5298539f995214fe6c",
+      "source": "configs/approvals/s8_seed_amendment_v1.json",
+      "bytes": 678
+    },
+    "configs/approvals/s8_time_limit_removed_v1.json": {
+      "sha256": "60c64e8189e4efba6f01ca317489390f2d80c37b0c6a431ecbcf676f87420b22",
+      "source": "configs/approvals/s8_time_limit_removed_v1.json",
+      "bytes": 610
+    },
+    "configs/campaigns/s0_s1_fake.json": {
+      "sha256": "be2341caf486786fe01627474a0bc0683651f7560b2b499187152bb936381a84",
+      "source": "configs/campaigns/s0_s1_fake.json",
+      "bytes": 1259
+    },
+    "configs/campaigns/s5_dualhead_smoke.json": {
+      "sha256": "efe4958072daf100deefafffb8d875b2e96170596c7b6a1d56121dcb5e8070a0",
+      "source": "configs/campaigns/s5_dualhead_smoke.json",
+      "bytes": 1898
+    },
+    "configs/campaigns/s6_profile.json": {
+      "sha256": "2cd6ef29c17ea71327f72b3b24aea63d027ceaf73a0d9b8ab3877a8b6321f788",
+      "source": "configs/campaigns/s6_profile.json",
+      "bytes": 1872
+    },
+    "configs/campaigns/s7_plan.json": {
+      "sha256": "993de76483f2f40c12731268f4d8488b0a1a3b5b0c4a162dd48f25d0416493f0",
+      "source": "configs/campaigns/s7_plan.json",
+      "bytes": 3294
+    },
+    "configs/campaigns/s8_epoch_dispatch_v1.json": {
+      "sha256": "9647df84d8712dadec4aa6b8779234c7828f98fc8f7d120b7866274aa70c7a32",
+      "source": "configs/campaigns/s8_epoch_dispatch_v1.json",
+      "bytes": 1089
+    },
+    "configs/campaigns/s8_heuristic_policy_v1.json": {
+      "sha256": "2789a7d902c2ac4f103ffcb70857a0e91f5abd4eddb25eb28c72bd4f77c87fe3",
+      "source": "configs/campaigns/s8_heuristic_policy_v1.json",
+      "bytes": 1324
+    },
+    "configs/campaigns/s8_heuristic_training_draft_v1.json": {
+      "sha256": "8ba148db48f6f5ebe7269ba472e7a66aa967acc90b28f5cacff6f09d169ffc18",
+      "source": "configs/campaigns/s8_heuristic_training_draft_v1.json",
+      "bytes": 4033
+    },
+    "configs/campaigns/s8_preflight.json": {
+      "sha256": "f45cb70312c7cd9ff939675012a3e542961dee2b4e34c25b0b820c56ae4963c3",
+      "source": "configs/campaigns/s8_preflight.json",
+      "bytes": 1468
+    },
+    "configs/campaigns/s8_real_only_v1.json": {
+      "sha256": "302ad7c1c5ddf15e1ac61d3b248dc92c9a8ca892e3eb91623dce7eb9f9a97638",
+      "source": "configs/campaigns/s8_real_only_v1.json",
+      "bytes": 56998
+    },
+    "configs/campaigns/s8_ssh_probe.json": {
+      "sha256": "6bb2548cc6c70a638193aea63ecb108e5ce8bb9fd4ec08279e40de006a165ef0",
+      "source": "configs/campaigns/s8_ssh_probe.json",
+      "bytes": 459
+    },
+    "configs/campaigns/s8_ssh_probe_v2.json": {
+      "sha256": "56313622cf4909dd761352301966b238f577c3719a84096725cfc4d1664cf4b2",
+      "source": "configs/campaigns/s8_ssh_probe_v2.json",
+      "bytes": 409
+    },
+    "configs/environments/s4-smoke-requirements.txt": {
+      "sha256": "b567c1df067b477153f3f455283052f1dcd1df299b911741698a91fa0bd5bd36",
+      "source": "configs/environments/s4-smoke-requirements.txt",
+      "bytes": 63
+    },
+    "configs/environments/s5-environment-lock.txt": {
+      "sha256": "320b6b9e539b9b1d174f06b5dac6d0b6b1814e418757ac56874913ad2eb9747b",
+      "source": "configs/environments/s5-environment-lock.txt",
+      "bytes": 1239
+    },
+    "configs/runtime_hotfix/s8_atomic_retry_v1/sitecustomize.py": {
+      "sha256": "c13d43f2fb6f176785ed5f0dbf55347d635df0a8f4762a749989f96023e7a5b0",
+      "source": "configs/runtime_hotfix/s8_atomic_retry_v1/sitecustomize.py",
+      "bytes": 1221
+    },
+    "experiments/registry.csv": {
+      "sha256": "c85e448081949d3d94dfe99447e6ccc806d934f70ab5c4dde5ba2afd09f624c0",
+      "source": "experiments/registry.csv",
+      "bytes": 2960
+    },
+    "build_demo_synthetic_segmentation.py": {
+      "sha256": "1edd3d382324bb5879a0bb6cce5e68baaa046bdc12a5aea040a31d4f1b4a111f",
+      "source": "build_demo_synthetic_segmentation.py",
+      "bytes": 107521
+    },
+    "Build_Object_Pool_From_Txt_ObjectBased.py": {
+      "sha256": "5bb2bc5fdf715028c7e546493e6d074f8d71630e93cf91ae04582865170ec836",
+      "source": "Build_Object_Pool_From_Txt_ObjectBased.py",
+      "bytes": 16142
+    },
+    "Build_Splits_From_Revised_Selected.py": {
+      "sha256": "152d1d8bf93b19d13db0ce6681599bae3b901467f9a19b8a9ac2e622c5c96369",
+      "source": "Build_Splits_From_Revised_Selected.py",
+      "bytes": 28821
+    },
+    "mask_coverage_stats.py": {
+      "sha256": "e3caf974ad12ef0679a68dce00cf831fc2f733173ff231f2f94d6e8d4f3a89a1",
+      "source": "mask_coverage_stats.py",
+      "bytes": 5161
+    },
+    "Mask_To_txt.py": {
+      "sha256": "93cbc2c32a33d3e0f610613267dcafa44e0bd457956c5dd655e55aea9d708afb",
+      "source": "Mask_To_txt.py",
+      "bytes": 8046
+    },
+    "rename_dataset.py": {
+      "sha256": "61d5f614d88d339327cca0b19680d0487e71e67fcf0422d36b3326adf8ddee00",
+      "source": "rename_dataset.py",
+      "bytes": 7814
+    },
+    "Revise_Hard_Positive_Selected.py": {
+      "sha256": "57e638589dc43cb19a3bf92799ac14a12df362452e9de8f233660c345b4f1c8a",
+      "source": "Revise_Hard_Positive_Selected.py",
+      "bytes": 598
+    },
+    "Select_Hard_Negative_Backgrounds.py": {
+      "sha256": "432ba8639d8de00a4c76188bdcfbfac0e687f62037137a7cfd4235a276959e63",
+      "source": "Select_Hard_Negative_Backgrounds.py",
+      "bytes": 16071
+    },
+    "Select_Hard_Positive.py": {
+      "sha256": "798ec1187fe3708054bf271aa1a421905ba5feea439d75c5535db02ab2abde02",
+      "source": "Select_Hard_Positive.py",
+      "bytes": 32819
+    },
+    "synthetic_real_domain_evaluation.py": {
+      "sha256": "6cf80506e925c83e48e8a9c3b79bc0aaf5f7a1b2d5bcca6ed0edf9c313da5ecf",
+      "source": "synthetic_real_domain_evaluation.py",
+      "bytes": 23648
+    },
+    "Test_RedLine.py": {
+      "sha256": "e88a9d59918d657f62620e0e809356d3d2a33825b96ed777ca950db391dc0659",
+      "source": "Test_RedLine.py",
+      "bytes": 5603
+    },
+    "configs/environments/legacy-root-requirements.txt": {
+      "sha256": "9d37b1c1430e832f02b327bf18fe751902bf0800dae0768ae9b575b83936cc64",
+      "source": "requirements.txt",
+      "bytes": 858
+    },
+    "third_party/ultralytics_custom/ultralytics/__init__.py": {
+      "sha256": "eceef2a2bfbcbf7836992a46123619abca50f97306968f866f695c772db0818b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/__init__.py",
+      "bytes": 1301
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/__init__.py": {
+      "sha256": "6e94aa21564b526c2223ede7e3dd79a014c1829193b069ae6939125f28005ede",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/__init__.py",
+      "bytes": 40231
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/default.yaml": {
+      "sha256": "3ef9fcf96280ba18b761a6165f7d77e14630b6759d5b32b28cd9d31025734dca",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/default.yaml",
+      "bytes": 9251
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11-cls-resnet18.yaml": {
+      "sha256": "d58729f6a32bc296fcaeaedcaa1b7743ed6030dd11f3b537e679b68ff8ac76ba",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11-cls-resnet18.yaml",
+      "bytes": 524
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11-cls.yaml": {
+      "sha256": "d7b97919d37e56cb782ef69fb0adbeaba2e2f555fd52551c4f90a50ad8a4c1e1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11-cls.yaml",
+      "bytes": 1412
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11-obb.yaml": {
+      "sha256": "147a3bc56ae129d3760419f6c5d674f7d4f635ca9c5098aec90d1aeb376faea6",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11-obb.yaml",
+      "bytes": 2031
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11-pose.yaml": {
+      "sha256": "756393f55051c43f21fa39900b4a9610ebc5bf2c750946b4b5e92dd6439dbe69",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11-pose.yaml",
+      "bytes": 2131
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11-seg.yaml": {
+      "sha256": "c724d65611684accc5d4b84d108ce7216f1018a535cf410022f929e0ec18b65b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11-seg.yaml",
+      "bytes": 2046
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yolo11.yaml": {
+      "sha256": "43d8a7c86acc77282ddf4966d6526e091e5b064c140ed4a6e4c0b68ecbc3784c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yolo11.yaml",
+      "bytes": 2012
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yoloe-11-seg.yaml": {
+      "sha256": "e894291de1ab11349f69cfc4831e683043ba15310b3f1bb0a4995d75e315f011",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yoloe-11-seg.yaml",
+      "bytes": 2002
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/11/yoloe-11.yaml": {
+      "sha256": "607e9c7cbaec1f8acf01ed4527e92ded1e60ad51dcba94fd4c2464ac78bde414",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/11/yoloe-11.yaml",
+      "bytes": 1994
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/12/yolo12-cls.yaml": {
+      "sha256": "c8906e0ce5d160b6be2d08a91a42c14fdeee8ca4b25f1ef9e73b6ceb5d895567",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/12/yolo12-cls.yaml",
+      "bytes": 1407
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/12/yolo12-obb.yaml": {
+      "sha256": "d9c3c9295ee4535b616319e736c0893df58da13934976f590f6d94e174d7df04",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/12/yolo12-obb.yaml",
+      "bytes": 1972
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/12/yolo12-pose.yaml": {
+      "sha256": "781a3ef5bde8feabf7fa37ed802697d0579d78958e7ca1c32c93cf7c2330bbb3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/12/yolo12-pose.yaml",
+      "bytes": 2072
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/12/yolo12-seg.yaml": {
+      "sha256": "d094ea4a3ca13932cd4c8ac81403aebba17bc90a8c92ad6ca2c70091266db33f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/12/yolo12-seg.yaml",
+      "bytes": 1985
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/12/yolo12.yaml": {
+      "sha256": "65e03c2eeca62573cd8d9e719319191e4724b4368a0f35016f629cde008b0b5c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/12/yolo12.yaml",
+      "bytes": 1953
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-cls.yaml": {
+      "sha256": "1a668bbe707ad97eabf7f999c29c746f62d3458217cd562a4aa47731ccb7dfa8",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-cls.yaml",
+      "bytes": 1432
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-obb.yaml": {
+      "sha256": "03d360e6764ea30ef8b5891e8f1a15c86076c33b488bf72e36ac58aea0794f7f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-obb.yaml",
+      "bytes": 2146
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-p2.yaml": {
+      "sha256": "0dbc2fa3dfede5edcda2566ab8c7ea150ad066ea29d79e68d6c4da2bab476279",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-p2.yaml",
+      "bytes": 2405
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-p6.yaml": {
+      "sha256": "60559a1fa340387a0b6261f84dedde75c8f9f9ced027e825ceb8bec4f164e14d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-p6.yaml",
+      "bytes": 2457
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-pose.yaml": {
+      "sha256": "07ba82d9637023f261e526c38fa9aeb8ab05d911766ffd8cf4f48cd33f27188d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-pose.yaml",
+      "bytes": 2245
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26-seg.yaml": {
+      "sha256": "53c0348a36a3e19bbc3bd4f695f50cbbfc97a3059f62e9b251f278ad74fdd7cb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26-seg.yaml",
+      "bytes": 2156
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yolo26.yaml": {
+      "sha256": "b1d1fa0c69eced64f9939536038bd8d697c32e72200b34187a767de431af7ef0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yolo26.yaml",
+      "bytes": 2120
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yoloe-26-seg.yaml": {
+      "sha256": "425c8addac232ce8ecf6ad2b6a3d307b94021b5b43cbe36f436b90cca0e80589",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yoloe-26-seg.yaml",
+      "bytes": 2223
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/26/yoloe-26.yaml": {
+      "sha256": "616b014b80f77fb421a8b433613f8b55d08e212a3455a4c82c868b2a6ba30dda",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/26/yoloe-26.yaml",
+      "bytes": 2191
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/README.md": {
+      "sha256": "bbedbc05454fba78c27f567a615039a5689f0c0b8a0e7945a64ef51f47decb1f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/README.md",
+      "bytes": 4628
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/rt-detr/rtdetr-l.yaml": {
+      "sha256": "85716f626769cb5ddf00d59fcf6cafb5814aad196328100bdc7c93306f650e83",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/rt-detr/rtdetr-l.yaml",
+      "bytes": 2043
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/rt-detr/rtdetr-resnet101.yaml": {
+      "sha256": "e6f08f7e2872cd730a091ee46182034876d21ef03362559b399e56a7d9bce0cb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/rt-detr/rtdetr-resnet101.yaml",
+      "bytes": 1696
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/rt-detr/rtdetr-resnet50.yaml": {
+      "sha256": "5e6f94fe6fbfa2476ca625bbab16f99a037f34f64fbf28d7ad2d40d4a728685a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/rt-detr/rtdetr-resnet50.yaml",
+      "bytes": 1692
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/rt-detr/rtdetr-x.yaml": {
+      "sha256": "4076b70793f077d4c0f41dd6e65130ad497efdb02fc065d5a9296f9cb49b28db",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/rt-detr/rtdetr-x.yaml",
+      "bytes": 2250
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10b.yaml": {
+      "sha256": "5bd2be96a81410a382a55d007bb764f220541694934c5cc33c32f70079cc29fb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10b.yaml",
+      "bytes": 1488
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10l.yaml": {
+      "sha256": "62d74bef88afc56c58da352c6249145ff5ab696b0b26d70e2a144d8a80b0bc98",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10l.yaml",
+      "bytes": 1488
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10m.yaml": {
+      "sha256": "610bb19f82a3886ab1c0afb706e452a6bb7ce9a5b17319f656780894740ac72e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10m.yaml",
+      "bytes": 1479
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10n.yaml": {
+      "sha256": "88bf53e1752b4e77f4d358ba7bda85f70101094a2b6a5fdf1796e3205c4974c5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10n.yaml",
+      "bytes": 1474
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10s.yaml": {
+      "sha256": "746ff3d1f4b0788cc28bb2a6f4e63e43d233b443a35faef016c74fe046a6feda",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10s.yaml",
+      "bytes": 1483
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v10/yolov10x.yaml": {
+      "sha256": "205218479a78e8e102b072b7cb3e543b908cc51d4934359e5cacd4410bf133f3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v10/yolov10x.yaml",
+      "bytes": 1491
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v3/yolov3-spp.yaml": {
+      "sha256": "86c33eca1756bfef17956b9a48e56a14970751567e1668c7e108e403d0872595",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v3/yolov3-spp.yaml",
+      "bytes": 1625
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v3/yolov3-tiny.yaml": {
+      "sha256": "498ad28349b503a12b51aa5dac90c8e44f9e74b687d2817e3516f9e7c0d98264",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v3/yolov3-tiny.yaml",
+      "bytes": 1330
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v3/yolov3.yaml": {
+      "sha256": "16fb78fcf4f02c1a51c37478bf8550fb53c88a88e9a05643d6eb93672494612c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v3/yolov3.yaml",
+      "bytes": 1612
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v5/yolov5-p6.yaml": {
+      "sha256": "54a116ca492cca44a5cefbb2ee27f8c85a3d5a56e50b785da9c37127d6f01de9",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v5/yolov5-p6.yaml",
+      "bytes": 1994
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v5/yolov5.yaml": {
+      "sha256": "403f1d45ee5ee72b39db05cf2af3499fadb61ffde25f48cfcc4ff6fbed9d671d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v5/yolov5.yaml",
+      "bytes": 1626
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v6/yolov6.yaml": {
+      "sha256": "b65d388877b875583fefc8e0ba956e97981ba8e9f984186d2ca7cfdf16317160",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v6/yolov6.yaml",
+      "bytes": 1813
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yoloe-v8-seg.yaml": {
+      "sha256": "43cee24a2a5c9c618f33f80d1dd548ccf43abef6a690185118ed5166f525492f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yoloe-v8-seg.yaml",
+      "bytes": 2008
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yoloe-v8.yaml": {
+      "sha256": "a0647d89e68075f5dbe7ece2c98481d03fd7c3208672c53a493fb33b4093af31",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yoloe-v8.yaml",
+      "bytes": 1959
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-cls-resnet101.yaml": {
+      "sha256": "4c0880919c14724ce359d63aca7fee946cccfa59c7698ed8c7dbfcac8fb65a80",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-cls-resnet101.yaml",
+      "bytes": 1014
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-cls-resnet50.yaml": {
+      "sha256": "81b22db4d32f8f4d9193778a8eae39aa08dd99d0a8e67fe657d479c6deb939d5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-cls-resnet50.yaml",
+      "bytes": 1010
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-cls.yaml": {
+      "sha256": "1b9d269f0f82d125ab669665e70ce8bf576e81d8d930ceb34f7d2de5c42b7094",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-cls.yaml",
+      "bytes": 1019
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-ghost-p2.yaml": {
+      "sha256": "e4c5fc0f7ffc9648fd68a570a40202d4f64068ca1316cfd6abe5d9513567f4f5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-ghost-p2.yaml",
+      "bytes": 2505
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-ghost-p6.yaml": {
+      "sha256": "73b6189c43f1dafaf01e36e0af8a3f43d7ff348d97d5dc7632b2e8f7178ebd77",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-ghost-p6.yaml",
+      "bytes": 2575
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-ghost.yaml": {
+      "sha256": "9f1cc896f9ed15a8c76eee0337cba3131eb93d11209fba340dde9c1e9f291d23",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-ghost.yaml",
+      "bytes": 2198
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-obb.yaml": {
+      "sha256": "3b0967731e6978a053368df18646d5c73ff5aa5cd5251e19db335ea11fcd0f18",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-obb.yaml",
+      "bytes": 2016
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-p2.yaml": {
+      "sha256": "ba54363e9f283e8f60b0fa0843eb37115093338d6f9273ccd4f74f60639754f4",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-p2.yaml",
+      "bytes": 1831
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-p6.yaml": {
+      "sha256": "4ea22c6bc80d116d382a674bc710bdaea85decf087954aa4ce8883c673138a8d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-p6.yaml",
+      "bytes": 2363
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-pose-p6.yaml": {
+      "sha256": "b5f81f62b6d5bb96e25825a6753651afb6510bece5033c9cb11c9a25b0ed2358",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-pose-p6.yaml",
+      "bytes": 2047
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-pose.yaml": {
+      "sha256": "2ddcdb8885649d940c2d8076c33087aae97736295f2a9e27c7949d68642c17ab",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-pose.yaml",
+      "bytes": 1676
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-rtdetr.yaml": {
+      "sha256": "e5cba91ca3c70f8ddcbaf7771f7cef3628e2aa95bdf9b14b2a0f8a31e47338f1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-rtdetr.yaml",
+      "bytes": 2055
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-seg-p6.yaml": {
+      "sha256": "ec594d958fac07c6c2715b72d877ff9d80fc7f1669b2a693806c537da73c0d12",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-seg-p6.yaml",
+      "bytes": 1958
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-seg.yaml": {
+      "sha256": "8457a23855704d5e33bf4f08ae64c8bb325c519998918ed2222da8577db67ba5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-seg.yaml",
+      "bytes": 1587
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-world.yaml": {
+      "sha256": "da1350a326c84cee4504d9ca2b3d393e4f7281e01fe2a5bb5ef90c11f05df740",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-world.yaml",
+      "bytes": 2174
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8-worldv2.yaml": {
+      "sha256": "524751864ee96ae2c866da3b41d3ab5a95bc31bfb727ad51751bb14b99590b6e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8-worldv2.yaml",
+      "bytes": 2124
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v8/yolov8.yaml": {
+      "sha256": "405a3c302eb6096103a99af4d82c1d2d8b2bbff469a228c55aac944b2c19672a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v8/yolov8.yaml",
+      "bytes": 1977
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9c-seg.yaml": {
+      "sha256": "5011e843f709576ca9eab3331d7469e3ab8101498a22b6e07778e21013d1bea2",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9c-seg.yaml",
+      "bytes": 1447
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9c.yaml": {
+      "sha256": "c7592eb3fda641d53d5776468345dd139593514de3f1fc067b53aedf1d9a5f92",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9c.yaml",
+      "bytes": 1426
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9e-seg.yaml": {
+      "sha256": "595a54e631e0a14b823158abbe69ff49c3a61fd775332555217f17018f3bf3b7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9e-seg.yaml",
+      "bytes": 2377
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9e.yaml": {
+      "sha256": "3a5af63e5003a640fa3754e257200910cce4ac0ed26cdba5d6739a505f024b7f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9e.yaml",
+      "bytes": 2355
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9m.yaml": {
+      "sha256": "59c290df146c0b524c800e361f1e31cebe05666b44e81df02afaa1950c64ab0f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9m.yaml",
+      "bytes": 1411
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9s.yaml": {
+      "sha256": "716910b5835658e7243815e377c5eb27fab9bfa4ff0b9e3118c3f54b7aa7a595",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9s.yaml",
+      "bytes": 1392
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/models/v9/yolov9t.yaml": {
+      "sha256": "43c1a949713b7ee9a1b898908386b64a4b92fd49a75eaa7e7a86715bf0b4bc4a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/models/v9/yolov9t.yaml",
+      "bytes": 1375
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/trackers/botsort.yaml": {
+      "sha256": "9faa60f695052a817528795178ab7fd1ddd5760e3dbf9a8e1da6a6956ad63708",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/trackers/botsort.yaml",
+      "bytes": 1440
+    },
+    "third_party/ultralytics_custom/ultralytics/cfg/trackers/bytetrack.yaml": {
+      "sha256": "ecb4b539b3f9bbb05415c99e63a2f69b76d1b8f524b67a49b2914a77f1255567",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/cfg/trackers/bytetrack.yaml",
+      "bytes": 908
+    },
+    "third_party/ultralytics_custom/ultralytics/data/__init__.py": {
+      "sha256": "4e847cce5d098411f2e3666f57bcc8c0efc5de56e2e6836519034f2b776575d5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/__init__.py",
+      "bytes": 644
+    },
+    "third_party/ultralytics_custom/ultralytics/data/annotator.py": {
+      "sha256": "8aed449fe2f3951e11c91de871fb6d86702883fa5e40757d168acf468fd0717f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/annotator.py",
+      "bytes": 2985
+    },
+    "third_party/ultralytics_custom/ultralytics/data/augment.py": {
+      "sha256": "37a32d0d0555db44bd84f149673d9a85d7be1529e793e4e204a5001b62201dae",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/augment.py",
+      "bytes": 128331
+    },
+    "third_party/ultralytics_custom/ultralytics/data/base.py": {
+      "sha256": "329bf0a8788d4774483ab1628d3204793cf15e3d29c9f24ce6f3fbe3e58e3098",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/base.py",
+      "bytes": 20004
+    },
+    "third_party/ultralytics_custom/ultralytics/data/build.py": {
+      "sha256": "dade920b69323a5e6ac49b5245e6914357b28ec31653c33c3fbe69ef6e2818f4",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/build.py",
+      "bytes": 17225
+    },
+    "third_party/ultralytics_custom/ultralytics/data/converter.py": {
+      "sha256": "7b009b1f122371f145621939d6fddac7f520ae313eaa7856ecb0533705f3e762",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/converter.py",
+      "bytes": 39974
+    },
+    "third_party/ultralytics_custom/ultralytics/data/dataset.py": {
+      "sha256": "81a26cbe1f5d2899a138a3a5b72063fed74da023fc08ef0cb818ceaf590121fa",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/dataset.py",
+      "bytes": 40119
+    },
+    "third_party/ultralytics_custom/ultralytics/data/loaders.py": {
+      "sha256": "cebcd872a94f345e9fa8c732a4528d2d2f673d33c3992384a78fba2ac37a7553",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/loaders.py",
+      "bytes": 31291
+    },
+    "third_party/ultralytics_custom/ultralytics/data/split.py": {
+      "sha256": "0ecf04b6373d94ba5f366637982871be0ff0bae59ddf9d102dfda6407bbbfa48",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/split.py",
+      "bytes": 5122
+    },
+    "third_party/ultralytics_custom/ultralytics/data/split_dota.py": {
+      "sha256": "76acf70c0a4bf1e02430229e0fc504c91d9457cae35db0aa43352baddef4d859",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/split_dota.py",
+      "bytes": 12873
+    },
+    "third_party/ultralytics_custom/ultralytics/data/utils.py": {
+      "sha256": "8da76e1d05b3081497511fc431fcfcbb48d6e91803c373667fc7e50a0c10f302",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/data/utils.py",
+      "bytes": 37088
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/__init__.py": {
+      "sha256": "966e8c72415808f4dba88a17ef0d2cfdd6b176335e05e296e835e9a6fd7e4143",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/__init__.py",
+      "bytes": 70
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/exporter.py": {
+      "sha256": "dff3b6a94beff9845bd597a108bbaccf41bc2de408c3585cd6ede9bdc6b852d1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/exporter.py",
+      "bytes": 60020
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/model.py": {
+      "sha256": "d49c8cd62aa15b02178019b17f7a0cbe448019e8bb98eb124d69cb04c12a74ca",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/model.py",
+      "bytes": 54127
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/predictor.py": {
+      "sha256": "9f5163db63130283446e5552b3b19af086700325440921be9cd5ece5960067d0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/predictor.py",
+      "bytes": 23237
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/results.py": {
+      "sha256": "66f2f9e3f72335a1015f15cc06581361682bbb97e24902b628f7c44baed4b3bc",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/results.py",
+      "bytes": 68634
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/trainer.py": {
+      "sha256": "c9c43f9f652119f67abe29760cd13c03b26fd878d4ba1be5a01fb60192e8111c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/trainer.py",
+      "bytes": 49870
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/tuner.py": {
+      "sha256": "35961bb02e23d5620dd6eea884c33efcac573e6ed1149d2d840c6023f3777665",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/tuner.py",
+      "bytes": 21901
+    },
+    "third_party/ultralytics_custom/ultralytics/engine/validator.py": {
+      "sha256": "c0cb98a087caa8b43a414ce2bf9defb5cfe1014a4ab1e749a91e4ed36f375541",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/engine/validator.py",
+      "bytes": 18037
+    },
+    "third_party/ultralytics_custom/ultralytics/hub/__init__.py": {
+      "sha256": "6742bf134d23cd087dd1bd7cab72030a1c15993bf2218a7a0b4d2c095fa7d85f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/hub/__init__.py",
+      "bytes": 6709
+    },
+    "third_party/ultralytics_custom/ultralytics/hub/auth.py": {
+      "sha256": "3f7f568f343937429b05c3105d35672ed9dbc23811765b1148d2d23f3e54c99e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/hub/auth.py",
+      "bytes": 6290
+    },
+    "third_party/ultralytics_custom/ultralytics/hub/google/__init__.py": {
+      "sha256": "af4e8b7784ee64404eaa0e226a0a5e37e78c024838dd3d8e4f1387e3fec87e43",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/hub/google/__init__.py",
+      "bytes": 8445
+    },
+    "third_party/ultralytics_custom/ultralytics/hub/session.py": {
+      "sha256": "38693bfbd6a51057f6de9c5cf97edeb61339b152ab45d2f6158e67cd6712dc80",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/hub/session.py",
+      "bytes": 18363
+    },
+    "third_party/ultralytics_custom/ultralytics/hub/utils.py": {
+      "sha256": "8e49e5974eb235a0312b23aa2a58882c9bf55ce537f562563861bf0f2154876d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/hub/utils.py",
+      "bytes": 6353
+    },
+    "third_party/ultralytics_custom/ultralytics/models/__init__.py": {
+      "sha256": "963bacfeed4222e3fdf64f5fbbab02b7321e159f93084dbc359f2479f64714d6",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/__init__.py",
+      "bytes": 309
+    },
+    "third_party/ultralytics_custom/ultralytics/models/fastsam/__init__.py": {
+      "sha256": "2aef3d172fd7f2893760f1146a38d46798b83b4f23749323247b7edd9f7d16b9",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/fastsam/__init__.py",
+      "bytes": 231
+    },
+    "third_party/ultralytics_custom/ultralytics/models/fastsam/model.py": {
+      "sha256": "1cde82007093c0c9b20424255f1e3030153b5ea92f547c946b045ac67d86babf",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/fastsam/model.py",
+      "bytes": 3426
+    },
+    "third_party/ultralytics_custom/ultralytics/models/fastsam/predict.py": {
+      "sha256": "2c992efe9dbb05c57845b211fc9805426f1c5374957e904f1cf10fc86de1f248",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/fastsam/predict.py",
+      "bytes": 8822
+    },
+    "third_party/ultralytics_custom/ultralytics/models/fastsam/utils.py": {
+      "sha256": "75ef627a1e29054b93361e474e235d46959985701a49f368dd1d4534cb7618e1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/fastsam/utils.py",
+      "bytes": 879
+    },
+    "third_party/ultralytics_custom/ultralytics/models/fastsam/val.py": {
+      "sha256": "30950ac7f3691447aea92abdca75f514948ae85e51854241f8faa1429d90d183",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/fastsam/val.py",
+      "bytes": 2091
+    },
+    "third_party/ultralytics_custom/ultralytics/models/nas/__init__.py": {
+      "sha256": "4386506a4f31356b55e584b0fe916ed1a9db0b20f1c4402e30c0df333bbafb4b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/nas/__init__.py",
+      "bytes": 207
+    },
+    "third_party/ultralytics_custom/ultralytics/models/nas/model.py": {
+      "sha256": "2a4ea4d6c0237df1258d8323f137c99675798bd207865d2489054276dfa64c16",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/nas/model.py",
+      "bytes": 3919
+    },
+    "third_party/ultralytics_custom/ultralytics/models/nas/predict.py": {
+      "sha256": "e276eea3d9dbbe7bc8dea547d729612c28e8fbba16dfd32e9887ac9bed5e5376",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/nas/predict.py",
+      "bytes": 2692
+    },
+    "third_party/ultralytics_custom/ultralytics/models/nas/val.py": {
+      "sha256": "3084729b72d0343211c6762ce7170e88b90a3a0bf77a76455e1e7f83d3eada10",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/nas/val.py",
+      "bytes": 1543
+    },
+    "third_party/ultralytics_custom/ultralytics/models/rtdetr/__init__.py": {
+      "sha256": "17834442ab5c54a1718fdec387bae49f656edc91b811afe7c6aac107ef4fd6f7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/rtdetr/__init__.py",
+      "bytes": 225
+    },
+    "third_party/ultralytics_custom/ultralytics/models/rtdetr/model.py": {
+      "sha256": "8c9cd287fe44fffad540eeff2249a77290b88c876ef713622319534c8685255c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/rtdetr/model.py",
+      "bytes": 2269
+    },
+    "third_party/ultralytics_custom/ultralytics/models/rtdetr/predict.py": {
+      "sha256": "62feb49e9484c340d36fa429cca64b98caa5380cd5fe9e458cfc6d62565164f9",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/rtdetr/predict.py",
+      "bytes": 4137
+    },
+    "third_party/ultralytics_custom/ultralytics/models/rtdetr/train.py": {
+      "sha256": "7b13e6b1eb7f0962b76417abddbb44bc32edb6030f5eeb0caf6d56b091776e48",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/rtdetr/train.py",
+      "bytes": 3740
+    },
+    "third_party/ultralytics_custom/ultralytics/models/rtdetr/val.py": {
+      "sha256": "f7974365832f0eb2e146571a591150f268d42ecb89e12e96f2518d4251a63a6a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/rtdetr/val.py",
+      "bytes": 9215
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/__init__.py": {
+      "sha256": "8687f3f5c186871116a595d7f322e9e64fcb4149962ff4a177d91fccae14eb3d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/__init__.py",
+      "bytes": 592
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/amg.py": {
+      "sha256": "698bc9ee340c9134775fd295ed21e2dea3f7c8d721420816354bab4d1670c508",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/amg.py",
+      "bytes": 11786
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/build.py": {
+      "sha256": "ac46855c0e11d67caeb52a2721e9d129cb8db4ed45804a239e471aca8d054cfe",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/build.py",
+      "bytes": 12867
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/build_sam3.py": {
+      "sha256": "74595a6487443fb64f3d60f8a79bd5f18ceb9cd9c5bc47678a079eeb11779055",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/build_sam3.py",
+      "bytes": 12206
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/model.py": {
+      "sha256": "bb24af7b99516da2aace9c9e00c59acf3ae0857bc47f61e16adf4dae563c7798",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/model.py",
+      "bytes": 7372
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/__init__.py": {
+      "sha256": "966e8c72415808f4dba88a17ef0d2cfdd6b176335e05e296e835e9a6fd7e4143",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/__init__.py",
+      "bytes": 70
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/blocks.py": {
+      "sha256": "fc375d198898e3e4b7310dcb16223a9a4c4d4517b6f1fae2c8f1c0ea34b5821d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/blocks.py",
+      "bytes": 44465
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/decoders.py": {
+      "sha256": "306502f33b3c145b5269c070ae9e0dbdaeec8189825e950b3d6f939955f3e308",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/decoders.py",
+      "bytes": 25045
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/encoders.py": {
+      "sha256": "ef608488c3aba3947fa3cd70c62649fc4903a7363c316c224f52ae8e300dd521",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/encoders.py",
+      "bytes": 35453
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/memory_attention.py": {
+      "sha256": "c7c02316498aeecc78a970c2749ff206cc6d401a9e95d60d04c45ef27b692c7b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/memory_attention.py",
+      "bytes": 13287
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/sam.py": {
+      "sha256": "f750c47942301e1444a09ec1c6bea50f9ceda2719496764e57d7d1ef1f7c868f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/sam.py",
+      "bytes": 61669
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/tiny_encoder.py": {
+      "sha256": "d8b7829381e221809ac7d7eef83044d3ba8f1901704232508463f1ef7c3fb1ce",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/tiny_encoder.py",
+      "bytes": 42050
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/transformer.py": {
+      "sha256": "a86704b797283f259e6978cad67cedf880f91d6d90df4bbab40c52c8e931dd28",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/transformer.py",
+      "bytes": 14884
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/modules/utils.py": {
+      "sha256": "d5f988c26e685700643fc2f2515342537998474fb489549542841b05df85df60",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/modules/utils.py",
+      "bytes": 21371
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/predict.py": {
+      "sha256": "6af727230797bde25747176cb3f0efa2fd1edac4a17cc6114f5a6086cb89b0b5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/predict.py",
+      "bytes": 204392
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/__init__.py": {
+      "sha256": "68ce3e2a29a76202057be7b972d2d3f1eea4f4f6a0beebca15a1da6a00d933b1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/__init__.py",
+      "bytes": 144
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/decoder.py": {
+      "sha256": "9f5efe55d57bfe697d9a7d5e34556b01a9c476132a1b0b1abab47a26b087b9f7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/decoder.py",
+      "bytes": 22869
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/encoder.py": {
+      "sha256": "2d79d7ed2b1d95dc85c5f8b77ece48df3c7cf711750cf9bbe685f904e7df75cc",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/encoder.py",
+      "bytes": 21749
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/geometry_encoders.py": {
+      "sha256": "f43ec1d9302da40f63336f78374f93a2d1c4d576a386d482b13504650537edca",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/geometry_encoders.py",
+      "bytes": 17523
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/maskformer_segmentation.py": {
+      "sha256": "8dff6a263ef1c93546a7b399e6e2501741140f8ebc10e9c19b53ec8e24cedae8",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/maskformer_segmentation.py",
+      "bytes": 10735
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/model_misc.py": {
+      "sha256": "00723c0d7bd0a728ed831ec50239548c05a3413a24f538f629f3eae47901bbbe",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/model_misc.py",
+      "bytes": 7926
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/necks.py": {
+      "sha256": "f4c716e5779649f4f2e9eaa1a3eadf6850ec8936560b9fa15f03dd3b8f79fe90",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/necks.py",
+      "bytes": 4693
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/sam3_image.py": {
+      "sha256": "31965739bae23cfe553cc293c49eeb3d358501302062783b8de33372160ff181",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/sam3_image.py",
+      "bytes": 13336
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/text_encoder_ve.py": {
+      "sha256": "8aff3ee95037b78c89d4ce3644f8c70e516e1fd3ff9cd4523726a8167dac8ccc",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/text_encoder_ve.py",
+      "bytes": 12283
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/vitdet.py": {
+      "sha256": "a8a16b86e1511045c2ca4bed0af6ffd8124006d6da6f83655e904f7373ab6d62",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/vitdet.py",
+      "bytes": 22070
+    },
+    "third_party/ultralytics_custom/ultralytics/models/sam/sam3/vl_combiner.py": {
+      "sha256": "1e9169363de95ec58873f693a2ff84a56e63d5f3a3fe6d23e32b979827d6360e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/sam/sam3/vl_combiner.py",
+      "bytes": 6476
+    },
+    "third_party/ultralytics_custom/ultralytics/models/utils/__init__.py": {
+      "sha256": "966e8c72415808f4dba88a17ef0d2cfdd6b176335e05e296e835e9a6fd7e4143",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/utils/__init__.py",
+      "bytes": 70
+    },
+    "third_party/ultralytics_custom/ultralytics/models/utils/loss.py": {
+      "sha256": "f17c5cf77ea1d1ad250c6576126971a855a3f01f3320b63b04b16b35ad35bf75",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/utils/loss.py",
+      "bytes": 21149
+    },
+    "third_party/ultralytics_custom/ultralytics/models/utils/ops.py": {
+      "sha256": "7d520895c245adafb06b07c6b330dabbd6a36a69cd0fe742cd71f2797f474dde",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/utils/ops.py",
+      "bytes": 15229
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/__init__.py": {
+      "sha256": "603e34ecd0c38b28e8d31fcc47abac25a4e978f28f82c7c15187a1942c3b951b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/__init__.py",
+      "bytes": 307
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/classify/__init__.py": {
+      "sha256": "f7ef8755a34e7c8d4aeeb9ffad1a9c94bf055009e97de06b46a11021a430db13",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/classify/__init__.py",
+      "bytes": 383
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/classify/predict.py": {
+      "sha256": "a5136bc0655d02e0c9766fb4ad26390bb30276398703be6d99393ca61b4f0022",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/classify/predict.py",
+      "bytes": 4202
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/classify/train.py": {
+      "sha256": "88a290a0740acfdc59491631607104365258ec49460f9a3e1385337a6d6280aa",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/classify/train.py",
+      "bytes": 9599
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/classify/val.py": {
+      "sha256": "3db32d1f0a54b347784ef11234e4c25c26a7da1e1cf8219241ef6b1fa13a7765",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/classify/val.py",
+      "bytes": 10524
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/detect/__init__.py": {
+      "sha256": "18846c2d847e913e09271ee5878659005181663d1a79ba24b94d00ec96e30d50",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/detect/__init__.py",
+      "bytes": 257
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/detect/predict.py": {
+      "sha256": "da7c65332c3fcd52aad5a7891514e06f81062f6bce16ae292d3f6d02b1c17c5f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/detect/predict.py",
+      "bytes": 5385
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/detect/train.py": {
+      "sha256": "286673c6096beb3390010eb1dea8e88a696584673951ce2a51e111f211ac9bc0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/detect/train.py",
+      "bytes": 10827
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/detect/val.py": {
+      "sha256": "0385bcfdf1d2f35fd46782331272ae35673083b7c2d0ada4dd58b786d2030725",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/detect/val.py",
+      "bytes": 22849
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/model.py": {
+      "sha256": "5a2159deb9a45c510915d6a1ebd9fd074a2678365b60bfe965480a46d81cf94f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/model.py",
+      "bytes": 18662
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/obb/__init__.py": {
+      "sha256": "b509a91bcc151ec6a35a465d983e9c8c6a21278922eb88925d04fc258fddc9da",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/obb/__init__.py",
+      "bytes": 221
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/obb/predict.py": {
+      "sha256": "540e72468df62156a467fe6763be4a02b7da5e765b00dcd39313151839be728e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/obb/predict.py",
+      "bytes": 2634
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/obb/train.py": {
+      "sha256": "23b9b14dda11d7e06d02030023d8e48739ba42e4ebe78ea3793fdeadee27cf22",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/obb/train.py",
+      "bytes": 3437
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/obb/val.py": {
+      "sha256": "55c864f784f900e51798a9dc08f20e9677e60e5933803ea8825666e81ace739f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/obb/val.py",
+      "bytes": 14563
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/pose/__init__.py": {
+      "sha256": "ffd3852e3d7d5f0bc91c147142d556e4257baef27fde10cf13dee68a2b74b0f7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/pose/__init__.py",
+      "bytes": 227
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/pose/predict.py": {
+      "sha256": "6bf0fafb4a824614cbfdc7057ba513341d6381a077329d7079d2c342978b3de3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/pose/predict.py",
+      "bytes": 3175
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/pose/train.py": {
+      "sha256": "8a60639e0766d9ddb4819703c87daab257c2704f13efebfabef78e46c600bccd",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/pose/train.py",
+      "bytes": 4837
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/pose/val.py": {
+      "sha256": "c9382fedae7ebb968ba1fca8775214be7957c99cad7411e077b461b0595a8c41",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/pose/val.py",
+      "bytes": 12072
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/segment/__init__.py": {
+      "sha256": "dc84e1859d7096463d16f9969bd704fb9f99c84e85d4583302d43a8ce385cf3c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/segment/__init__.py",
+      "bytes": 275
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/segment/predict.py": {
+      "sha256": "e5e1af1ff1f85d74cfbd7b0d2af0b47fc4c59f05e626ae5bb2252811be800333",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/segment/predict.py",
+      "bytes": 5502
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/segment/train.py": {
+      "sha256": "a39b33d624dce6366a73d76ad5911d5bff8a49a5419e5b69a498e561b96cd479",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/segment/train.py",
+      "bytes": 3042
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/segment/val.py": {
+      "sha256": "773c7b3d5b04b3f73f2a09e8d01bbd5cc31a4f03a9ee80dd9f753d9b1dbd35bb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/segment/val.py",
+      "bytes": 13232
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/world/__init__.py": {
+      "sha256": "9e587c23ab7c84c1b3fef660f104a5b145b547ed9e2af9fd0865283cf4041a10",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/world/__init__.py",
+      "bytes": 131
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/world/train.py": {
+      "sha256": "9c8a70c5efcd2cf41bb638c8b988300625d6db731ea26395acd539bd35a99827",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/world/train.py",
+      "bytes": 7922
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/world/train_world.py": {
+      "sha256": "c9bd0556138602585b73afa9a8f3e312d159a58750c9be27c2f7f2b24b7c6551",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/world/train_world.py",
+      "bytes": 9449
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/yoloe/__init__.py": {
+      "sha256": "cda668d7fa2699ac4dbfb983ef1a5d4a898d178b3c9a939c0954d7b298349dc6",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/yoloe/__init__.py",
+      "bytes": 760
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/yoloe/predict.py": {
+      "sha256": "2cea15901c68518225669a671152fc6c92923e81759a1764f36d5c8baafbe0de",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/yoloe/predict.py",
+      "bytes": 7097
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/yoloe/train.py": {
+      "sha256": "5f32ff1d803b84341a9ac64129bd144bd7530f42d6c974442d60982b0fbf4758",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/yoloe/train.py",
+      "bytes": 12789
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/yoloe/train_seg.py": {
+      "sha256": "bd95aa459b3a91298192b982487deb9266375e0b9de8056377a499fe248f21b9",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/yoloe/train_seg.py",
+      "bytes": 5291
+    },
+    "third_party/ultralytics_custom/ultralytics/models/yolo/yoloe/val.py": {
+      "sha256": "bad50559e14a445599acfaf5cb703cced6d3c1da16318ab397004dec2434b420",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/models/yolo/yoloe/val.py",
+      "bytes": 9418
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/__init__.py": {
+      "sha256": "e77f0b64f50a2af737242320890e152c6a913766406952c57106de34d1c59040",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/__init__.py",
+      "bytes": 545
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/autobackend.py": {
+      "sha256": "b862ba2cc874ea458539fe052800d455335f0bda92b2c25fdc63b9c2190c2655",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/autobackend.py",
+      "bytes": 15172
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/__init__.py": {
+      "sha256": "9e1eda293ef6c1bca751b8c60d64132b33b7ed61e3f29340032978d4699e16f0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/__init__.py",
+      "bytes": 1291
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/axelera.py": {
+      "sha256": "1616d7dbc21afe513b566f88bdcba57aefcf8f90527e12efd7a25b11e2a32636",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/axelera.py",
+      "bytes": 2324
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/base.py": {
+      "sha256": "c2da9dac9dfbb56f61dbf0b23dd3bef4b0481e595439e8a829d79678baa847d3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/base.py",
+      "bytes": 4209
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/coreml.py": {
+      "sha256": "159b50a9ad0a068078b90e1f310329aed2890c14016d7285f5340681aaa1018a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/coreml.py",
+      "bytes": 2296
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/executorch.py": {
+      "sha256": "f968b645cd62c3acbef75f40cdc6cce8e890cf8c245c0a377d41d4c36959757b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/executorch.py",
+      "bytes": 1867
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/mnn.py": {
+      "sha256": "f1e810275a2261921ee105d70b03ee121b22205c17e39781fd08b2e7e954f21a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/mnn.py",
+      "bytes": 1954
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/ncnn.py": {
+      "sha256": "f6b6b739f7291906c0a95d143bc57218b6772064154f5931feae3f4388a44ffa",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/ncnn.py",
+      "bytes": 2474
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/onnx.py": {
+      "sha256": "8a26c4a1e4787c977d610111080b08b7992f0c0617abfcae5785e28bb7805a5b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/onnx.py",
+      "bytes": 8522
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/openvino.py": {
+      "sha256": "89fe9eb17d95c185ea8453da90f486be5738bca19677b6d238edb497db2b6023",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/openvino.py",
+      "bytes": 3980
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/paddle.py": {
+      "sha256": "01019d89093d487665d3068e9bfe41e700f8ea638cb01d6ca58c4fb6b83a3116",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/paddle.py",
+      "bytes": 3020
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/pytorch.py": {
+      "sha256": "22a250b6c2d704dd6828eecdd59884fd06ead0b98a696fdc51510e22e011eaae",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/pytorch.py",
+      "bytes": 5512
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/rknn.py": {
+      "sha256": "debb795712009d7df7f5fca27804a8d964199eda157bd2f8e784ae281649e4ac",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/rknn.py",
+      "bytes": 2303
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/tensorflow.py": {
+      "sha256": "b32b9ff639c4a71691e3e22b6f07916275dea2a2cb95fcf0d0c2a6ca2fa44a54",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/tensorflow.py",
+      "bytes": 7820
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/tensorrt.py": {
+      "sha256": "eedf26e040b774659d410aa2a22fc613469825fa28f38cae61eded66752d9bb8",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/tensorrt.py",
+      "bytes": 6080
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/backends/triton.py": {
+      "sha256": "5752566f7aea5fc58c15d6912ad2b0823e24aff1eecbd8cf620fa7b658241dfa",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/backends/triton.py",
+      "bytes": 1466
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/__init__.py": {
+      "sha256": "f4ac90071a689a9e6e249d4fbcc1ae385b36a51dcda6a65c14726533a439e9cd",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/__init__.py",
+      "bytes": 3322
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/activation.py": {
+      "sha256": "27a9fe0892852b461b8707110ea9bdcc424cf69480132723e6ab90b2cff7c7a1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/activation.py",
+      "bytes": 2219
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/block.py": {
+      "sha256": "1e135bf35f1fc3520687b73942259108ccbfb6ed983bda0e74e7bc6a76db0b6a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/block.py",
+      "bytes": 74527
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/conv.py": {
+      "sha256": "c802f36ea1596d8910f2b651d57877b50a4960857b97cbb5a20d44a1dbbaa774",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/conv.py",
+      "bytes": 21090
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/head.py": {
+      "sha256": "e509f85ea0d745d470eab0f869e6675b2072b871aaab64d188c6bc3fcc382a7f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/head.py",
+      "bytes": 80362
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/transformer.py": {
+      "sha256": "8986f3f58a5e30a42545f544f1a35f5e5861b13ee5d4507d8b2afab1c41df782",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/transformer.py",
+      "bytes": 31979
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/modules/utils.py": {
+      "sha256": "bcf0492178d3924b5d6a5f5808906b7aec6214172b70bfeb21b3aab308b17164",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/modules/utils.py",
+      "bytes": 6013
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/tasks.py": {
+      "sha256": "19be610be99c41a7452b23c7105ac28d5315d579a336b3a114c0bca05a576312",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/tasks.py",
+      "bytes": 73332
+    },
+    "third_party/ultralytics_custom/ultralytics/nn/text_model.py": {
+      "sha256": "d081a7293fa90349d21dfbba1149347b96353248495646e598ee3e3feaa18088",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/nn/text_model.py",
+      "bytes": 15375
+    },
+    "third_party/ultralytics_custom/ultralytics/optim/__init__.py": {
+      "sha256": "4a5dc3c767a268977fbb855b9aa701a9658317c1479cee56d270442fcfccfc2e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/optim/__init__.py",
+      "bytes": 130
+    },
+    "third_party/ultralytics_custom/ultralytics/optim/muon.py": {
+      "sha256": "22ef96094e891696ccb8bb14c17c669a1e2e219698943f2e29aa55db2812c1ee",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/optim/muon.py",
+      "bytes": 14241
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/__init__.py": {
+      "sha256": "263ece7118988c71fe7b5d381f8c538238d1e56e9a3c1e260519dd6da48f9a05",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/__init__.py",
+      "bytes": 1209
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/ai_gym.py": {
+      "sha256": "7eaf6c21bd11041bf277b4994a163c4ceebdd2529ba4f34e15aa783868b9088f",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/ai_gym.py",
+      "bytes": 5181
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/analytics.py": {
+      "sha256": "51a1fe07a87c22bf65d3475e454780216e9041320eff9f791d3a7ddec770b5e3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/analytics.py",
+      "bytes": 12820
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/config.py": {
+      "sha256": "8716cb7b571a03a8a0063418f25eab82b6095f784c6b6fd6afceabec0703663c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/config.py",
+      "bytes": 5422
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/distance_calculation.py": {
+      "sha256": "45ca510e87441c0254ba0f6da1bb502ade7f6f248d03c34c49189a2f7e3b4355",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/distance_calculation.py",
+      "bytes": 5891
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/heatmap.py": {
+      "sha256": "d1feeffb4a001a3e27a3f8752e5f811ac4e6b33481a10d2d35ae1acc9600410c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/heatmap.py",
+      "bytes": 5481
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/instance_segmentation.py": {
+      "sha256": "a68c5f08a978826ee91e18f050b39e20f211cbdabfc0ec6ac2d9d45d713d3614",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/instance_segmentation.py",
+      "bytes": 3778
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/object_blurrer.py": {
+      "sha256": "119aefde853af2411a6a103196193d705e59285b6855a5bc6c30780acb3dc5ed",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/object_blurrer.py",
+      "bytes": 3981
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/object_counter.py": {
+      "sha256": "3a93122e57a70caf9c2ef0a008ea0a6ea317219ae7832a8ff033fa65e12758bf",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/object_counter.py",
+      "bytes": 9355
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/object_cropper.py": {
+      "sha256": "5916eb7d7011e5a0fa3d006a27e06f7156a26aab5affd61e4e55cdd9d636ef8b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/object_cropper.py",
+      "bytes": 3510
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/parking_management.py": {
+      "sha256": "4347c414a96fe9d28a5aec3fe2399669e1d05571a9a73b94ed5aff1ea558a873",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/parking_management.py",
+      "bytes": 13770
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/queue_management.py": {
+      "sha256": "365557e8f30469f7e3a198df42b5726b268351db5cd0917c1b34d0ad9163a428",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/queue_management.py",
+      "bytes": 4371
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/region_counter.py": {
+      "sha256": "200be5170118a0d7ed0f37c16dda393332f072e89d3875bda131b24420f33117",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/region_counter.py",
+      "bytes": 6025
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/security_alarm.py": {
+      "sha256": "0bf2df93e51973729ad8c5fc1422808bc9f097cbc6b9c5f6054c3a98bb4041b6",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/security_alarm.py",
+      "bytes": 6295
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/similarity_search.py": {
+      "sha256": "43614e054b44a247a08891e57c36cf3f46cac6be45fac1cddfe22fb240e87b4d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/similarity_search.py",
+      "bytes": 9644
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/solutions.py": {
+      "sha256": "790c43653e18d90a70789b8a7bc338f0c6545acae7b82e2335beb86d88017ccf",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/solutions.py",
+      "bytes": 36990
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/speed_estimation.py": {
+      "sha256": "5ab6440b1280aba3f84297936e1929dfe46a8e7a31eed751db97d4c73a339695",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/speed_estimation.py",
+      "bytes": 5861
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/streamlit_inference.py": {
+      "sha256": "42e176a7672385ac90f02aa03b0d01b940f3f9c227cda0ffb3f7aa26e4248030",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/streamlit_inference.py",
+      "bytes": 13060
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/templates/similarity-search.html": {
+      "sha256": "998b8923c1fce1c9aee24c0fab6684b26cdace298510488b84e5d9d3c9574200",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/templates/similarity-search.html",
+      "bytes": 4165
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/trackzone.py": {
+      "sha256": "a2abfecd92fdf5155431c37956200f99a7735fa40d740128cd8aeb836a6a3ba9",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/trackzone.py",
+      "bytes": 3903
+    },
+    "third_party/ultralytics_custom/ultralytics/solutions/vision_eye.py": {
+      "sha256": "6d25e627ddc3c8bbb8fc25a06c5dc6907ce1fd5a6212690ae6f5490cf3c6cc8e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/solutions/vision_eye.py",
+      "bytes": 2982
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/__init__.py": {
+      "sha256": "9f704e3b44d1f92cf900d0d83a42838a933d9d21ce78f304c2a69f6e4f9810fb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/__init__.py",
+      "bytes": 255
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/basetrack.py": {
+      "sha256": "17e116dbd17d13c1b05ebe6fcf02ea5b6acdc08b6ee0a231d8c29c7b9a505f12",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/basetrack.py",
+      "bytes": 4374
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/bot_sort.py": {
+      "sha256": "275cbcbe47398dd5aa4dcc186fb459a8fb2f9b8356989f579f5204cbf9fbe201",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/bot_sort.py",
+      "bytes": 11865
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/byte_tracker.py": {
+      "sha256": "f424e934f86279f9eed4652ca50081570abef23aa0bd532b226e2e53387da14d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/byte_tracker.py",
+      "bytes": 21073
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/README.md": {
+      "sha256": "370cf98bec767025efe556b636080b6238aaf53b783cc97490c729e00a10c1f7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/README.md",
+      "bytes": 14784
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/track.py": {
+      "sha256": "c6d7b99645416ce9eb67fb552ec1d49b3bed3636dd92c4d5792150b4b08bb7f3",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/track.py",
+      "bytes": 4742
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/utils/__init__.py": {
+      "sha256": "966e8c72415808f4dba88a17ef0d2cfdd6b176335e05e296e835e9a6fd7e4143",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/utils/__init__.py",
+      "bytes": 70
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/utils/gmc.py": {
+      "sha256": "9c3a9d8fc532de6bbed6ed3f3ecc2d029b3c72281db07e8da4e2074fa538b0b0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/utils/gmc.py",
+      "bytes": 13800
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/utils/kalman_filter.py": {
+      "sha256": "3e2722d310e2b037125da3a4a5a4e314e1fa63c58372d4bbd5f030bf113290e1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/utils/kalman_filter.py",
+      "bytes": 21622
+    },
+    "third_party/ultralytics_custom/ultralytics/trackers/utils/matching.py": {
+      "sha256": "8b494752a08c15d71c8027e1a5c3b4cc705a00845466dea6121aa46751ac11cf",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/trackers/utils/matching.py",
+      "bytes": 7110
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/__init__.py": {
+      "sha256": "20cb0f1b09ba450b73d76ecd0d823ac462bcb040f9b6ba762080dcb003212796",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/__init__.py",
+      "bytes": 56836
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/autobatch.py": {
+      "sha256": "160207346825427be6e33776a549d8c6f9d9de8039d240e4115c6db0c4dfe7b5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/autobatch.py",
+      "bytes": 5679
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/autodevice.py": {
+      "sha256": "8116dd34f2bda2847a93c09547fec598ef96cf57ec90c9975519255d40932996",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/autodevice.py",
+      "bytes": 9107
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/benchmarks.py": {
+      "sha256": "f1e10654dbde3c16f77f2c05c8cd86f5e425b628dfb7d0681e355ed0c413fe94",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/benchmarks.py",
+      "bytes": 31669
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/__init__.py": {
+      "sha256": "8732fadd171ee9591984fe0b7229bd2ca8da762c5a406f3a9caa8f864ec8912d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/__init__.py",
+      "bytes": 242
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/base.py": {
+      "sha256": "7e5a03df5247a87a6255a6d0884efafe1cc2fe3eca8ed2f8c3f733903d5b2ca7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/base.py",
+      "bytes": 6883
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/clearml.py": {
+      "sha256": "43af64b797a78335252082334987898835b51090574d2b81d237e42f3c6af90c",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/clearml.py",
+      "bytes": 5868
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/comet.py": {
+      "sha256": "fd160c509cc82a286062b2fd8323dec099737721a2273d8f8b4e7c68489ed91d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/comet.py",
+      "bytes": 25139
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/dvc.py": {
+      "sha256": "3995ebae75cff067225fcf735ed4d9d170b1382d6004d5f3f5c8a7f7cff56b42",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/dvc.py",
+      "bytes": 7485
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/hub.py": {
+      "sha256": "afe0808661c8ebc686226574b643d89b8af4b1a619c39058dd9ad10b475084eb",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/hub.py",
+      "bytes": 4250
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/mlflow.py": {
+      "sha256": "c025e342076e7e9f4b62e8ea3332d93a620ebabea4beb0291cd7a8f5d03bb7f8",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/mlflow.py",
+      "bytes": 5323
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/neptune.py": {
+      "sha256": "fefb7770cc031c247e2f24f72ad462906a63e801b5d6843eb24514514759ef8a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/neptune.py",
+      "bytes": 4391
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/platform.py": {
+      "sha256": "a9996d18e3ea2aa3629476de9c2bf6f20c147d1a43bc872346e8bfcb4c030212",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/platform.py",
+      "bytes": 20167
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/raytune.py": {
+      "sha256": "634745c8d65546e168bd287b9e48142074d02f7c485ce002125807b986e0ff92",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/raytune.py",
+      "bytes": 1278
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/tensorboard.py": {
+      "sha256": "2bb6fa2ad0bbae299fcea16ef8d0d9ff9e536ddede0ba4dc92a41d4cd3ee43a5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/tensorboard.py",
+      "bytes": 5039
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/callbacks/wb.py": {
+      "sha256": "b4b6a3202190f8b5d4c6d978e81306b0d46761310706c8918646382c6c2b9cde",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/callbacks/wb.py",
+      "bytes": 7890
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/checks.py": {
+      "sha256": "f60b554d633f9466c9fa2fdd44c5ec38cd59e7c5ab72bf150295079f53e16182",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/checks.py",
+      "bytes": 41325
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/cpu.py": {
+      "sha256": "3a4b0a3a55fddc0b1b4ac16ea18bcb5d15e0a643a26eb652c10c96ea58a9b784",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/cpu.py",
+      "bytes": 3493
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/dist.py": {
+      "sha256": "da4290e4ce931871624f362f92800593b11a969709ee6b991fdf3446aacc7787",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/dist.py",
+      "bytes": 5003
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/downloads.py": {
+      "sha256": "043b9634d2261f1d30a82ba4f376eef38059716c9a9a7b70a68eb7fe45092d22",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/downloads.py",
+      "bytes": 23314
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/errors.py": {
+      "sha256": "75465c4d6a5b2491ea12e58733a21b7a8249e13cc0ff21c13fc13bb44129055b",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/errors.py",
+      "bytes": 1388
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/events.py": {
+      "sha256": "91fbbc8fe24a1bb74d9fc007364ca5527d60e1d73f8324dbe34832d925a4fe59",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/events.py",
+      "bytes": 4911
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/__init__.py": {
+      "sha256": "f8cf3a45f8f9354597f8fabaff2594cecfc77815f76f4d08f8306096c03ebb99",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/__init__.py",
+      "bytes": 850
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/axelera.py": {
+      "sha256": "f684cb92ee15df792be610d8deb52726337ef2c3fddf80018b9e15711e03ccd4",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/axelera.py",
+      "bytes": 2171
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/coreml.py": {
+      "sha256": "3b00bd100f3c008b08b9cc62a444886d5b7e17b670cd5649516d022d391da3ab",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/coreml.py",
+      "bytes": 10586
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/engine.py": {
+      "sha256": "cf874820849e177a631391b8c3792f8e6f6e234daf9764b4f182ddef53c3fbb7",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/engine.py",
+      "bytes": 11639
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/executorch.py": {
+      "sha256": "322a9e0ad96b095cdeebc9dd7eef951455da15b18569e847e0b94b84bcaf3189",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/executorch.py",
+      "bytes": 2828
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/imx.py": {
+      "sha256": "ced26f9b8c9e354e23588deaaa53b034611095173f3de389180c321993a24200",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/imx.py",
+      "bytes": 13901
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/mnn.py": {
+      "sha256": "006241500ffc1fde09d84c849fd4868a96a916f6c3b7ee8db6387c772d80d8ef",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/mnn.py",
+      "bytes": 1857
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/ncnn.py": {
+      "sha256": "3dca823b1ae7290e3d22963c854b17b05cc18a6a72703b7afaf1e4f7f8f444b0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/ncnn.py",
+      "bytes": 2365
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/openvino.py": {
+      "sha256": "aec1d860bfcc2079c50352d43ddcbeb5fc3561de1855bc3be8965def2d17fce1",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/openvino.py",
+      "bytes": 2065
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/paddle.py": {
+      "sha256": "6acc5414617811663dc7e95f8a49c22a6eb48c978142c7e7543915be294428b6",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/paddle.py",
+      "bytes": 1869
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/rknn.py": {
+      "sha256": "10a1bb94d4e508a386045a820ff8a29adab21dedb6327215c1ff9dfdfc0b22dd",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/rknn.py",
+      "bytes": 1723
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/tensorflow.py": {
+      "sha256": "36ea35a8a6067d0972b6596e72330980aeff3795bc7c6b04f27e80a3aeabce77",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/tensorflow.py",
+      "bytes": 9957
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/export/torchscript.py": {
+      "sha256": "58d387d4a064628eb94e89fcd89a1ad7642fafb302e92c027b048e1c19289b71",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/export/torchscript.py",
+      "bytes": 1629
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/files.py": {
+      "sha256": "25897f375d7c5af20e6f03521b97fbc107a6969ae527c3109c10464f489e9547",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/files.py",
+      "bytes": 8191
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/git.py": {
+      "sha256": "51da9e222884ce0d6a91eac066b83962d4d83ee258c2ba715bd37fe8fabab3c5",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/git.py",
+      "bytes": 5501
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/instance.py": {
+      "sha256": "687043e45f2d26f965e693df5a55c5217c82c796986e8680d55f710a087957ad",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/instance.py",
+      "bytes": 19442
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/logger.py": {
+      "sha256": "a0fe7b21c50b8969349c88036a8ec8278077343c047357dd621d97cd187fa2b0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/logger.py",
+      "bytes": 19117
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/loss.py": {
+      "sha256": "5dded3556d12d8b0d149dc56928b862e3bbe2af0718d0e6a9a58925957be2b9a",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/loss.py",
+      "bytes": 61005
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/metrics.py": {
+      "sha256": "7023f140596db687b9df74a0b1e16b3356db787d8deba99b6e3e882261bf8770",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/metrics.py",
+      "bytes": 68823
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/nms.py": {
+      "sha256": "f17f8bfba204ff96e95be41747504d23949f32a68fd29fe4a17b151cdf08b212",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/nms.py",
+      "bytes": 14377
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/ops.py": {
+      "sha256": "9fbe79783cad8bbce1eeed183b9e28691e4e8cb09b55aea113cedbc7dea96d09",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/ops.py",
+      "bytes": 25975
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/patches.py": {
+      "sha256": "afc4006f9be4f2efe229bb4d0f81679e0c2d5f90b907f534e79e2af2ac824fec",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/patches.py",
+      "bytes": 9446
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/plotting.py": {
+      "sha256": "d98864b19b656a5e4fd3294ab1eeaa795c2cf3f36439b3df65244b98bf892406",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/plotting.py",
+      "bytes": 48357
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/tal.py": {
+      "sha256": "37494f68725dc9a134dbb8be5db218c1b02bfd8cbf448d6bf50058c631ce4a81",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/tal.py",
+      "bytes": 24534
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/torch_utils.py": {
+      "sha256": "47ce7ed9006e00c57503bcc6e09a7a05584380e09f93861c703026131d1ecc11",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/torch_utils.py",
+      "bytes": 41666
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/tqdm.py": {
+      "sha256": "63d9d4e5a493cadeb912510b9224f3de2f3cd25e21946559bda662a5bb3319dc",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/tqdm.py",
+      "bytes": 16353
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/triton.py": {
+      "sha256": "a9f038549bc65548d48febae4331dcd1e67df3dfa266474c9aeaa8e169e8b54d",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/triton.py",
+      "bytes": 5215
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/tuner.py": {
+      "sha256": "37a3bd3efd9cff9fd1205a76769bb85237cca1666cc209684092215a30a2a61e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/tuner.py",
+      "bytes": 7300
+    },
+    "third_party/ultralytics_custom/ultralytics/utils/uploads.py": {
+      "sha256": "c0b208773426258937cb257e242dc63f6871b8467fca93597ae879f5066e73ba",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/ultralytics/utils/uploads.py",
+      "bytes": 3809
+    },
+    "third_party/ultralytics_custom/LICENSE": {
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/LICENSE",
+      "bytes": 34523
+    },
+    "third_party/ultralytics_custom/README.md": {
+      "sha256": "b7adac0a66e927e63edc5298f40591fa0a1432181546d9cbe58eedcd559e49b2",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/README.md",
+      "bytes": 34651
+    },
+    "third_party/ultralytics_custom/pyproject.toml": {
+      "sha256": "4ebe8047df356d81a25adc8fb836f769665d5b4f5807e1605cc605f199f2053e",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/pyproject.toml",
+      "bytes": 8623
+    },
+    "third_party/ultralytics_custom/CITATION.cff": {
+      "sha256": "f7076404a979e5b1c6fe7b2e1b06c4f41d03f926a659535b92d8e8318090da44",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/ultralytics_lib/CITATION.cff",
+      "bytes": 764
+    },
+    "models/yolov8-seg-custom.yaml": {
+      "sha256": "ea858c8187cba8b11f7bd091797cd4b533990d7d86160b6d9f2cf922b6e987f4",
+      "source": "artifacts/s5_environment/source/custom_model_ee444fca6cab/Capstone-Project-Camouflage-Net-Detection-feature-Custom_Model/experiments/yolov8-seg-custom.yaml",
+      "bytes": 1499
+    },
+    "results/tables/all_summary_mean_sd.csv": {
+      "sha256": "2e73267b2105138f4632471cd4fde55b03ca4528570f9ab40780311a594ffe60",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/tables/all_summary_mean_sd.csv",
+      "bytes": 23849
+    },
+    "results/tables/all_checkpoint_metrics.csv": {
+      "sha256": "45a361b2d011162b64ce976bcf8195341ed888efb3199044bd1cdce6916d29a9",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/tables/all_checkpoint_metrics.csv",
+      "bytes": 19625
+    },
+    "results/tables/all_epoch_metrics.csv": {
+      "sha256": "cbed07e4c49c74961c58808d85bd0313c12b0c1c35fb67a1ce2667052dbcad5e",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/tables/all_epoch_metrics.csv",
+      "bytes": 1094530
+    },
+    "results/tables/experiment_lookup.csv": {
+      "sha256": "0a237b313f9d9ace2b245e4abdd2054ac520a08c2b0546fbea733b0819c44538",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/tables/experiment_lookup.csv",
+      "bytes": 14035
+    },
+    "results/tables/semester1_metrics.csv": {
+      "sha256": "7ed2d6e8fd452569588fb687758bdf446c160bc459f2b416807eff3655de457f",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/tables/semester1_metrics.csv",
+      "bytes": 1203
+    },
+    "results/figures/01_main_test.png": {
+      "sha256": "4caba93a10e8274aae8e74e5fcaa585b6735fa743b208c8a0238ce199260ecfc",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/01_main_test.png",
+      "bytes": 170108
+    },
+    "results/figures/05_heuristic_ablation.png": {
+      "sha256": "9fcf5c6f943eab55e5de60309e1a09e03c71bcf7b085feb4de57945795ae3729",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/05_heuristic_ablation.png",
+      "bytes": 391281
+    },
+    "results/figures/06_head_ablation.png": {
+      "sha256": "459fbbd22b214c9d14776fd2b703747a14eb4fb5ab3e853d00926b8c9549a0d8",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/06_head_ablation.png",
+      "bytes": 130592
+    },
+    "results/figures/16_within_study_gains.png": {
+      "sha256": "d8c21c674a9e809d84a236edee8ad8e8736732779228fc613961f611f7532cb0",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/16_within_study_gains.png",
+      "bytes": 156586
+    },
+    "results/figures/19_background_paired_effects.png": {
+      "sha256": "0ae66cb8ed75ba34018a306a230b7584b7b7d10179a100cd8f4cd7983419012c",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/19_background_paired_effects.png",
+      "bytes": 116338
+    },
+    "results/figures/22_current_results_overview.png": {
+      "sha256": "65f770a7d6bbbface4e1a541cb5b022c558ebd6b87dd45a889842f320c016c7b",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/22_current_results_overview.png",
+      "bytes": 132348
+    },
+    "results/figures/23_training_budget_context.png": {
+      "sha256": "0f20a906d32c68e41634c1fc82e7990ca88b174fff50a0cc1b278a8ee6a8060d",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/figures/23_training_budget_context.png",
+      "bytes": 161633
+    },
+    "docs/EXPERIMENT_LOOKUP_KO.md": {
+      "sha256": "34a226fe482e2c83c6786985f501b248bac2f6256a376dc020f97101c8bd6d15",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/EXPERIMENT_LOOKUP_KO.md",
+      "bytes": 17703
+    },
+    "results/evidence/audit_complete.json": {
+      "sha256": "70952143fdc9e6f0eec441f86bd21e9f575d5e5f302467a159e0663a793f7814",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/audit_complete.json",
+      "bytes": 13283
+    },
+    "results/evidence/audit_qualitative.json": {
+      "sha256": "16a5a383dc5a23c1445d595db9dcc125028fa4728b7a7cd6c1dec4e08166b302",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/audit_qualitative.json",
+      "bytes": 2991
+    },
+    "results/evidence/audit_readability.json": {
+      "sha256": "9e102f31ac29c5985c7aff63c0ff1626c3a278258780912788e3621d3b32537d",
+      "source": "artifacts/final_presentation/end_to_end_v6_readable/audit_readability.json",
+      "bytes": 1854
+    }
+  }
+}

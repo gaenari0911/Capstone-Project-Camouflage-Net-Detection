@@ -1,0 +1,153 @@
+{
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "reason": "A0 exception approved by user delegation; mixed formal release pending. Use release campaign.json after verification.",
+  "gpu_concurrency": 1,
+  "batch": 16,
+  "job_count": 14,
+  "jobs": [
+    {
+      "id": "A0_seed0",
+      "experiment": "A0",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A0_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "A1_seed0",
+      "experiment": "A1",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "A2_seed0",
+      "experiment": "A2",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A2_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "A3_seed0",
+      "experiment": "A3",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A3_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "A4_seed0",
+      "experiment": "A4",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A4_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "A5_seed0",
+      "experiment": "A5",
+      "seed": 0,
+      "epochs": 40,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A5_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "M1_seed0",
+      "experiment": "M1",
+      "seed": 0,
+      "epochs": 150,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "M1_seed1",
+      "experiment": "M1",
+      "seed": 1,
+      "epochs": 150,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "M1_seed2",
+      "experiment": "M1",
+      "seed": 2,
+      "epochs": 150,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "L1_seed0",
+      "experiment": "L1",
+      "seed": 0,
+      "epochs": 150,
+      "real": 187,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/low187_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "L1_seed1",
+      "experiment": "L1",
+      "seed": 1,
+      "epochs": 150,
+      "real": 187,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/low187_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "L1_seed2",
+      "experiment": "L1",
+      "seed": 2,
+      "epochs": 150,
+      "real": 187,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/low187_A1_manifest.json",
+      "variant": "H2"
+    },
+    {
+      "id": "H0_S_seed0",
+      "experiment": "H0_S",
+      "seed": 0,
+      "epochs": 150,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H0"
+    },
+    {
+      "id": "H1_S_seed0",
+      "experiment": "H1_S",
+      "seed": 0,
+      "epochs": 150,
+      "real": 748,
+      "synthetic": 3000,
+      "synthetic_manifest": "artifacts/s8_heuristic_audit/run_v1/train748_A1_manifest.json",
+      "variant": "H1"
+    }
+  ],
+  "reference": {
+    "H2_S_seed0": "M1_seed0"
+  },
+  "budget": "retain cumulative168h/new100GiB/free20GiB; bind heuristic+Real ledger before release"
+}

@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED",
+  "source_version": "end_to_end_v5_demo",
+  "source_delivery_sha256": "ae0c2e269cdb33f104ce429417da084fe3ce88d2ae75d04f43e1c42510b2a3f6",
+  "experiment_definitions": 26,
+  "training_jobs_crosschecked": 40,
+  "checkpoint_metric_rows": 74,
+  "new_training": false,
+  "new_gpu_inference": false,
+  "prior_version_preserved": true,
+  "browser": {
+    "status": "VERIFIED",
+    "checks": [
+      "Report experiment links and BG0 data totals",
+      "Search: G0 clarification, job ID, A5, H2 alias, no results, Escape",
+      "26 static table rows and 9 guide sections",
+      "All 14 cases, 10 model cards, 3 legends, compare purpose, live model card, offline mode",
+      "390px mobile: no page-wide horizontal overflow",
+      "New wrapper serves v6 HTML and unchanged health API; no prediction requests"
+    ],
+    "javascript_exceptions": 0,
+    "new_gpu_inference": false,
+    "offline_images": 200,
+    "demo_models": 10,
+    "experiment_definitions": 26
+  },
+  "unchanged_inherited_files": 414,
+  "broken_local_links": [],
+  "sources": {
+    "tools/readable_experiment_catalog.py": "3b943870fa9001aaeece0ae8c76f814261393fb0e1df875aebd89ef82dbfc349",
+    "tools/experiment_lookup_template.md": "94ab5576721f864cbb10f4b0444ad8a9658f0917c954aa7d6a349d4e93c20204",
+    "tools/experiment_lookup.css": "ac94c6ca9e19dd6f294b0e14c35e05e5881f41430a1c00d523734490e7c8fae6",
+    "tools/experiment_lookup.js": "a22754424a67108f5d1e7f7020d8f23fe9832c3f241c4ae22c2ef3197c8b346e",
+    "tools/build_readable_results.py": "57ceade22834f429cf55f8a89fe92d1b2935a6e1457bbf187b392c0e6796d4d4",
+    "tools/verify_readable_results.py": "920b4f2da63de11522e715fc70be5ab8b5b7a8a5ed3c521d1fe1de022c5141cb",
+    "tools/serve_readable_demo.py": "8c8536a9d78bb37eb5bc369358ceae5bfa9d0ddc8ad71f6b7a0090a4d00a90db"
+  }
+}
